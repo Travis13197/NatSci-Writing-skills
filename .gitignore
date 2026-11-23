@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+_test_out/
+figures/
+.DS_Store
+Thumbs.db
+*.zip
+*.log
+.vscode/
+.idea/

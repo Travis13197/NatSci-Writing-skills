@@ -1,0 +1,18 @@
+NatSci-Writing-skills Non-Commercial License, Version 1.0
+Copyright (c) 2026 Chuanyang Liu
+
+This license applies to the original contents of NatSci-Writing-skills: the SKILL.md files, references, templates, scripts, documentation and package structure authored by Chuanyang Liu, except for third-party material identified in NOTICE.md and LICENSES/.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this work and associated documentation files (the "Work"), to deal in the Work without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute and sublicense copies of the Work, subject to the following conditions:
+
+1. NON-COMMERCIAL USE ONLY. You may not use the Work, in whole or in part, for any commercial purpose or for any purpose intended to generate revenue or commercial advantage. This includes, without limitation: paid products or services; consulting deliverables; use by a for-profit entity as part of a commercial offering; and any use whose primary purpose is monetary compensation or commercial gain. Academic research, teaching, personal study and other non-commercial scholarly use are permitted.
+
+2. ATTRIBUTION. You must retain this copyright notice, this license file and NOTICE.md in all copies or substantial portions of the Work, and clearly credit "NatSci-Writing-skills by Chuanyang Liu" in any public use, derivative work or redistribution.
+
+3. THIRD-PARTY MATERIAL. Portions adapted from the open-source nature-skills project are distributed under the Apache License 2.0 (see LICENSES/Apache-2.0.txt and NOTICE.md). Those portions remain available under Apache-2.0, and nothing in this license restricts the rights granted to you by Apache-2.0 for those portions. If you redistribute only Apache-2.0 portions, comply with Apache-2.0.
+
+4. NO WARRANTY. THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THE USE OF THE WORK.
+
+5. COMMERCIAL LICENSING. For commercial use, contact the author for a separate written license.
+
+This is a source-available, non-commercial license. It is not an OSI-approved open-source license because it restricts commercial use, even though copying, modification and non-commercial redistribution are permitted.

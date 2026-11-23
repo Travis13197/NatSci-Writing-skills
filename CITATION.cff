@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use NatSci-Writing-skills, please cite the related paper (to be updated when published) and this repository."
+title: "NatSci-Writing-skills: a production system for Nature/Science-level manuscripts and figures"
+abstract: "Two self-contained agent skills (English and Chinese) for complete manuscript drafting, figure production, revision, journal formatting and reviewer response, built from the author's research projects and long-term conversations and integrating the open-source nature-skills project with attribution."
+authors:
+  - family-names: "Liu"
+    given-names: "Chuanyang"
+version: "1.2.0"
+date-released: "2026-11-23"
+license: "LicenseRef-NatSci-Writing-skills-NC"
+license-url: "https://github.com/YOUR-GITHUB-USERNAME/NatSci-Writing-skills/blob/main/LICENSE"
+repository-code: "https://github.com/YOUR-GITHUB-USERNAME/NatSci-Writing-skills"
+url: "https://github.com/YOUR-GITHUB-USERNAME/NatSci-Writing-skills"
+keywords:
+  - academic writing
+  - scientific writing
+  - Nature
+  - Science
+  - figure design
+  - agent skills

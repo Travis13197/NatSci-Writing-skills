@@ -1,0 +1,292 @@
+---
+name: natsci-writing
+description: >-
+  NatSci-Writing-skills production system. Write, draft and revise complete biology, biotechnology, bioinformatics and
+  AI-for-science manuscripts to Nature/Science standard, and produce the figures that
+  carry them. Use for full manuscripts, abstracts, introductions, results, discussions,
+  methods, reviews, perspectives, figure sets, figure legends, journal formatting,
+  response-to-reviewers letters, Chinese scientific prose, complete HTML revision,
+  literature-grounded research design, data or calculation verification, bracketed
+  annotations, bilingual revision and continuation of the SEAL project. Encodes
+  corpus-calibrated argument architecture, diction, hedging, figure conventions,
+  editorial fit, statistics and reporting integrity, information architecture and
+  end-to-end production workflows measured from 800+ Nature/Science papers.
+metadata:
+  version: "1.2.0"
+  updated: "2026-11-23"
+  author: "Chuanyang Liu"
+  system: "NatSci-Writing-skills"
+  language: "en"
+  companion: natsci-writing-zh
+---
+
+# NatSci-Writing-skills — Nature/Science manuscript production (English)
+
+## Purpose and scope
+
+Produce or revise complete scientific manuscripts, sections, figures and submission packages at Nature/Science standard: a specific question, an early claim, evidence that earns it, a consequence the reader can use, and figures that carry the same argument visually. The skill covers research Articles, Reviews, Perspectives, methods and algorithmic papers in life science, biotechnology, bioinformatics, protein language models and AI-for-science, in English and Chinese.
+
+Four habits govern every task:
+
+1. **Claim before catalogue.** Each paragraph opens with the relationship it establishes, then earns it with evidence.
+2. **Concrete before abstract.** Name the molecule, dataset, comparison, measurement or model quantity; abstractions are earned by definition, not used as scaffolding.
+3. **Calibrated confidence.** Verbs match evidence; uncertainty is stated once, concretely, where it matters.
+4. **Reader economy.** Delete anything that does not change what the reader knows or can do.
+
+Resources:
+- references/manuscript-production.md — complete drafts, section playbooks, paper types, journal formats, full-manuscript package, formatting, statements, self-review. Read for any full-manuscript or formatting task.
+- references/revision-and-response.md — polishing workflow, phrasebank, style guardrails, response letters, reviewer simulation. Read for revisions and rebuttals.
+- references/journal-style-evidence.md — corpus coverage, measured statistics, genre definitions, exemplars, limitations.
+- references/writing-diagnostics.md — AI-tell lexicon, failure modes, rewrite drills.
+- references/editorial-and-submission.md — Nature/Science editorial criteria, journal fit, article limits, cover letter, presubmission and submission package.
+- references/innovation-and-broad-interest.md — contribution types, contribution ladder, gap engineering, discriminating predictions, broad-interest and why-this/why-now/why-broad tests.
+- references/main-text-and-information-architecture.md — result classification, shortest evidence chain, main-text/caption/SI split, revision-accretion control, claim repetition, display budgets.
+- references/statistics-and-reporting-integrity.md — independent unit and replication, Nature statistical requirements, figure statistics, image integrity, data/code/materials reporting, severity labels.
+- references/language-and-taste.md — prose rhythm, voice, house style, taste diagnostics, model shapes, Chinese-specific checks.
+- references/figure-craft-and-information-density.md — multi-panel evidence architecture, inferential roles, figure order escalation, information density, vector schematics, graphical abstracts.
+- references/figure-production.md — figure contract, archetypes, Python/R backends, design system, chart selection, QA. Read for any figure task.
+- references/figure-standards-nature-science.md — journal specifications, caption grammar, statistical display.
+- references/figure-design-and-audit.md — the author's project geometry, colour hierarchy, structure rendering and release audits.
+- references/panel-layout-and-letter-placement.md, figure-colour-audit-contract.md, structural-figures-baker-standard.md, seal-supplementary-figure-standard.md — mandatory project figure gates, including per-panel delivery and the SEAL 28-figure release audit.
+- references/research-and-language.md — research-topic design, hypothesis development, literature synthesis, conceptual revision.
+- references/html-and-data-verification.md — complete HTML revision, data authenticity and calculation checks.
+- references/academic-prompt-zh.md — reusable Chinese task prompt.
+- Project references (seal-project.md, translation-validation.md, dimension-annotation.md) — only for that project.
+- assets/templates/ — manuscript outline, figure contract, caption, response letter, data statements, terminology ledger, cover letter/submission package, innovation canvas, editorial audit, reporting/statistics checklist, figure evidence map.
+
+Project-specific values are dated evidence records, not universal facts; the latest author decision and verified analyses supersede them. Skill use does not authorize external publication or source-data changes.
+
+## 0. Deliverable modes and routing
+
+Separate skill maintenance, research design, manuscript drafting, local polishing, figure production, complete HTML revision, formatting conversion and response letters. Perform the underlying task when it is the requested deliverable; treat a quoted reusable prompt as instruction to incorporate.
+
+| Mode | Input | Output |
+|---|---|---|
+| Complete draft | idea, data, figures, notes, Chinese draft | Full manuscript in target structure, with assumptions and missing-input list |
+| Section draft | section request plus claim/evidence | Complete sections ready to paste |
+| Rebuild | draft with structural problems | New architecture plus rewritten sections |
+| Polish | finished or near-finished prose | Sentence/paragraph revision with change log |
+| Formatting | manuscript plus target journal | Journal-compliant layout, references, statements, legends |
+| Figure set | data plus claim | Publication-grade figures, captions, source-data map |
+| Response | reviewer comments plus revision facts | Point-by-point letter, tracker, change checklist |
+| Pre-submission review | manuscript | Three reviewer reports plus synthesis |
+| Editorial audit | manuscript plus target journal | Fit assessment, readiness state, missing-fact list |
+| Submission package | manuscript plus author facts | Cover letter, title page, declarations, reviewer suggestions, deliverable matrix |
+| Statistics audit | methods/results/legends | P0/P1/P2 issues, ready-to-paste revisions, AUTHOR_INPUT_NEEDED list |
+
+Before a full draft or major rewrite, run the confirmation gate (manuscript-production.md §2): echo the one-sentence argument, paper type, plan, terminology ledger, reader lead question and assumptions; ask at most 2–3 high-leverage questions only if the framing is ambiguous. If the author supplies a complete claim/evidence/boundary, state the argument in one line and proceed.
+
+For a new research project, read research-and-language.md in full, identify the unresolved biological relationship, and develop a central hypothesis with distinguishable predictions. Record search dates and compare with the closest primary studies.
+
+## 1. Preserve the author's scientific intent
+
+- Treat the latest explicit author decision, supplied text and annotations as the editing baseline; older versions provide context only. A changed file is a reason to inspect, not permission to restore.
+- Keep approved titles, abstracts, definitions and names consistent. Change approved text only when requested or when correcting a substantive error; explain the correction separately.
+- Read the full supplied section and all annotations; read adjacent sections when they affect the edit. Say accurately what was read.
+- Interpret 【】 and inline comments as instructions about the preceding sentences; resolve every comment and remove editing instructions from the prose.
+- When the structure is largely satisfactory, preserve it; polish sentences, repair connections, add only evidence-grounded insight.
+- Preserve numbers, units, cohort definitions, thresholds, figure identities and statistical directions. Correct verified discrepancies transparently. Never manufacture experiments, effects, citations, benchmarks or mechanisms.
+- Treat the intended novelty as a scientific argument to develop, not a label to repeat. Distinguish a conceptual proposal, a demonstrated capability and a future opportunity.
+
+## 2. Argument, top-journal standard and genre
+
+Build an internal map: question → unresolved issue → approach → evidence → interpretation → next question. For each paragraph identify its purpose, object/comparison, claim, evidence, inference, and its link to the previous and next paragraphs. Reordering alone does not repair a missing relationship.
+
+Measured targets (median values from the corpus; per 1,000 words for rates):
+
+| Dimension | Research Articles | Reviews | Perspectives |
+|---|---|---|---|
+| Abstract | Nature ~200 words/7–8 sentences; Science ~125/6 | 120–200 words/5–6 sentences | Nature ~185-word preface; Science one-sentence teaser (~11 words) |
+| Sentence | 24–25 words; p90 42–45 | 25 words | 26–27 words |
+| Paragraph | 120–140 words/4–5 sentences | 150–260/6–9 | 200–320, essayistic |
+| First person | 10–13 | 1–2 | ~5 |
+| Hedges | 3–6 | 6 | 5 |
+| Connectives | 4 | 6 | 5 |
+| Not X but Y | <1 | <1 | <1 |
+| Em dash/semicolon | <1 / 3–4 | 1–4 / 1–2 | 1–3 / 1–2 |
+| Numerals | 50–60 | 40–65 | 30–40 |
+
+Qualitative rules: claim-first openings; specific subjects and strong verbs; evidence adjacent to claim; one move per paragraph; calibrated verbs (show/demonstrate/reveal for direct evidence; indicate/suggest/consistent with for inference; may/could/propose for speculation); quantified prose with unit, comparison and denominator; restrained connectives; journal-specific signatures (Nature summary paragraph ≤200 words with "Here we show"; Nature Review preface ≤200 words, <7,000 words, 4 display items; Nature Perspective personal and forward-looking; Science abstract ~125 words; Science Perspective one-sentence teaser; Nature lowercase bold panel letters, Science uppercase).
+
+**Genre architecture.**
+- Research Article: abstract 5–6 moves; introduction funnel; Results subsections as question → design → observation → inference; Discussion 4–6 paragraphs ending on a concrete opportunity.
+- Review: argued thesis, organizing framework, synthesis by mechanism, evidence-quality judgement, specific outlook; one conceptual figure; not author-centred.
+- Perspective: tension → thesis → 3–5 evidenced propositions → serious counterposition → consequences → agenda; personal voice, labelled speculation.
+- Short formats: one claim, minimal context, one decisive comparison, ≤2 display items.
+
+### 2.4 Innovation, broad interest and editorial fit
+
+Classify the primary contribution (phenomenon, mechanism, measurement/capability, resource, theory, clinical/translational) and place it on the contribution ladder (incremental → discriminating → explanatory → enabling → field-changing). Most Nature/Science papers need rung 2–4 in a broad frame; do not claim rung 5 without evidence.
+
+A publishable gap is a scientific unknown, not the absence of your method. State the exact unknown, the competing explanations, the observation that discriminates them, and what resolving the gap changes. Write three sentences: why this, why now, why broad — each answerable with nouns and evidence, not adjectives.
+
+Editorial fit is judged on originality, outstanding scientific importance, interdisciplinary interest, technical soundness and readability. Name the audience beyond the specialty and the concrete change for them. If the fit is weak, say so and propose how to strengthen the contribution or choose a better venue; never inflate significance language.
+
+Detail: editorial-and-submission.md and innovation-and-broad-interest.md.
+
+## 3. Language and writing diagnostics
+
+Define a term at first relevant use through its measurable object or action; then use the established term. Replace unexplained abstraction with the actual comparison or result. Prefer exact verbs and concrete nouns; remove unsupported evaluative adjectives (sophisticated, revolutionary, unprecedented, universal, powerful, highly accurate, comprehensive, robust, seamless, pivotal, crucial, state-of-the-art).
+
+Avoid promotional summaries and generic promises ("provides a foundation", "opens a new paradigm"). Each closing sentence names a capability, inference or consequence. Rewrite formulaic opposition and concession ("not X, but Y", "rather than", "X, but Y", 不是……而是……, 并非……而是……) as direct statements; keep contrast only when two scientific alternatives genuinely compete. Remove defensive framing, generic rigor assurances, self-evaluation and repeated limitation language; state the actual object, comparison, evidence and condition. Preserve substantive controls, negative findings, uncertainty and conditions that determine the conclusion.
+
+Apply the same direct style inside figures: panel titles, legends, direct labels and captions name the measured observation, comparison, count or interval. Avoid defensive or self-limiting boilerplate in figure text; preserve genuine negative results in positive descriptive form (for example "the adjusted 95% interval includes zero", "62 of 84 shifts were negative") while keeping denominators, units, intervals, thresholds and sample hierarchy.
+
+Avoid opaque phrases (for example 高加性读出中仍可识别连通响应, 物理与 AI 保持不同的可观测扇区, 全局软方向是一个真实的中介对象); read the source to find the actual perturbation, response, spatial relationship or mechanism; never invent one to repair a sentence. Avoid conversational instructions, audit language and editorial workflow descriptions inside manuscript paragraphs; keep them in short author notes. Avoid em dashes or hyphens linking independent clauses; standard compound modifiers are acceptable.
+
+Seven diagnostics (detail in writing-diagnostics.md): abstraction stacking; template contrast; connective inflation; evaluative adjectives; defensive/self-limiting prose; list-paragraphs and module catalogues; meta-commentary. Corpus watchlist density is 2–4 per 1,000 words, mostly statistical/technical; more than ~5 per 1,000 or two in one paragraph signals generated-sounding prose. Run the delete-20%, actor, so-what and read-aloud tests.
+
+## 4. Section playbooks (summary)
+
+- **Title**: system/object + capability/action + application/consequence; 8–12 words; searchable, specific, defensible; no grant-style aims or unverified "first".
+- **Abstract**: context/problem → gap → approach → strongest result with number/comparison → consequence → bounded implication. Nature: staged summary paragraph, "Here we show" after sufficient context, ≤200 words. Science: ~125 words. Draft last; every sentence must survive deletion of the others.
+- **Introduction**: field stake → bottleneck → prior work (what it has and has not solved) → remaining gap → present study. Three to five paragraphs; no results in detail; explicit transition from known to this paper.
+- **Results**: evidence ladder (system validation → main result → fair baseline → mechanism/ablation → application/generalization → stress test). Subsection openings state the question; observations with statistics; inference last. Every claim has comparison/ablation/stress-test evidence or is marked for follow-up.
+- **Discussion**: central advance → meaning → rival explanations → relation to closest work → specific limits → now-testable opportunity. Interpret, do not repeat Results; hedge only where needed; limitations name the actual condition.
+- **Conclusion**: contribution → decisive evidence → implication → boundary; no new data.
+- **Methods**: reproducible inputs, design, procedure, outcomes, analysis/statistics, ethics; no "standard conditions", "routine methods" or undefined randomisation.
+- **Review/Perspective**: see genre architecture; argument first, literature as evidence.
+
+Full playbooks, paper-type variants (research, methods, algorithmic, hypothesis, review), journal formats and the complete-manuscript package are in manuscript-production.md.
+
+### 4.1 Main-text discipline and information architecture
+
+Evidence completeness is not main-text completeness. Classify every result before placement: core discovery, necessary support, qualification, robustness, heterogeneity, provenance detail, alternative inference or edge case. Build the shortest sufficient evidence chain; route reassurance, provenance and secondary analyses to Extended Data/Supplementary Information; never hide conclusion-changing or contradictory evidence in SI.
+
+Use the main text for what was found and what it means; captions for what is shown and how to read it; SI for why the conclusion survives deeper scrutiny. Report full statistics once in a defined location. Run the paragraph necessity test and claim-repetition map; every requested addition triggers a deletion check to prevent revision accretion. Respect the display-item and word budget (Nature Article ~2,500 or ~4,300 words with 4–6 modest display items).
+
+Detail: main-text-and-information-architecture.md.
+
+## 5. Scientific claims and statistics
+
+- Distinguish association, model-output response, molecular mechanism and biological causality. Decoder sensitivity identifies a computational effect; functional assays test a biological role.
+- When a project continues an earlier model generation, build a cross-generation comparison register: objective, source population and analysis cohort, model/layer scope, dimensionality reduction and atlas, clustering, visualization, group-level dimensions, compact programs, cross-model/species analysis, translation, annotation, experimental endpoints, statistical validation and delivered artifacts. Compare source counts, anchors and shared objects only when denominators, coordinate systems and evidence status align. Preserve ARI, effect size, KL, AP, recall, odds ratio as separate estimands; do not collapse them into a composite score. Report mapped rank, derived-axis loading and effect change with corrected cohort and background. State what the earlier generation supplies, what the current adds, and which predecessor analyses have not been rebuilt.
+- Do not describe residue identities or domains as intrinsically qualitative; dimensions add quantitative variables learned from sequence context. "Underlying/deeper" refers to the model's numerical representation, not a physical layer below amino acids.
+- Treat raw coordinates as model/layer-specific components; same-numbered coordinates from different models have no assumed biological equivalence.
+- Distinguish raw embedding coordinates, PCA components and sparse-autoencoder features; do not attribute an SAE result to original coordinates.
+- Keep FDR-only counts separate from effect-size-filtered selections. Distinguish unique GO terms from dimension–term associations summed over dimensions.
+- Distinguish annotation call, inferred coverage, recovery of existing annotations, independent predictive accuracy and experimentally established function. Report numerator, denominator, unit and overlap for coverage.
+- Distinguish in-library recovery from held-out testing; a held-out label alone does not ensure independent feature selection, library construction or calibration.
+- Distinguish a decoy-calibrated operating point from an independently measured false-positive rate; state the operating point.
+- Report means with correct dispersion, n, test, correction family and null model; never reuse a P value from a different null.
+- Keep residue indexing and sequence-to-PDB mappings explicit; separate a decoded structural alphabet from a measured conformation.
+- Use "some control comparisons also showed widespread significance" when that is what was observed; such results alone do not quantify the fraction from length/composition.
+- Avoid family specificity, conservation or general applicability beyond the comparison. "Across the 34 families analysed" is stronger and safer than "generally".
+- Trace annotation statistics through reference construction, feature selection, scoring, calibration and evaluation; a column named padj is not proof of term-level correction. Expanding a top-ranked list from a scan with one significant term does not make every link significant.
+- Describe signed sets as dimension identities plus the direction relative to a stated reference; the sign is not an activating/inhibiting biological effect. State whether a quantity is a score, unadjusted test, adjusted result or calibrated probability; check how positive/negative tests are combined.
+- Preserve provenance of selected variables (decoder KL, family dimensions, signed top-effect, all-model); do not substitute a favourable all-dimension result for a variable-specific validation.
+- Separate largest structural displacement, model sensitivity, hinge motion, catalytic contribution, binding and mutational necessity. A candidate near an experimentally studied residue inherits regional context, not that residue's proof. Use fixed site-selection and aggregation rules before claiming recovery of important residues.
+- Apply cohort splitting at every stage: a protein excluded from positive training may still sit in the selection background. Name the evaluation scope.
+
+### 5.1 Statistics and reporting integrity
+
+Define the independent experimental unit for every central claim; separate biological from technical replicates; do not treat cells, fields, reads, wells or model runs as independent samples. Report exact n, error-bar/interval definitions, number of repeated experiments, exact P values, and F/t statistics with degrees of freedom where required. State the comparison, test family, tail and multiple-comparison correction.
+
+For flagship Nature, the Methods statistics section must cover tests, sidedness, independent unit, replicate definitions, pairing/repeated measures, inclusion/exclusion, randomisation/blinding and correction strategy; a Reporting Summary applies to life/behavioural/social/ecology/evolution/environmental fields and covered physical sciences. Audit image integrity (raw files, crop, contrast, pseudocolour, stitching, reuse) and data/code/materials statements.
+
+Use P0/P1/P2 severity; never invent sample sizes, tests, software versions, approvals or accession numbers. Detail: statistics-and-reporting-integrity.md.
+
+## 6. Literature, citations and statements
+
+For simple polishing of supplied text, use its evidence and do not browse unnecessarily. When asked to discuss studies, assess novelty or meet current journal requirements, consult primary literature and official guidance.
+
+- Form targeted questions; prioritise primary papers, author repositories and official guidance over secondary summaries.
+- Verify title, authors, year, publication status and DOI before adding a reference; distinguish preprint from peer-reviewed version.
+- Read the sections that support the statement; report access limitations accurately.
+- Synthesise around a scientific question or methodological distinction, not paper summaries.
+- Explain what the new work adds, complements or makes practical. Avoid "first", "universal", "new class" without a defined search scope.
+- Place manuscript citation markers before sentence punctuation (author preference) unless a platform rule overrides; format references consistently for the venue.
+- Never invent identifiers or convert database coverage into external validation.
+- Verify resource availability (repository, release, licence, checkpoint compatibility) before writing that code or data are public; a local package or intended upload is not a public resource.
+- Data availability, code availability, author contributions, competing interests and ethics statements must be specific, durable and verifiable; never "available upon request" without reason, route, eligibility and metadata. Details in manuscript-production.md §10.
+
+## 7. Deliverables
+
+Unless the request specifies otherwise:
+1. One short Chinese paragraph explaining the revision logic.
+2. The complete English revision in manuscript paragraphs.
+3. A fully corresponding Chinese version in the same paragraph order.
+4. Bold every replaced or added span relative to the author's latest text, including grammar and word choice; keep unchanged text unbolded. A fully rewritten sentence may be bolded in full.
+5. A short prose note for significant scientific corrections, unresolved figure/source issues or editorial choices.
+
+For a final clean version or complete HTML, remove revision bolding unless tracked changes are requested. When only one language is requested, deliver that language. For Chinese academic tasks, write native Chinese paragraphs directly (companion: natsci-writing-zh). Keep checklists and evidence ledgers outside manuscript prose.
+
+Complete-manuscript deliverables additionally include: title page, abstract (and Chinese version when bilingual), main text with headings, methods, verified references, figure legends, extended data/supplementary list, statements, assumptions/missing-input list, and a change log. Output Markdown for review, DOCX for co-authors, LaTeX or HTML when required; keep one source of truth for numbers.
+
+Match evidence strength across languages: candidate = 候选; associated = 相关/关联; predicted = 预测; demonstrated only for the tested capability.
+
+## 8. Files and long-form work
+
+Read the entire original and all annotations; preserve the source unless in-place editing is requested. For Word, create a new version and preserve images, sections, styles, references, fields and review anchors. Keep code outside document text.
+
+Maintain an ordered coverage record for long files; continue through truncated tool output; include captions, tables, footnotes, references, appendices and dynamic scientific text. Review in two complete passes: (1) scientific logic, evidence, paragraph links, consistency; (2) every sentence, terminology, figures, statistics and annotation. For a section task, apply both passes to that section and adjacent context.
+
+When data authenticity or calculations are in scope, follow html-and-data-verification.md: trace claims to sources and project data, inspect producing code, recompute consequential quantities, check units, denominators, uncertainty, null models, multiplicity and train/test separation. Record what was verified; distinguish arithmetic checking from reproducing a result from raw inputs.
+
+Verify that files were created and report what remains unresolved. A completed writing task does not imply experiments or source-data repairs are complete.
+
+## 9. Figures: contract, standards, production, release
+
+Read figure-production.md, figure-craft-and-information-density.md and figure-standards-nature-science.md for any figure task, plus figure-design-and-audit.md and its companion contracts for project figures.
+
+**Figure-level claim and evidence architecture.** Start from one Results-level question and one figure-level claim; state what could overturn it. Give panels distinct inferential roles (setup, representative example, primary quantitative evidence, baseline/control, decomposition, stratification, orthogonal validation, perturbation/stress test, boundary/failure case, mechanistic evidence). Prefer role diversity over metric diversity; a mirror layout of the same metric is one role, not four. Use a chain: establish → compare/control → stress-test/discriminate → broaden → bound. Across figures, each figure should raise the next question rather than repeat “X performs well”.
+
+**9.1 Contract.** Write the figure's one-sentence conclusion, archetype, panel map (each panel one question), evidence hierarchy, statistics, source-data mapping and reviewer risks before coding. Every panel answers a unique question; the hero panel gets the clearest axis and largest area; controls stay quieter.
+
+**9.2 Journal specifications (verify at submission).**
+- Nature: 89 mm single, 183 mm double, 120–136 mm 1.5 column; page depth 247 mm; Helvetica/Arial; text 5–7 pt; panel letters 8 pt bold lowercase a, b, c; line weights 0.25–1 pt; raster 300–600 dpi RGB; vector EPS/PDF/AI preferred; avoid red–green contrast.
+- Science: 55 mm single, 120 mm 1.5, 183 mm double; Helvetica/Arial; 5–7 pt; uppercase bold A, B, C; ≥300 dpi photographs, 600 dpi line art; PDF/EPS/AI.
+- Design at final printed size; never shrink key text below 5 pt. The author's HTML/project overlay uses larger roles (10 pt text, 10.5 pt axis, 11 pt bold panel titles, 11.5 pt structure titles, 12.5 pt panel letters) and must not be mixed with journal print sizes in one deliverable.
+
+**9.3 Panel construction.** One data plot per panel; no inset axes, subplot mosaics, facet grids, nested colour bars or miniature assembled plots inside one panel. Combine several measurements in one coordinate system through shared position/unit/shape/line style/direct labels; otherwise move supporting evidence to caption, source table or a separate panel. Sequence/residue tracks may keep aligned layers only on one positional coordinate. Panel order follows the reader's reasoning: system/design → primary comparison → mechanism/localisation → quantification → robustness/validation. Three-panel complete rows; 3×2 for six; 3×3 (nine analytical panels) default for project composites; five-panel plates are 3+2 centred; 7/8/10/11 mixed rows fail project release.
+
+**9.4 Project release gates** (details and thresholds in the four project figure references):
+- Fixed physical axes grid; square data boxes (0.9–1.1, target 1.0) measured in rendered pixels after typography; equal axes width/height within 0.01 mm; equal-role panel areas within 5%.
+- Complete-boundary gutters 0.38–0.42 × panel width, default 0.40, measured after final ticks/legends and unchanged at save.
+- Panel letters anchor the complete cell (≈0.20 × panel width left, ≈0.20 × panel height above the data box, ≥4 mm above, ≥3 mm from the title); titles single-line, bold, centred; axis titles present on every analytical axes.
+- One evidence track plus nine analytical panels (letters a, then b–j); no detached mini-plots.
+- Semantic colour roles stable across panels; evidence state encoded by fill/shape/hatch/outline; ≤3 chromatic categories plus neutral; no jet/rainbow/hsv; text contrast ≥4.5; no matrix-cell text; colour audit files written.
+- Structure rasters cropped to ink, aspect preserved, ≥85% content extent, internal blank bands <14%, outer margin ≤5%; structure and statistics share residue/state/colour mapping; Baker-standard structural requirements apply.
+- Text-text, text-canvas and text-mark collisions checked for every artist type (scatter, line collections, intervals, bars, identity lines), with per-axes records; legends sized before rendering; no compression of designed gutters after rendering.
+- Every panel has enough evidence: effect, uncertainty, sample distribution, null/control, holdout and transfer shown in distinct panels when available; reject naked axes, isolated mean bars, single points and threshold-free curves when richer evidence exists.
+- State in prose, after each figure group, what was found, which comparison establishes the regularity, what relationship it supports and where interpretation stops. The caption inventories panels; the body explains the science.
+
+**9.5 Caption grammar.** Claim title → panel-by-panel present-tense description → statistics (n, n definition, centre/spread, test, correction) → symbols/colours → source-data/permission line. 100–220 words for research figures, 80–150 for reviews (Nature style ≤300). No numbers in the title line; no method inventory.
+
+**9.6 Per-panel deliverables and supplementary figures.** For SEAL work, read seal-supplementary-figure-standard.md in full before creating or auditing any main or supplementary figure. The panel is the delivery unit: every declared panel is exported as its own editable SVG carrying its own letter, axes, ticks, marks and annotations; the composite must be reproducible from those panel exports. Deliver composite SVG, vector PDF, 600-dpi PNG and JPG, one SVG per panel, one SVG per shared legend or scale bar, the caption, a panel-definition record and an audit record. Automated collision counts are screening only: open every figure at final size and inspect panel by panel, and record the inspection. Labels sit in a margin label stack with leader lines when anchors are close; the row gap must exceed the previous row's x tick labels plus the next row's title band. The SEAL 28-figure release gate requires one regeneration pass with 8 pt ordinary text, 10 pt axis labels and panel letters, 0.4 pt axis/tick strokes, 0.9–1.1 data boxes, zero collisions, 600-dpi PNG, parseable SVG, one-page PDF, current panel SVG links and browser checks at desktop and mobile widths.
+
+## 10. Revision, polishing, formatting and response
+
+- Polishing repairs reasoning before rhythm: check section/paragraph job, claim → evidence → boundary, hourglass, topic sentences, then grammar and register. Change only flagged passages; keep the rest verbatim; if a fix forces structural change, state it and confirm.
+- Section moves, phrasebank by evidence strength, style guardrails and overclaim checks are in revision-and-response.md.
+- Response letters: strategy summary → tracker → point-by-point letter → change checklist → risk flags. Preserve reviewer comments verbatim; map every item to an action and manuscript location; never invent experiments, citations, line numbers or panels; use AUTHOR_INPUT_NEEDED when facts are missing. Disagree narrowly with evidence, never personally; treat misunderstanding as a presentation signal.
+- Pre-submission review: three reviewer reports plus synthesis across originality, scientific importance, interdisciplinary interest, technical soundness and non-specialist readability; flag unsupported or non-assessable claims.
+- Formatting: apply the target journal structure, reference style, statements, figure placement, equation rendering (MathML/TeX) and line numbering without changing scientific meaning; flag discrepancies rather than silently "fixing" numbers or author lists.
+- Submission package and editorial audit: determine stage (initial, revision, accepted-in-principle, proof); verify journal/article-type limits; build the deliverable matrix; draft cover letter, title page, declarations and reviewer suggestions from author-confirmed facts; run the editorial criteria and broad-interest audit; return ready / ready_with_author_checks / blocked. Detail: editorial-and-submission.md; templates in assets/templates/.
+
+## 11. Final quality check
+
+- Every annotation addressed or explicitly identified as blocked.
+- Each analysis states its purpose before its results.
+- Every abstract sentence has a concrete object or defined term; abstract length matches the venue.
+- Claims use calibrated verbs; uncertainty stated once, where it matters; no generic defensive language or promotional adjectives.
+- Numbers carry unit, comparison and denominator; statistics have n, test, correction and effect size.
+- Paragraphs have one move and a topic sentence; no list-paragraphs or module catalogues.
+- Author-approved terminology and adjacent sections agree; terminology ledger enforced.
+- References support their sentence; publication status and DOI verified; style consistent.
+- Figure contract, panels, journal specs, typography, colour roles, gutters, collisions, structure rasters and captions pass the gates above; figure/panel numbering matches text and legends.
+- Complete manuscripts include title page, abstract, main text, methods, references, legends, extended data, statements and change log; missing inputs are listed, not invented.
+- Chinese and English align paragraph by paragraph; bolding represents actual changes.
+- Closing paragraph names a specific scientific consequence, not a promise.
+- Text reads as a scientific argument a biologist can follow without decoding AI jargon.
+- Frontier and novelty claims have a dated search record and verified primary sources.
+- Consequential numerical claims agree with source data, calculations, tables, figures and units.
+- Response package covers every editor/reviewer item with action, location and remaining limitation.
+- Per-panel SVG deliverables exist for every declared panel; composite, PDF, 600-dpi PNG/JPG, caption and audit record agree; SEAL supplementary figures pass the 28-figure release gate.
+- Innovation is classified and positioned; the gap is a scientific unknown; competing explanations have discriminating predictions; why-this/why-now/why-broad are answerable without adjectives.
+- Editorial criteria, broad interest and journal fit are assessed in one sentence each; the cover letter and significance statement match the manuscript's actual claims.
+- Every result has an assigned destination; the shortest sufficient evidence chain is in the main text; SI does not hide conclusion-changing results; revision additions pass the deletion check.
+- Statistics define the independent unit, n, error definition, test, tail, correction and exact values; Reporting Summary, image integrity and data/code/materials statements are complete and consistent.
+- Figure panels have distinct inferential roles; figure order escalates; information density is adequate; the caption contract and journal stage-specific figure requirements are met.
+- The submission package is complete for the recorded stage; missing facts are marked, not invented.
+- Files exist, are the audited versions, and unresolved items are reported.
