@@ -9,7 +9,7 @@ It is built for one job: produce complete manuscripts and complete figure sets a
 
 ## Where it comes from  |  Skill从哪儿来的？
 
-This is not a generic prompt collection. ** I built the rules, section playbooks, figure contracts, statistics checks and revision workflows from my own research projects and long-term conversations with AI coding agents ** — from real manuscripts, figures, reviews and rewrites.  |  NatSci-Writing-skills是作者自己从科研课题、长期与 AI 编程助手的对话、真实稿件/图件/审稿/返修中沉淀出的规则、章节 playbook、图件合同、统计检查和修订流程。
+This is not a generic prompt collection. **I built the rules, section playbooks, figure contracts, statistics checks and revision workflows from my own research projects and long-term conversations with AI coding agents** — from real manuscripts, figures, reviews and rewrites.  |  NatSci-Writing-skills是作者自己从科研课题、长期与 AI 编程助手的对话、真实稿件/图件/审稿/返修中沉淀出的规则、章节 playbook、图件合同、统计检查和修订流程。
 
 It also integrates and adapts the open-source **Nature-skills** project by **Yuan Yizhe (袁一哲)** — https://github.com/Yuan1z0825/nature-skills — under Apache-2.0, with attribution kept in NOTICE.md and LICENSES/.  |  中文：同时整合并改编了袁一哲老师的开源项目 Nature-skills（地址：https://github.com/Yuan1z0825/nature-skills，Apache-2.0），署名保留在 NOTICE.md 与 LICENSES/。
 
@@ -123,7 +123,7 @@ Current version: 1.2.0 (2026-11-23).  |  当前版本 1.2.0（2026-11-23）。
 
 **Author and origin:** Chuanyang Liu; built from the author's own research projects and long-term conversations with AI coding agents.  |  作者与来源：Chuanyang Liu；由作者自己的科研课题和长期与 AI 编程助手的对话完整建立。
 
-**Third-party:** integrates and adapts Nature-skills by Yuan Yizhe (袁一哲), https://github.com/Yuan1z0825/nature-skills, Apache-2.0; adapted portions retain their Apache-2.0 terms. See NOTICE.md and LICENSES/Apache-2.0.txt.  |  第三方：整合并改编袁一哲的 Nature-skills（地址同上，Apache-2.0）；改编部分保留 Apache-2.0 条款，详见 NOTICE.md 与 LICENSES/。
+**Third-party:** integrates and adapts Nature-skills by Yuan Yizhe (袁一哲), https://github.com/Yuan1z0825/nature-skills, Apache-2.0; adapted portions retain their Apache-2.0 terms. See NOTICE.md and LICENSES/Apache-2.0.txt.  |  第三方：整合并改编袁一哲老师的 Nature-skills（地址同上，Apache-2.0）；改编部分保留 Apache-2.0 条款，详见 NOTICE.md 与 LICENSES/。
 
 ## Citation  |  引用
 
