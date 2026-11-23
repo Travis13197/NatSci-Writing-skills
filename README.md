@@ -3,7 +3,7 @@
 **Author:** Chuanyang Liu  |  作者：Chuanyang Liu  
 **Citation:** a related paper is in preparation and will be updated; if you use these skills, please cite it and this repository.  |  引用：相关论文准备中并会更新；使用本 skills 请引用论文与本仓库。
 
-Most writing advice tells you to "be clearer" and "tell a story". That is not enough when a real editor is deciding whether your paper is worth review. This package is the opposite of that advice: a working system of rules, templates, checks and figure code that turns data, figures and rough notes into a manuscript you can actually submit.  |  结合AI Coder，能够使用skills直接把数据、Manuscript推进到可投稿状态。
+Most writing advice tells you to "be clearer" and "tell a story". That is not enough when a real editor is deciding whether your paper is worth review. This package is the opposite of that advice: a working system of rules, templates, checks and figure code that turns data, figures and rough notes into a manuscript you can actually submit.  |  结合AI Coder，能够使用skills直接把数据、Manuscript推进到Nature Science期刊可直接投稿的稿件状态，也会润色、会作图。
 
 It is built for one job: produce complete manuscripts and complete figure sets at Nature/Science standard, then revise, format and defend them.  |  目标只有一个:按照 Nature/Science 标准写出完整论文和整套图件，并能修订、排版、回复审稿。
 
