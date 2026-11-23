@@ -1,5 +1,13 @@
 # NatSci-Writing-skills 更新记录
 
+## 1.2.2 — 2026-11-23
+
+基于镜像世界项目的 Perspective/理论文章升级：新增 nature-perspective-production 与 mirror-world-case-study 参考；新增 Perspective 提纲、编辑范围与修改记录、概念图设计单模板；SKILL 增加编辑保真、Perspective 生产、概念图与终检条款；扩展文风检查器；更新 README/文档/manifest。
+
+## 1.2.1 — 2026-11-23
+
+发表系统升级：新增 AI 使用与披露政策、文献检索与引用诚信、五轮校对、Perspective/洞见写作、Nature 章节技艺参考；扩展审稿/回复与数据/代码/材料指导；新增 AI 披露、文献检索、数据/材料模板；重润色 README；整合独立 skill（insight-led-scientific-perspective、literature-review、grammar-checker、polish、writing-beats）与当前期刊 AI 政策。
+
 ## 1.2.0 — 2026-11-23
 
 包元数据更新：作者署名为 Chuanyang Liu；来源说明为作者自己的科研课题与长期对话经验，并整合袁一哲的 Nature-skills（Apache-2.0）；新增引用元数据；许可改为源码可用、非商业条款，改编部分保留 Apache-2.0。技能内容不变。

@@ -16,3 +16,5 @@ jobs:
         run: python tools/validate_package.py --strict
       - name: Check manifest is current
         run: python tools/build_manifest.py --check
+      - name: Check prose style of READMEs
+        run: python tools/check_prose_style.py README.md README.zh-CN.md --fail-on error

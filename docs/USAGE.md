@@ -14,6 +14,13 @@
 | Editorial audit | manuscript + target journal | fit assessment, readiness state, missing-fact list |
 | Submission package | manuscript + author facts | cover letter, title page, declarations, reviewer suggestions |
 | Statistics audit | methods/results/legends | P0/P1/P2 issues, revised text, AUTHOR_INPUT_NEEDED list |
+| AI integrity audit | AI-assisted manuscript + target journal | disclosure statement, prohibited-use check, citation/number verification |
+| Literature audit | manuscript/review + claims | search record, evidence table, verified references |
+| Proofread | full or section text | five-pass issue log + corrected text |
+| Perspective development | topic/notes/exemplars | intellectual centre, discovery sequence, draft |
+| Perspective production | design docs/author text | six-section manuscript, Box/figures, bilingual package, template |
+| Author-faithful edit | source file + mode | revised copy, change log, residual questions |
+| Theory-paper audit | manuscript + claims | evidence ledger, three-discipline review, figure/format audit |
 | Pre-submission review | manuscript | three reviewer reports + synthesis |
 
 ## 2. What to supply
@@ -93,7 +100,19 @@ Preserve reviewer comments verbatim; classify each item; map to an action and a 
 - "Build the figure set; ask Python or R; give the contract and panel map first."
 - "Draft the response letter; here are the reviewer comments and my revision notes."
 
-## 12. Common failure modes to avoid
+## 12. Perspective and author-fidelity gates
+
+- Perspective: one thesis, six sections, five-level evidence ledger, full paragraphs, no lists inside the argument, boundaries in one paragraph, 2–3 bold single-sentence insights per subsection, conceptual figures with legends at the end.
+- Editing: agree on light polish / author-faithful expansion / structural rewrite / translation / tracked revision; protect the author's claim order and wording; copy the source; keep a change log.
+- Bilingual: identical claims, numbers, citations, certainty and emphasis; natural Chinese and matching academic English.
+
+## 13. AI, literature and proofreading gates
+
+- AI integrity: check the target journal policy; log tools/tasks; remove confidential material; verify every AI-suggested reference/number; draft the required disclosure; confirm a human can defend every sentence.
+- Literature: document databases, strings and dates; screen and extract; synthesize by question/mechanism; verify every DOI/title/author and preprint/retraction status; keep the library.
+- Proofreading: run five passes, then numbers, units, statistics, references, figure/table citations and markup; list residual author questions.
+
+## 14. Common failure modes to avoid
 
 - Asking for prose before the claim and evidence are fixed.
 - Supplying figures without source data or statistics; captions cannot be completed honestly.

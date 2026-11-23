@@ -98,3 +98,23 @@ Per report: overall assessment; who would be interested and why; major strengths
 - Statements: data/code availability, contributions, competing interests, ethics; each specific and durable.
 - Equations and symbols render correctly; tables are editable; supplementary files listed and cited in order.
 - Tracked changes or clean copy as requested; filename and version clear; original preserved.
+
+## 9. Reviewer-side audit and response-package consistency
+
+When reviewing a manuscript as a referee or preparing a response, use a technical-concern taxonomy rather than generic praise/criticism:
+
+- **Design**: sampling, controls, randomisation, blinding, power, confounding, leakage.
+- **Evidence**: unsupported claims, missing comparisons, weak effect size, overgeneralisation, causal overreach.
+- **Statistics**: independent unit, pseudoreplication, multiplicity, model assumptions, exact reporting.
+- **Reproducibility**: missing parameters, software/version, data/code access, protocol detail.
+- **Figures**: evidence density, panel logic, statistical display, image integrity, caption consistency.
+- **Claims and novelty**: priority, distance from prior work, incremental framing, mismatch between title/abstract and evidence.
+- **Ethics and compliance**: consent, approvals, dual use, conflicts, AI disclosure, permissions.
+
+Severity: P0 issues can invalidate a central claim; P1 issues weaken reviewability or credibility; P2 issues are clarity/consistency. Reviewer 1 foregrounds technical soundness; Reviewer 2 originality and importance; Reviewer 3 broad interest and readability; all cover all axes briefly.
+
+**Forensic consistency audit.** Before finalising a review or response, compare numbers, sample sizes, exclusions, randomisation, software versions, figure/panel counts, accession numbers, reference lists and statements across manuscript, figures, legends, supplement, cover letter and response letter. Flag contradictions; do not silently harmonise them. A response letter must not claim a change that the manuscript does not contain; every claimed change has a location or an explicit AUTHOR_INPUT_NEEDED placeholder.
+
+**Response-package consistency.** Strategy summary -> tracker -> letter -> change checklist -> risk flags. Preserve reviewer comments verbatim; assign each an action and manuscript location; keep readiness state (ready, draft with placeholders, needs author input, blocked). For a local edit requested without a decision letter, do not invent editor instructions; for an unclear decision type, ask or mark it.
+
+**Reviewer visibility and role boundaries.** Do not write as the authors in a reviewer report; do not claim editorial decisions; do not invent reviewer identities or line numbers. AI may help language, but reviewers must not upload manuscripts to public LLMs or substitute model output for independent judgement; disclose AI assistance where the journal requires it.

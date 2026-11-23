@@ -1,5 +1,13 @@
 # NatSci-Writing-skills changelog
 
+## 1.2.2 — 2026-11-23
+
+Perspective and theory-manuscript upgrade derived from the mirror-world project: added nature-perspective-production and mirror-world-case-study references; Perspective outline, editing scope/change log and conceptual-figure brief templates; SKILL sections on editing fidelity, Perspective production, conceptual figures and final gates; expanded style checker; updated README/docs/manifest.
+
+## 1.2.1 — 2026-11-23
+
+Publication-system upgrade: added AI-use and disclosure policy, literature search/citation integrity, five-pass proofreading, Perspective/insight writing and Nature section craft references; extended reviewer/response and data/code/materials guidance; added AI-disclosure, literature-search and data/materials templates; re-polished README; integrated content from independent skills (insight-led-scientific-perspective, literature-review, grammar-checker, polish, writing-beats) and current journal AI policies.
+
 ## 1.2.0 — 2026-11-23
 
 Package metadata update: author credited as Chuanyang Liu; provenance states that the system was built from the author's own research projects and long-term conversations and integrates Nature-skills by Yuan Yizhe (Apache-2.0); citation metadata added; license moved to source-available non-commercial terms with Apache-2.0 retained for adapted portions. Skill content unchanged.

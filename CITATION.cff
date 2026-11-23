@@ -5,7 +5,7 @@ abstract: "Two self-contained agent skills (English and Chinese) for complete ma
 authors:
   - family-names: "Liu"
     given-names: "Chuanyang"
-version: "1.2.0"
+version: "1.2.2"
 date-released: "2026-11-23"
 license: "LicenseRef-NatSci-Writing-skills-NC"
 license-url: "https://github.com/YOUR-GITHUB-USERNAME/NatSci-Writing-skills/blob/main/LICENSE"

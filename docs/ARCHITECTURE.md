@@ -32,6 +32,13 @@ The agent then loads only the references needed for the current mode. This keeps
 | Statistics and integrity | references/statistics-and-reporting-integrity.md | independent unit, replication, Nature statistics, Reporting Summary, image/data integrity |
 | Language and taste | references/language-and-taste.md | rhythm, voice, house style, taste diagnostics |
 | Figure craft | references/figure-craft-and-information-density.md | multipanel evidence architecture, figure order, information density, vector schematics |
+| Nature section craft | references/nature-section-craft.md | abstract/Introduction/Results/Discussion moves, claim escalation, audits |
+| Perspective | references/perspective-and-insight.md | intellectual centre, discovery sequence, speculation, formal content |
+| Perspective production | references/nature-perspective-production.md | Nature format, six-section architecture, full paragraphs, evidence hierarchy, conceptual figures, editing modes |
+| Worked theory case | references/mirror-world-case-study.md | mirror-world hypothesis: six sections, Box/figures, mathematical objects, production lessons |
+| Literature and citation | references/literature-search-and-citation.md | search strategy, source hierarchy, screening, synthesis, citation verification |
+| AI integrity | references/ai-use-and-writing-integrity.md | authorship ban, disclosure, permitted/prohibited use, journal policy table |
+| Proofreading | references/proofreading-and-polish.md | five-pass proofreading, sentence polish, grounding/rhythm, consistency |
 | Production | references/manuscript-production.md | complete-manuscript pipeline, section/paper-type playbooks, journal formats, package, statements |
 | Revision | references/revision-and-response.md | polishing, phrasebank, response letters, reviewer simulation |
 | Figure production | references/figure-production.md | contract, archetypes, backends, design system, chart selection, QA |
@@ -41,7 +48,7 @@ The agent then loads only the references needed for the current mode. This keeps
 | Data and HTML | references/html-and-data-verification.md | full-document revision, data authenticity, calculation checks |
 | Project specifics | seal-project.md, translation-validation.md, dimension-annotation.md | SEAL terminology, validation, annotation |
 | Prompt | references/academic-prompt-zh.md | reusable Chinese task prompt |
-| Assets | assets/templates, assets/code | 11 working templates (manuscript, figure, cover letter, innovation canvas, editorial audit, reporting checklist, response, statements) and tested Python/R figure starters |
+| Assets | assets/templates, assets/code | 17 working templates (manuscript, figure, cover letter, innovation canvas, editorial audit, reporting checklist, response, statements, AI disclosure, literature search plan, data/code/materials) and tested Python/R figure starters |
 
 ## 4. Why two language skills instead of one bilingual skill
 
@@ -71,6 +78,7 @@ The SEAL project standards, R50 regression checklist, R50/SEAL per-panel deliver
 - docs/COVERAGE-AUDIT.md records the layer-by-layer audit against sources.
 - tools/validate_package.py checks package structure, frontmatter, skill names, versions, companion links, reference links, absolute paths, stale names, assets and required documents.
 - tools/build_manifest.py regenerates manifest.json with sizes and SHA-256 checksums.
+- tools/check_prose_style.py scans prose for template contrast, defensive/self-limiting language and AI vocabulary.
 - tools/install.py copies skills into a target skills directory and validates the installed copies.
 - CI workflow .github/workflows/validate.yml runs validation on every push and pull request.
 - Releases follow semantic versioning. The system version is in VERSION and CHANGELOG.md; each skill also has its own version and changelog.

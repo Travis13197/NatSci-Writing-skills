@@ -5,7 +5,8 @@
 - [ ] No private data, unpublished manuscripts, reviewer materials or paywalled full text are inside the repository. The package contains guidance and templates only.
 - [ ] Confirm the license choice and update the GitHub URL in CITATION.cff. The package is source-available for non-commercial use under the NatSci-Writing-skills Non-Commercial License; adapted nature-skills portions remain Apache-2.0 and are attributed in NOTICE.md. For commercial use, a separate written license is required.
 - [ ] Check author names, affiliations, contact and citation metadata.
-- [ ] Run python tools/validate_package.py --strict.
+- [ ] Run python tools/validate_package.py --strict
+python tools/check_prose_style.py README.md README.zh-CN.md.
 - [ ] Regenerate manifest.json: python tools/build_manifest.py.
 - [ ] Test install into a temporary directory and run a smoke prompt.
 - [ ] Review the English and Chinese READMEs for consistency.
@@ -23,7 +24,7 @@ Topics: agent-skills, academic-writing, scientific-writing, nature, science, man
 ~~~bash
 git init
 git add .
-git commit -m "NatSci-Writing-skills v1.2.0"
+git commit -m "NatSci-Writing-skills v1.2.2"
 git branch -M main
 git remote add origin https://github.com/<user>/NatSci-Writing-skills.git
 git push -u origin main
@@ -31,10 +32,10 @@ git push -u origin main
 
 Then create a release:
 
-- Tag: v1.2.0
-- Title: NatSci-Writing-skills v1.2.0
-- Attach: NatSci-Writing-skills-v1.2.0.zip (generated from the repository root)
-- Release notes: copy the 1.2.0 section of CHANGELOG.md.
+- Tag: v1.2.2
+- Title: NatSci-Writing-skills v1.2.2
+- Attach: NatSci-Writing-skills-v1.2.2.zip (generated from the repository root)
+- Release notes: copy the 1.2.2 section of CHANGELOG.md.
 
 ## 4. Post-publish checks
 

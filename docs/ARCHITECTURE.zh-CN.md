@@ -32,6 +32,13 @@ agent 先读 SKILL.md。SKILL.md 是操作手册而非百科：
 | 统计与诚信 | references/statistics-and-reporting-integrity-zh.md | 独立单位、重复、Nature 统计、Reporting Summary、图像/数据诚信 |
 | 语言与品味 | references/language-and-taste-zh.md | 节奏、声音、house style、品味诊断 |
 | 图件技艺 | references/figure-craft-and-information-density-zh.md | 多面板证据架构、图序、信息密度、矢量示意图 |
+| Nature 章节技艺 | references/nature-section-craft-zh.md | 摘要/引言/结果/讨论动作、断言升级、审核 |
+| Perspective | references/perspective-and-insight-zh.md | 智识中心、发现序列、推测、形式内容 |
+| Perspective 生产 | references/nature-perspective-production-zh.md | Nature 格式、六节结构、整段正文、证据层级、概念图、编辑模式 |
+| 理论文章案例 | references/mirror-world-case-study-zh.md | 镜像世界假说：六节、Box/图、数学对象、生产经验 |
+| 文献与引用 | references/literature-search-and-citation-zh.md | 检索策略、来源层级、筛选、综合、引用核对 |
+| AI 诚信 | references/ai-use-and-writing-integrity-zh.md | 作者禁令、披露、允许/禁止用途、期刊政策表 |
+| 校对 | references/proofreading-and-polish-zh.md | 五轮校对、句子润色、概念落地/节奏、一致性 |
 | 生产 | references/manuscript-production.md | 完整论文流水线、章节/论文类型 playbook、期刊格式、稿件包、声明 |
 | 修订 | references/revision-and-response.md | 润色、句式库、审稿回复、审稿模拟 |
 | 图件生产 | references/figure-production.md | 图件合同、原型、后端、设计系统、图型选择、QA |
@@ -41,7 +48,7 @@ agent 先读 SKILL.md。SKILL.md 是操作手册而非百科：
 | 数据与 HTML | references/html-and-data-verification.md | 全文修订、数据真实性、计算核验 |
 | 专题 | seal-project.md、translation-validation.md、dimension-annotation.md | SEAL 术语、回译、注释 |
 | 提示词 | references/academic-prompt-zh.md | 可复用中文任务提示词 |
-| 资产 | assets/templates、assets/code | 11 个工作模板（论文、图件、cover letter、创新画布、编辑审核、报告检查、回复、声明）与已测试的 Python/R 图件脚本 |
+| 资产 | assets/templates、assets/code | 17 个工作模板（论文、图件、cover letter、创新画布、编辑审核、报告检查、回复、声明、AI 披露、文献检索、数据/材料）与已测试的 Python/R 图件脚本 |
 
 ## 四、为什么是两个语言技能
 
@@ -71,6 +78,7 @@ SEAL 项目规范、R50 回归清单、逐 panel 交付和项目颜色契约是�
 - docs/COVERAGE-AUDIT.md 记录逐层来源审计。
 - tools/validate_package.py：检查结构、frontmatter、技能名、版本、companion、参考链接、绝对路径、旧名称、资产和必要文档。
 - tools/build_manifest.py：生成带大小和 SHA-256 的 manifest.json。
+- tools/check_prose_style.py：扫描模板对立、防御性/自限性表达和高频 AI 词。
 - tools/install.py：把技能复制到目标 skills 目录并校验。
 - CI 工作流 .github/workflows/validate.yml 在每次 push/PR 时校验。
 - 版本遵循语义化版本；系统版本在 VERSION 与 CHANGELOG.md，技能各自也有版本和 changelog。

@@ -134,3 +134,80 @@ Apply to every paragraph that feels generated.
 - The Discussion's final sentence names a measurement or capability, not a hope.
 - Reading the topic sentences alone reproduces the paper's argument.
 - The abstract contains no sentence that could be moved to another paper unchanged.
+
+## 3A. Defensive, self-limiting and template-contrast language (zero tolerance)
+
+These patterns are banned from manuscript prose, READMEs, cover letters and figure text. They make the writer sound uncertain, evasive or machine-generated. State the claim directly; if a contrast is real, write two affirmative sentences.
+
+### A. Template contrast (the strongest AI tell)
+
+| Banned pattern | Example | Rewrite |
+|---|---|---|
+| not X but Y | "The gain is not from scale but from data quality." | "Data quality produces the gain; scale contributes little." |
+| not only X but also Y | "The model is not only accurate but also fast." | "The model reaches 0.91 accuracy and runs in 40 s." |
+| not just X, it is Y | "This is not just a benchmark; it is a new evaluation paradigm." | "The benchmark measures held-out family accuracy." |
+| rather than | "We measure calibration rather than accuracy." | "We measure calibration. Accuracy appears in Extended Data Fig. 2." |
+| far from X, Y | "Far from settled, the mechanism remains unclear." | "The mechanism remains unresolved." |
+| it is not that X; it is that Y | "It is not that the model fails; it is that the data leak." | "The data leak explains the apparent gain." |
+| X, not Y (comma negation) | "The result reflects biology, not batch effects." | "The result persists after batch correction." |
+
+Chinese equivalents: 不是……而是……；并非……而是……；不是……，是……；不仅……而且……；不只是……更是……；与其说……不如说……；看似……实则……；表面上……实际上……；所谓……并不是……；X，而不是 Y；X，不 Y。Rewrite as two affirmative statements.
+
+### B. Defensive and self-limiting phrases
+
+Delete these unless a specific condition requires a precise limitation. When a limitation matters, state the condition, the scope and the consequence in one sentence.
+
+- it is important/worth/crucial/necessary to note/mention/emphasize
+- it should be noted; it must be acknowledged; it cannot be overstated
+- to some extent; to a certain extent; in some sense; arguably; presumably; seemingly
+- further research/work/studies is/are needed/required/warranted
+- the findings/results should be interpreted with caution
+- based on the available information/data/sources
+- this does not by itself establish/prove/imply
+- while the data/evidence/sample are limited
+- may potentially; could possibly; might possibly; may vary
+- 值得注意的是；需要指出的是；需要强调的是；必须承认；不可否认；毋庸置疑；毋庸讳言；众所周知；诚然；固然
+- 在一定程度上；在某种意义上；某种意义上；或许；也许；有望；尚需；有待；仅供参考；不成熟；浅析；抛砖引玉；难免；限于篇幅；不再赘述；以期；试图；旨在
+- 本研究的不足之处；由于条件限制；有待进一步研究；希望本文能够；仅供参考
+
+Replace with the measured condition: "In the 34 held-out families, ..." / "The single-centre cohort limits generalisation to ...". Then state what follows.
+
+### C. AI vocabulary and density
+
+Tier 1 (avoid by default): delve, underscore, intricate/intricacies, realm, tapestry, testament, nuanced, multifaceted, meticulous, commendable, garner, boast, leverage, robust, pivotal, crucial, vital, foster, navigate (figurative), landscape (figurative), showcase, underpin, notably, comprehensive, seamless, holistic, paradigm, transformative, groundbreaking, unprecedented, state-of-the-art, cutting-edge.
+Tier 2 (use only when the technical meaning is exact): significant (with a test), substantial (with a magnitude), robust (with the perturbation it resists), comprehensive (with its scope), novel (with the specific new relation).
+Chinese: 赋能、助力、闭环、抓手、生态、范式、图景、底层逻辑、组合拳、破局、重塑、颠覆、革命性、里程碑、新篇章、注入新动能、按下加速键、提供新思路、奠定基础、开辟新方向、具有广阔前景、具有重要意义、发挥关键作用、至关重要、全面、深度、高度、系统性地、有效地、显著地（无检验时）。
+
+Density: more than five watchlist hits per 1,000 words, or two in one paragraph, signals generated prose. Most legitimate uses are statistical or technical.
+
+### D. Structural tells
+
+- Rule of three: three adjectives, three parallel clauses or three examples used as a default rhythm. Keep the informative item; cut the other two.
+- Section summaries and outline-like endings: "In summary", "In conclusion", "Overall", "Taken together"; Chinese 首先/其次/最后、总而言之、综上所述、由此可见、不难看出、总的来说、总之.
+- Didactic disclaimers and meta-commentary: "It is worth noting that this figure shows ...", "In this section, we will ...", "This paper aims to ...".
+- Information repetition: "in other words", "that is to say"; Chinese 换句话说、也就是说.
+- Symbol inflation: "witnessed", "carries", "marks", "is a microcosm of"; Chinese 见证了、承载着、彰显了、标志着、意味着.
+- Overuse of em dashes and definition-style colons; keep punctuation plain.
+- Avoidance of simple "is/are": do not turn every sentence into "serves as", "represents", "constitutes".
+- Emoji-decorated headings, canned lists and placeholder text in serious prose.
+
+### E. Rewrite protocol
+
+1. Find the sentence that carries the actual claim.
+2. Delete the negation setup, disclaimer or contrast frame.
+3. State the claim with its object, comparison, number or condition.
+4. If two alternatives genuinely compete, write two affirmative sentences and let the evidence separate them.
+5. Read the paragraph aloud; if the only rhetorical energy came from the banned frame, rewrite the science.
+6. Run the checker: python tools/check_prose_style.py <file>. ERROR hits are must-fix.
+
+### F. Overcorrection is also a tell
+
+Do not scrub the text into telegraphic fragments, remove every qualification, or replace precise hedges with false certainty. Fix robotic prose with specificity: the condition, the comparison, the number, the mechanism. A precise "in the 34 held-out families" is better than either "generally" or a stack of disclaimers.
+
+### G. Sources consulted (November 2026)
+
+- Wikipedia, Signs of AI writing: https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing
+- AI Smells field guide (AI-Smells-Agents-Avoid): https://github.com/williamsmithedward/pyvbaanalysis/blob/main/docs/AI-Smells-Agents-Avoid.md
+- Chinese AI cues (zh-cues): https://github.com/prism-shadow/penguin-harness/blob/main/plugins/humanizer/skills/humanizer/reference/zh-cues.md
+- Editage, AIGC style words: https://www.editage.cn/sci-writing/6791/
+- CASS, 智能写作的"AI味"问题: http://ling.cass.cn/news/xuejie/202607/t20260703_6057568.html

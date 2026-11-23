@@ -12,7 +12,7 @@ description: >-
   editorial fit, statistics and reporting integrity, information architecture and
   end-to-end production workflows measured from 800+ Nature/Science papers.
 metadata:
-  version: "1.2.0"
+  version: "1.2.2"
   updated: "2026-11-23"
   author: "Chuanyang Liu"
   system: "NatSci-Writing-skills"
@@ -43,6 +43,13 @@ Resources:
 - references/main-text-and-information-architecture.md — result classification, shortest evidence chain, main-text/caption/SI split, revision-accretion control, claim repetition, display budgets.
 - references/statistics-and-reporting-integrity.md — independent unit and replication, Nature statistical requirements, figure statistics, image integrity, data/code/materials reporting, severity labels.
 - references/language-and-taste.md — prose rhythm, voice, house style, taste diagnostics, model shapes, Chinese-specific checks.
+- references/ai-use-and-writing-integrity.md — AI authorship ban, disclosure, permitted/prohibited uses, confidentiality, AI-tone control, audit.
+- references/literature-search-and-citation.md — search strategy, source hierarchy, screening, evidence synthesis, citation verification and reference management.
+- references/proofreading-and-polish.md — five-pass proofreading, sentence polish, grounding/rhythm, number/reference consistency.
+- references/perspective-and-insight.md — Perspective intellectual centre, sequence of discoveries, speculation and accountability, formal content, audit.
+- references/nature-section-craft.md — Nature abstract/Introduction/Results/Discussion move sequences, claim escalation and section audits.
+- references/nature-perspective-production.md — Nature Perspective/theory-paper production: format, six-section architecture, full-paragraph rule, evidence hierarchy, conceptual figures, bilingual workflow, editing modes, three-discipline review.
+- references/mirror-world-case-study.md — worked case: mirror-world hypothesis Perspective, six sections, Box/figures, mathematical objects, production lessons and reusable checklist.
 - references/figure-craft-and-information-density.md — multi-panel evidence architecture, inferential roles, figure order escalation, information density, vector schematics, graphical abstracts.
 - references/figure-production.md — figure contract, archetypes, Python/R backends, design system, chart selection, QA. Read for any figure task.
 - references/figure-standards-nature-science.md — journal specifications, caption grammar, statistical display.
@@ -52,7 +59,7 @@ Resources:
 - references/html-and-data-verification.md — complete HTML revision, data authenticity and calculation checks.
 - references/academic-prompt-zh.md — reusable Chinese task prompt.
 - Project references (seal-project.md, translation-validation.md, dimension-annotation.md) — only for that project.
-- assets/templates/ — manuscript outline, figure contract, caption, response letter, data statements, terminology ledger, cover letter/submission package, innovation canvas, editorial audit, reporting/statistics checklist, figure evidence map.
+- assets/templates/ — manuscript outline, figure contract, caption, response letter, data statements, terminology ledger, cover letter/submission package, innovation canvas, editorial audit, reporting/statistics checklist, figure evidence map, AI-disclosure record, literature-search plan, data/code/materials checklist, Perspective outline (perspective-manuscript-outline.md), editing-scope/change log (editing-scope-and-change-log.md), conceptual-figure brief (conceptual-figure-brief.md).
 
 Project-specific values are dated evidence records, not universal facts; the latest author decision and verified analyses supersede them. Skill use does not authorize external publication or source-data changes.
 
@@ -136,6 +143,20 @@ Avoid opaque phrases (for example 高加性读出中仍可识别连通响应, �
 
 Seven diagnostics (detail in writing-diagnostics.md): abstraction stacking; template contrast; connective inflation; evaluative adjectives; defensive/self-limiting prose; list-paragraphs and module catalogues; meta-commentary. Corpus watchlist density is 2–4 per 1,000 words, mostly statistical/technical; more than ~5 per 1,000 or two in one paragraph signals generated-sounding prose. Run the delete-20%, actor, so-what and read-aloud tests.
 
+**Zero-tolerance patterns.** Do not use template contrast ("not X but Y", "not only X but also Y", "not just X, it is Y", "rather than", "far from"), defensive disclaimers ("it is important to note", "to some extent", "further research is needed", "the findings should be interpreted with caution"), self-limiting framing, outline-like transitions ("In summary", "In conclusion", "Overall"), or their Chinese equivalents (不是……而是……, 并非……而是……, 不仅……而且……, 值得注意的是, 在一定程度上, 有待进一步研究, 综上所述). State claims affirmatively. When two explanations genuinely compete, write two affirmative sentences and let the discriminating evidence separate them. The same ban applies to READMEs, cover letters, figure text and author notes that will be read by others. Check deliverables with python tools/check_prose_style.py; ERROR hits are must-fix. Full pattern tables, rewrites, structural tells and sources: writing-diagnostics.md section 3A.
+
+### 3.1 AI assistance boundary
+
+AI tools may help with language editing, structure, literature triage, formatting, code and figure layout, but AI cannot be an author and authors remain fully responsible. Disclose AI use where the target journal requires it; never upload unpublished, confidential, peer-review or patient material to public models; never use AI to generate data, research images, references, statistics or approvals. Treat AI-suggested references as unverified leads and verify every citation and number. The final text must still read as the authors' argument: specific, evidence-linked and free of AI-tone clusters. Policy table, disclosure template and audit: ai-use-and-writing-integrity.md; record template in assets/templates/ai-disclosure.md.
+
+### 3.2 Proofreading and final language pass
+
+Run the five passes in proofreading-and-polish.md: spelling/terms; grammar; inappropriate words; awkward expression; academic style/consistency. Then check grounding, paragraph rhythm, numbers/units, citations and markup. Preserve correct technical terms and the author's voice; do not manufacture pedantic edits.
+
+### 3.3 Editing modes and author-text fidelity
+
+Agree on the mode before touching a manuscript: light polish, author-faithful expansion, structural rewrite, translation, tracked revision or audit. Light polish preserves claim order, scope and wording and adds no claims, experiments or methods. Author-faithful expansion keeps the author's terms and order, adding explanation only where marked. Tracked revision copies the source first and edits the copy with tracked changes and yellow highlights; the source file stays untouched. For every mode, keep a change log, list residual questions and run the fidelity checks in assets/templates/editing-scope-and-change-log.md. Preserve theoretical status: a proposed comparison stays a proposal; a model-derived relation stays distinct from an observed result.
+
 ## 4. Section playbooks (summary)
 
 - **Title**: system/object + capability/action + application/consequence; 8–12 words; searchable, specific, defensible; no grant-style aims or unverified "first".
@@ -148,6 +169,18 @@ Seven diagnostics (detail in writing-diagnostics.md): abstraction stacking; temp
 - **Review/Perspective**: see genre architecture; argument first, literature as evidence.
 
 Full playbooks, paper-type variants (research, methods, algorithmic, hypothesis, review), journal formats and the complete-manuscript package are in manuscript-production.md.
+
+### 4.2 Nature section craft
+
+The four core sections are different compressions of one claim. Abstract: shortest claim-evidence-implication chain, one main discovery, no method inventory. Introduction: converge on the exact unknown, not the absence of your method; let the answer emerge after the question is motivated. Results: escalating evidence chain, one new inference per subsection, robustness visible where it bounds the claim. Discussion: synthesis against rival explanations and specific boundaries, ending on a concrete opportunity. Use the reverse outline, claim ladder, claim-location map and deletion tests in nature-section-craft.md.
+
+### 4.3 Perspective and conceptual writing
+
+A Perspective must change how the reader thinks. State one private editorial sentence, find the intellectual centre in a concrete tension, and design the argument as a sequence of discoveries rather than a topic tour. Mark established facts, interpretations, hypotheses and proposed experiments locally; use mathematics, analogies and speculation only where they do explanatory work. Detail: perspective-and-insight.md.
+
+### 4.4 Perspective production and theory manuscripts
+
+A full Perspective needs a production architecture, not only an insight. Use nature-perspective-production.md for the Nature format, the six-section archetype (tension, definitions, conceptual move, method, return, horizon), the evidence hierarchy, the full-paragraph rule, conceptual figure design, bilingual workflow, editing modes and the three-discipline review. Manuscript prose uses connected paragraphs; bullet lists stay out of the argument. Bold two or three single-sentence insights per subsection where the journal permits. Put boundaries in one dedicated paragraph, not in every paragraph. The mirror-world case study in mirror-world-case-study.md shows a worked six-section Perspective with a Box, three conceptual figures, mathematical objects and production lessons.
 
 ### 4.1 Main-text discipline and information architecture
 
@@ -199,6 +232,10 @@ For simple polishing of supplied text, use its evidence and do not browse unnece
 - Never invent identifiers or convert database coverage into external validation.
 - Verify resource availability (repository, release, licence, checkpoint compatibility) before writing that code or data are public; a local package or intended upload is not a public resource.
 - Data availability, code availability, author contributions, competing interests and ethics statements must be specific, durable and verifiable; never "available upon request" without reason, route, eligibility and metadata. Details in manuscript-production.md §10.
+
+### 6.1 Literature search, synthesis and citation integrity
+
+Search to answer a question, not to accumulate references. Use a source hierarchy (primary research > systematic reviews/guidelines > reviews > preprints), at least three complementary databases when comprehensiveness matters, and a documented search/screening record. Synthesise by question, mechanism or assumption, not paper by paper. Verify every DOI/title/author, distinguish preprint from peer-reviewed and check retractions; cite where the claim is made and within the journal's reference budget. Detail: literature-search-and-citation.md; planning template in assets/templates/literature-search-plan.md.
 
 ## 7. Deliverables
 
@@ -253,6 +290,8 @@ Read figure-production.md, figure-craft-and-information-density.md and figure-st
 
 **9.5 Caption grammar.** Claim title → panel-by-panel present-tense description → statistics (n, n definition, centre/spread, test, correction) → symbols/colours → source-data/permission line. 100–220 words for research figures, 80–150 for reviews (Nature style ≤300). No numbers in the title line; no method inventory.
 
+**9.7 Conceptual figures for Perspectives and theory papers.** Design one integrated composition per figure, not a collage of unrelated panels. Use a pure white background, flat vector-like artwork, no gradients/shadows/3D, a limited colour-blind-aware palette, at least 75% diagram area, fewer than about 45 words, lowercase panel letters and a "conceptual; no measured results" footer where appropriate. State the figure-level claim, panel roles, exact text inventory and scientific constraints before generating or drawing; check every label, equation, arrow and disclaimer. Detail: nature-perspective-production.md; brief template: assets/templates/conceptual-figure-brief.md.
+
 **9.6 Per-panel deliverables and supplementary figures.** For SEAL work, read seal-supplementary-figure-standard.md in full before creating or auditing any main or supplementary figure. The panel is the delivery unit: every declared panel is exported as its own editable SVG carrying its own letter, axes, ticks, marks and annotations; the composite must be reproducible from those panel exports. Deliver composite SVG, vector PDF, 600-dpi PNG and JPG, one SVG per panel, one SVG per shared legend or scale bar, the caption, a panel-definition record and an audit record. Automated collision counts are screening only: open every figure at final size and inspect panel by panel, and record the inspection. Labels sit in a margin label stack with leader lines when anchors are close; the row gap must exceed the previous row's x tick labels plus the next row's title band. The SEAL 28-figure release gate requires one regeneration pass with 8 pt ordinary text, 10 pt axis labels and panel letters, 0.4 pt axis/tick strokes, 0.9–1.1 data boxes, zero collisions, 600-dpi PNG, parseable SVG, one-page PDF, current panel SVG links and browser checks at desktop and mobile widths.
 
 ## 10. Revision, polishing, formatting and response
@@ -263,6 +302,9 @@ Read figure-production.md, figure-craft-and-information-density.md and figure-st
 - Pre-submission review: three reviewer reports plus synthesis across originality, scientific importance, interdisciplinary interest, technical soundness and non-specialist readability; flag unsupported or non-assessable claims.
 - Formatting: apply the target journal structure, reference style, statements, figure placement, equation rendering (MathML/TeX) and line numbering without changing scientific meaning; flag discrepancies rather than silently "fixing" numbers or author lists.
 - Submission package and editorial audit: determine stage (initial, revision, accepted-in-principle, proof); verify journal/article-type limits; build the deliverable matrix; draft cover letter, title page, declarations and reviewer suggestions from author-confirmed facts; run the editorial criteria and broad-interest audit; return ready / ready_with_author_checks / blocked. Detail: editorial-and-submission.md; templates in assets/templates/.
+- Editing fidelity: record the mode, protect the author's claim order and wording, keep the source unchanged, use tracked changes/yellow highlights on a copy, and return a change log plus residual questions.
+- Proofreading: run the five passes, then verify numbers, units, statistics, references, figure/table citations and markup; list residual author questions instead of guessing.
+- AI integrity: check the journal policy, log AI-assisted tasks, remove confidential material, verify AI-suggested references/numbers, draft the required disclosure and confirm the final text is human-defensible.
 
 ## 11. Final quality check
 
@@ -278,6 +320,9 @@ Read figure-production.md, figure-craft-and-information-density.md and figure-st
 - Complete manuscripts include title page, abstract, main text, methods, references, legends, extended data, statements and change log; missing inputs are listed, not invented.
 - Chinese and English align paragraph by paragraph; bolding represents actual changes.
 - Closing paragraph names a specific scientific consequence, not a promise.
+- Zero-tolerance style ban passes: no template contrast ("not X but Y"), defensive disclaimers, self-limiting framing, outline-like transitions or their Chinese equivalents; the prose style checker reports no ERROR hits.
+- Perspective/theory package: one thesis, six-section logic, five-level evidence ledger, full paragraphs, no lists in the argument, boundaries in one paragraph, 2–3 bold single-sentence insights per subsection, conceptual figures with legends at the end, references before periods and placeholder fields marked.
+- Bilingual parity: identical claims, numbers, citations, certainty and emphasis; natural Chinese prose and matching academic English.
 - Text reads as a scientific argument a biologist can follow without decoding AI jargon.
 - Frontier and novelty claims have a dated search record and verified primary sources.
 - Consequential numerical claims agree with source data, calculations, tables, figures and units.
@@ -289,4 +334,9 @@ Read figure-production.md, figure-craft-and-information-density.md and figure-st
 - Statistics define the independent unit, n, error definition, test, tail, correction and exact values; Reporting Summary, image integrity and data/code/materials statements are complete and consistent.
 - Figure panels have distinct inferential roles; figure order escalates; information density is adequate; the caption contract and journal stage-specific figure requirements are met.
 - The submission package is complete for the recorded stage; missing facts are marked, not invented.
+- AI use follows the target-journal policy: no AI authorship, no fabrication, no confidential uploads, disclosed where required, every AI-suggested citation/number verified.
+- Literature search and citations are documented and verified; synthesis is by question/mechanism; preprints/retractions handled.
+- A five-pass proofread is complete; numbers, units, statistics, references, figure/table citations and markup are consistent.
+- Section craft passes the abstract hidden-names test, Introduction reverse outline, Results claim ladder and Discussion synthesis audit.
+- Perspective work has one intellectual centre, a discovery sequence, marked evidence status and a concrete ending.
 - Files exist, are the audited versions, and unresolved items are reported.

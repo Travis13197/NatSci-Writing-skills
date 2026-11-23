@@ -150,3 +150,19 @@ Status: pass / AUTHOR_INPUT_NEEDED / not applicable with reason / blocked.
 - Are data/code/materials statements real, durable and consistent?
 - Is the Reporting Summary complete and consistent with the manuscript?
 - Are missing facts labelled rather than invented?
+
+## 11. Data, code and materials: mandatory deposition and access
+
+For flagship Nature and most Nature Portfolio journals:
+
+- Every original research Article needs a headed Data Availability statement; place it with Methods/end-of-Methods per the current sequence.
+- Map primary and reused datasets to repositories, accession numbers or exact Source Data/Supplementary files; cite deposited datasets in the reference list.
+- Use community repositories for sequences, structures/EM maps, gene expression, proteomics, crystallography, and field-specific data; personal sites, mutable cloud folders and unarchived GitHub branches are not durable records.
+- Code central to the claims needs a separate Code Availability statement, reviewer access, a versioned DOI-minting archive and a licence; state restrictions precisely.
+- Materials: persistent identifiers (RRIDs) for key antibodies, cell lines and organisms; authentication, source and distribution restrictions; deposit protocols and cite the DOI.
+- Controlled, clinical or third-party data: state why access is restricted, the responsible committee/route, eligibility, application procedure, expected timeframe, data-use agreement and what metadata remain public. "Undecided" is not a sharing plan.
+- Check mandatory deposition gates and structure validation files before submission; verify accessions resolve.
+
+Reporting guidelines: use the study-type standard where applicable (CONSORT for randomised trials, STROBE for observational studies, PRISMA for systematic reviews, ARRIVE for animal research, field-specific standards). The Reporting Summary must agree with Methods, Results, legends and Source Data.
+
+**Data-integrity audit**: every claim-critical dataset has a durable route; every accession resolves; no "available on request" without reason/route/eligibility/metadata; code can be run by a reviewer; materials requests have a named route; statements are consistent across files.
