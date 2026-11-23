@@ -5,19 +5,19 @@
 
 Most writing advice tells you to "be clearer" and "tell a story". That is not enough when a real editor is deciding whether your paper is worth review. This package is the opposite of that advice: a working system of rules, templates, checks and figure code that turns data, figures and rough notes into a manuscript you can actually submit.  |  结合AI Coder，能够使用skills直接把数据、Manuscript推进到Nature Science期刊可直接投稿的稿件状态，也会润色、会作图。
 
-It is built for one job: produce complete manuscripts and complete figure sets at Nature/Science standard, then revise, format and defend them.  |  目标只有一个:按照 Nature/Science 标准写出完整论文和整套图件，并能修订、排版、回复审稿。
+It is built for one job: produce complete manuscripts and complete figure sets at Nature/Science standard, then revise, format and defend them.  |  按照 Nature/Science 标准写出完整论文和整套图件，并能修订、排版、回复审稿。
 
 ## Where it comes from  |  它从哪里来
 
-This is not a generic prompt collection. I built the rules, section playbooks, figure contracts, statistics checks and revision workflows from my own research projects and long-term conversations with AI coding agents — from real manuscripts, figures, reviews and rewrites.  |  中文：不是通用提示词合集，而是从作者自己的科研课题、长期与 AI 编程助手的对话、真实稿件/图件/审稿/返修中沉淀出的规则、章节 playbook、图件合同、统计检查和修订流程。
+This is not a generic prompt collection. I built the rules, section playbooks, figure contracts, statistics checks and revision workflows from my own research projects and long-term conversations with AI coding agents — from real manuscripts, figures, reviews and rewrites.  |  NatSci-Writing-skills是作者自己从科研课题、长期与 AI 编程助手的对话、真实稿件/图件/审稿/返修中沉淀出的规则、章节 playbook、图件合同、统计检查和修订流程。
 
-It also integrates and adapts the open-source **Nature-skills** project by **Yuan Yizhe (袁一哲)** — https://github.com/Yuan1z0825/nature-skills — under Apache-2.0, with attribution kept in NOTICE.md and LICENSES/.  |  中文：同时整合并改编了袁一哲的开源项目 Nature-skills（地址：https://github.com/Yuan1z0825/nature-skills，Apache-2.0），署名保留在 NOTICE.md 与 LICENSES/。
+It also integrates and adapts the open-source **Nature-skills** project by **Yuan Yizhe (袁一哲)** — https://github.com/Yuan1z0825/nature-skills — under Apache-2.0, with attribution kept in NOTICE.md and LICENSES/.  |  中文：同时整合并改编了袁一哲老师的开源项目 Nature-skills（地址：https://github.com/Yuan1z0825/nature-skills，Apache-2.0），署名保留在 NOTICE.md 与 LICENSES/。
 
 ## What this is  |  这是什么
 
 Two self-contained agent skills, one English and one Chinese. Each contains a SKILL.md operating manual, a reference library, working templates and tested Python/R figure starters.  |  中英文各一个自包含技能，每个都带操作手册、参考库、模板和已测试的绘图脚本。
 
-No absolute paths. No network calls. No external corpus needed at run time. Copy the folder, load SKILL.md, and work.  |  没有绝对路径、不联网、运行时不依赖外部语料；直接复制文件夹、加载 SKILL.md 即可使用。
+No absolute paths. No network calls. No external corpus needed at run time. Copy the folder, load SKILL.md, and work.  |  不需联网、运行时不依赖外部语料；直接复制文件夹、加载 SKILL.md 即可使用。
 
 | Skill | Language | Version | Folder | 中文说明 |
 |---|---|---|---|---|
@@ -39,17 +39,17 @@ No absolute paths. No network calls. No external corpus needed at run time. Copy
 
 Top-journal writing fails in three places: the argument is thin, the evidence is badly placed, or the prose and figures do not let a busy reader see why it matters.  |  解决顶刊写作通常出现三种问题：论证单薄、放错位置，以及 **文字和图让读者无法直接看出重要性。**
 
-So the system enforces gates. Before drafting: innovation canvas and editorial fit. During drafting: main-text discipline and evidence chains. Before submission: statistics, reporting integrity and figure audits. After review: point-by-point response and claim calibration.  |  因此系统设置流程：写作前查创新与编辑契合；写作中控制正文纪律与证据链；投稿前查统计、报告诚信和图件；返修时做逐点回复和断言校准。
+So the system enforces gates. Before drafting: innovation canvas and editorial fit. During drafting: main-text discipline and evidence chains. Before submission: statistics, reporting integrity and figure audits. After review: point-by-point response and claim calibration.  |  因此设置了一个具体流程：写作前查创新与编辑契合；写作中控制正文纪律与证据链；投稿前查统计、报告诚信和图件；返修时做逐点回复和断言校准。
 
 None of this guarantees acceptance. It removes the avoidable reasons a good paper gets rejected or delayed. 
 
 ## Quality bar  |  质量门槛
 
-- **Argument:** one sentence, one claim, one evidence chain.  |  一句话论证、一个核心断言、一条证据链。
-- **Innovation:** name the contribution type and rung; the gap must be a scientific unknown, not a missing method.  |  写清贡献类型和层级；缺口必须是科学未知，不是"没人用我们的方法"。
-- **Broad interest:** name who outside the field cares and what changes for them.  |  写清领域外谁关心、对他们改变什么。
-- **Language:** concrete subjects, calibrated verbs, no hype, no defensive padding, no AI-tone clusters.  |  ** 主语具体、动词与证据匹配、不吹嘘、不防御、不堆 AI 味词。**
-- **Figures:** one figure-level claim, distinct inferential roles per panel, adequate information density, journal-compliant specs.  |  一幅图一个图级断言，面板承担不同推断角色，信息密度足够，符合期刊规格。
+- **Argument:** one sentence, one claim, one evidence chain.  |  一句话论证、核心断言、证据链。
+- **Innovation:** name the contribution type and rung; the gap must be a scientific unknown, not a missing method.  |  会写清楚论文的贡献类型和层级；缺口必须是科学未知，不是"没人用我们的方法"。
+- **Broad interest:** name who outside the field cares and what changes for them.  |  会写清楚领域外谁关心、对他们而言带来什么改变。
+- **Language:** concrete subjects, calibrated verbs, no hype, no defensive padding, no AI-tone clusters.  |  ** 去AI味儿：主语具体、动词与证据匹配、不吹嘘、不防御、不堆 AI 味词。**
+- **Figures:** one figure-level claim, distinct inferential roles per panel, adequate information density, journal-compliant specs.  |  一幅图一个图级断言，每个panel承担不同推断角色，信息密度足够，符合顶级期刊规格。
 - **Statistics:** independent unit, exact n, error definitions, tests, correction, exact P values.  |  独立单位、精确 n、误差定义、检验、校正、精确 P 值。
 - **Submission:** stage-specific package, real declarations, verified limits and access routes.  |  按投稿阶段准备材料，声明真实，限制与获取途径已核实。
 
@@ -57,7 +57,7 @@ None of this guarantees acceptance. It removes the avoidable reasons a good pape
 
 1. Copy one or both skill folders into your agent's skills directory.  |  把一个或两个技能目录复制到 agent 的 skills 目录。
 2. Refresh the catalog.  |  刷新技能目录。
-3. Ask for the outcome, not the steps.  |  直接说你要的结果，而不用给操作步骤。
+3. Ask for the outcome, not the steps.  |  直接说你要的结果，而不用具体给操作步骤。
 
 ~~~bash
 python tools/install.py --target ~/.agents/skills --skills both --dry-run
@@ -95,7 +95,7 @@ NatSci-Writing-skills/
     └── natsci-writing-zh/    same structure in Chinese
 ~~~
 
-Each skill is self-contained. Keep references/ and assets/ next to SKILL.md.  |  每个技能自包含；复制时务必带上 references/ 和 assets/。
+Each skill is self-contained. Keep references/ and assets/ next to SKILL.md. 
 
 ## Verify  |  校验
 
