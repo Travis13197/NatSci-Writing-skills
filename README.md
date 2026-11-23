@@ -7,13 +7,13 @@ Most writing advice tells you to "be clearer" and "tell a story". That is not en
 
 It is built for one job: produce complete manuscripts and complete figure sets at Nature/Science standard, then revise, format and defend them.  |  按照 Nature/Science 标准写出完整论文和整套图件，并能修订、排版、回复审稿。
 
-## Where it comes from  |  它从哪里来
+## Where it comes from  |  Skill从哪儿来的？
 
-This is not a generic prompt collection. I built the rules, section playbooks, figure contracts, statistics checks and revision workflows from my own research projects and long-term conversations with AI coding agents — from real manuscripts, figures, reviews and rewrites.  |  NatSci-Writing-skills是作者自己从科研课题、长期与 AI 编程助手的对话、真实稿件/图件/审稿/返修中沉淀出的规则、章节 playbook、图件合同、统计检查和修订流程。
+This is not a generic prompt collection. ** I built the rules, section playbooks, figure contracts, statistics checks and revision workflows from my own research projects and long-term conversations with AI coding agents ** — from real manuscripts, figures, reviews and rewrites.  |  NatSci-Writing-skills是作者自己从科研课题、长期与 AI 编程助手的对话、真实稿件/图件/审稿/返修中沉淀出的规则、章节 playbook、图件合同、统计检查和修订流程。
 
 It also integrates and adapts the open-source **Nature-skills** project by **Yuan Yizhe (袁一哲)** — https://github.com/Yuan1z0825/nature-skills — under Apache-2.0, with attribution kept in NOTICE.md and LICENSES/.  |  中文：同时整合并改编了袁一哲老师的开源项目 Nature-skills（地址：https://github.com/Yuan1z0825/nature-skills，Apache-2.0），署名保留在 NOTICE.md 与 LICENSES/。
 
-## What this is  |  这是什么
+## What this is  |  
 
 Two self-contained agent skills, one English and one Chinese. Each contains a SKILL.md operating manual, a reference library, working templates and tested Python/R figure starters.  |  中英文各一个自包含技能，每个都带操作手册、参考库、模板和已测试的绘图脚本。
 
@@ -35,15 +35,15 @@ No absolute paths. No network calls. No external corpus needed at run time. Copy
 - **Audit statistics and integrity.** Independent unit, replication, exact n and P values, Reporting Summary, image integrity, data/code/materials statements.  |  审计独立实验单位、重复、精确 n 与 P 值、Reporting Summary、图像诚信和数据/代码/材料声明。
 - **Control information density.** Decide what belongs in the main text, captions and SI; stop revision bloat.  |  决定什么进正文、图注和补充材料，控制返修导致的篇幅膨胀。
 
-## The idea behind it  |  背后的思路
+## The idea behind it  |  背后的核心idea
 
-Top-journal writing fails in three places: the argument is thin, the evidence is badly placed, or the prose and figures do not let a busy reader see why it matters.  |  解决顶刊写作通常出现三种问题：论证单薄、放错位置，以及 **文字和图让读者无法直接看出重要性。**
+Top-journal writing fails in three places: the argument is thin, the evidence is badly placed, or the prose and figures do not let a busy reader see why it matters.  |  解决顶刊AI写作通常出现三种问题：论证单薄、放错位置，以及 **文字和图让读者无法直接看出重要性。**
 
 So the system enforces gates. Before drafting: innovation canvas and editorial fit. During drafting: main-text discipline and evidence chains. Before submission: statistics, reporting integrity and figure audits. After review: point-by-point response and claim calibration.  |  因此设置了一个具体流程：写作前查创新与编辑契合；写作中控制正文纪律与证据链；投稿前查统计、报告诚信和图件；返修时做逐点回复和断言校准。
 
 None of this guarantees acceptance. It removes the avoidable reasons a good paper gets rejected or delayed. 
 
-## Quality bar  |  质量门槛
+## Quality bar  |  质控
 
 - **Argument:** one sentence, one claim, one evidence chain.  |  一句话论证、核心断言、证据链。
 - **Innovation:** name the contribution type and rung; the gap must be a scientific unknown, not a missing method.  |  会写清楚论文的贡献类型和层级；缺口必须是科学未知，不是"没人用我们的方法"。
