@@ -2,6 +2,17 @@
 
 All notable changes to NatSci-Writing-skills are documented here. The system follows semantic versioning.
 
+## 1.2.5 — 2026-11-24
+
+AI writing and AI figure integrity release, based on a broad policy review of Nature Portfolio, Science/AAAS, Cell Press, Elsevier, Springer Nature, PLOS, ICMJE, COPE and current surveys.
+
+- Added references/ai-figures-and-visual-integrity.md (plus Chinese edition): data vs conceptual figures, publisher AI-image policies, absolute prohibitions, disclosure framework, provenance record, prompt/data hygiene, copyright/licensing, reviewer boundaries and a negative checklist.
+- Expanded ai-use-and-writing-integrity.md (EN/ZH): 2026 policy clarifications, AI-writing negative list, image-policy pointer, reviewer/editor boundaries, detection/translation/licensing, and additional audit gates.
+- Added templates: ai-image-provenance-record.md and ai-negative-checklist.md (19 templates per language).
+- Extended figure-production, figure-craft and figure-standards references with AI-image gates; added SKILL 9.0 AI figure gate, AI negative gate in revision, and final gates for AI writing and figures.
+- Updated README, docs, architecture, usage, coverage audit, versions, manifest and release package.
+- Sources include Nature Methods 2026, Nature Materials 2026, Nature Geoscience, Science cover-image policy, Elsevier June 2026, Cell Press, Springer Nature, PLOS, ICMJE 2026, COPE, and arXiv 2603.16159.
+
 ## 1.2.2 — 2026-11-23
 
 Perspective and theory-manuscript release, derived from the complete mirror-world hypothesis project, its design documents, final bilingual manuscript, audits, figure prompts and author conversation.

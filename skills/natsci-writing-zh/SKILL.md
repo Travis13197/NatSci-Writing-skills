@@ -8,7 +8,7 @@ description: >-
   Nature/Science 生命科学、生物技术、蛋白质语言模型与 AI 论文的语料统计，以及编辑契合度、
   统计与报告诚信、信息架构、投稿包与端到端生产流程。
 metadata:
-  version: "1.2.2"
+  version: "1.2.5"
   updated: "2026-11-23"
   author: "Chuanyang Liu"
   system: "NatSci-Writing-skills"
@@ -39,7 +39,8 @@ metadata:
 - references/main-text-and-information-architecture-zh.md：结果分类、最短证据链、正文/图注/SI 分工、返修膨胀控制、断言重复、展示预算。
 - references/statistics-and-reporting-integrity-zh.md：独立单位与重复、Nature 统计要求、图件统计、图像诚信、数据/代码/材料报告、严重度分级。
 - references/language-and-taste-zh.md：句子节奏、声音、house style、品味诊断、示范结构、中文特有检查。
-- references/ai-use-and-writing-integrity-zh.md：AI 作者禁令、披露、允许/禁止用途、保密、去 AI 腔与审计。
+- references/ai-use-and-writing-integrity-zh.md：AI 作者禁令、披露、允许/禁止用途、2026 政策更新、AI 写作负面清单、保密、去 AI 腔与审计。
+- references/ai-figures-and-visual-integrity-zh.md：AI 生成/AI 辅助图件政策、数据图与概念图区分、出版社立场、披露、溯源、版权、质检与负面清单。
 - references/literature-search-and-citation-zh.md：检索策略、来源层级、筛选、证据综合、引用核对与文献管理。
 - references/proofreading-and-polish-zh.md：五轮校对、句子润色、概念落地与节奏、数字/引用一致性。
 - references/perspective-and-insight-zh.md：Perspective 智识中心、发现序列、推测与问责、形式内容、审核。
@@ -55,7 +56,7 @@ metadata:
 - references/html-and-data-verification.md：整篇 HTML 修订、数据真实性与计算核验。
 - references/academic-prompt-zh.md：可直接复用的中文任务提示词。
 - 专题文件（seal-project.md、translation-validation.md、dimension-annotation.md）仅在任务涉及该项目时读取。
-- assets/templates/：论文提纲、图件合同、图注、回复信、数据声明、术语表、cover letter/投稿包、创新画布、编辑审核、报告与统计检查、图件证据地图、AI 披露记录、文献检索计划、数据/代码/材料检查表、Perspective 提纲（perspective-manuscript-outline.md）、编辑范围与修改记录（editing-scope-and-change-log.md）、概念图设计单（conceptual-figure-brief.md）。
+- assets/templates/：论文提纲、图件合同、图注、回复信、数据声明、术语表、cover letter/投稿包、创新画布、编辑审核、报告与统计检查、图件证据地图、AI 披露记录、文献检索计划、数据/代码/材料检查表、Perspective 提纲（perspective-manuscript-outline.md）、编辑范围与修改记录（editing-scope-and-change-log.md）、概念图设计单（conceptual-figure-brief.md）、AI 图像溯源记录（ai-image-provenance-record.md）、AI 使用负面清单（ai-negative-checklist.md）。
 
 专题数值是有日期的证据记录，不是普适事实；最新作者决定和核实后的分析优先。技能使用不代表授权对外发表或修改源数据。
 
@@ -142,7 +143,9 @@ metadata:
 
 ### 3.1 AI 使用边界
 
-AI 可用于语言编辑、结构辅助、文献初筛、格式、代码和图件布局，但不能作为作者，作者对全部内容负责。按目标期刊要求披露 AI 使用；不得把未发表、机密、审稿或患者材料上传公共模型；不得用 AI 生成数据、研究图像、参考文献、统计或批件。AI 建议的文献只当未核实线索，每条引文和数字都要核实。最终文本仍须是作者的论证：具体、有证据链、无 AI 腔。政策表、披露模板和审计见 ai-use-and-writing-integrity-zh.md；记录模板在 assets/templates/ai-disclosure.md。
+AI 可用于语言编辑、结构辅助、文献初筛、格式、代码和图件布局，但不能作为作者，作者对全部内容负责。按目标期刊要求披露 AI 使用；不得把未发表、机密、审稿或患者材料上传公共模型；不得用 AI 生成数据、研究图像、参考文献、统计或批件。AI 建议的文献只当未核实线索，每条引文和数字都要核实。最终文本仍须是作者的论证：具体、有证据链、无 AI 腔。政策表、披露模板、2026 更新、AI 写作负面清单和审计见 ai-use-and-writing-integrity-zh.md；记录模板在 assets/templates/ai-disclosure.md。
+
+AI 图件走独立门槛。数据图用真实数据和代码；生成式模型不得创建或修改显微、凝胶、印迹、成像、定量图或结构。概念示意图、图形摘要和封面按目标期刊 AI 图像政策处理，需披露、人工核验、概念标注和溯源记录。禁用生成式填充、移除物体、合成研究图像、假比例尺或未披露的 AI 封面。任何图像生成前读 ai-figures-and-visual-integrity-zh.md；用 assets/templates/ai-image-provenance-record.md 记录；用 assets/templates/ai-negative-checklist.md 审计。
 
 ### 3.2 校对与最终语言检查
 
@@ -259,6 +262,8 @@ Nature 正刊的方法统计段须覆盖检验、单双侧、独立单位、重�
 
 ## 十、图件：合同、标准、生产与发布
 
+**10.0 AI 图件门。** 选工具前先分类：数据图、概念示意图、图形摘要/封面、AI 辅助排版或 AI 辅助处理。数据图用真实数据和代码；生成式图像模型不得创建或修改。概念性 AI 辅助图需期刊许可、Methods/图注/cover letter 披露、逐项人工核验标签和关系、概念标注，以及溯源记录（工具/版本/日期/prompt/输出哈希/人工修改）。封面和图形摘要需编辑许可。生成前核对期刊政策；政策因刊而异且会变。完整政策与负面清单见 ai-figures-and-visual-integrity-zh.md。
+
 任何图件任务先读 figure-production-zh.md、figure-craft-and-information-density-zh.md 和 figure-standards-nature-science-zh.md；项目图件同时读 figure-design-and-audit.md 及其配套契约。
 
 **图级断言与证据架构。** 从一个结果层问题、一个图级断言开始，并写出什么能推翻它。让面板承担不同推断角色（体系、代表性实例、主要定量证据、基线/对照、分解、分层、正交验证、扰动/压力测试、边界/失败案例、机制证据）。角色多样性优先于指标多样性；同一指标换种子/阈值的镜像布局只是一个角色，不是四个。使用链条：建立 → 比较/对照 → 压力测试/区分 → 扩展 → 限定。跨图时，每幅图应制造下一个问题，而不是重复"X 表现好"。
@@ -300,6 +305,7 @@ Nature 正刊的方法统计段须覆盖检验、单双侧、独立单位、重�
 - 编辑保真：记录模式，保护作者断言顺序和措辞，源文件不动，在副本上用修订痕迹/黄色高亮，返回修改记录和待确认问题。
 - 校对：按五轮扫描，再核对数字、单位、统计、参考文献、图表引用和标记；剩余作者问题列出，不猜测。
 - AI 诚信：查期刊政策、记录 AI 任务、移除机密材料、核实 AI 建议的文献/数字、按要求写披露，并确认最终文本可由人类作者辩护。
+- AI 负面门：跑 AI 写作负面清单；任何 AI 辅助图完成图像溯源记录和 AI 使用负面清单；核实无编造文献/数据/图像、无未披露 AI、无数据或患者泄漏、无版权/许可问题。
 
 ## 十二、终检
 
@@ -331,6 +337,8 @@ Nature 正刊的方法统计段须覆盖检验、单双侧、独立单位、重�
 - 图件面板有不同推断角色；图序逐级升级；信息密度充分；图注合同与期刊阶段特异要求满足。
 - 投稿包在记录阶段完整；缺失事实被标注而非编造。
 - AI 使用符合目标期刊政策：无 AI 作者、无编造、无机密上传、按要求披露、AI 建议的每条文献/数字已核实。
+- AI 写作负面清单通过：无编造文献/数据/结果、无引用操纵、无论文工厂模式、无未披露翻译/代写、无规避检测。
+- AI 图件门通过：数据图来自真实数据/代码；概念性 AI 图标明、披露并核验；溯源记录完整；无合成研究图像、生成式填充、假比例尺或未披露封面。
 - 文献检索与引用有记录且已核实；按问题/机制综合；预印本/撤稿处理正确。
 - 完成五轮校对；数字、单位、统计、参考文献、图表引用和标记一致。
 - 章节技艺通过摘要遮名测试、引言反提纲、结果断言阶梯和讨论综合审核。

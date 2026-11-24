@@ -1,6 +1,6 @@
 # Coverage audit: what is integrated and what is not
 
-Version 1.2.2; updated 2026-11-23. This document answers whether the author's earlier writing/figure requirements, the latest nature-skills content, current journal AI policies and independent writing skills are organically integrated into NatSci-Writing-skills.
+Version 1.2.5; updated 2026-11-24. This document answers whether the author's earlier writing/figure requirements, the latest nature-skills content, current journal AI policies and independent writing skills are organically integrated into NatSci-Writing-skills.
 
 ## 1. Audit scope
 
@@ -11,6 +11,7 @@ Version 1.2.2; updated 2026-11-23. This document answers whether the author's ea
 5. Journal AI policies: Nature Portfolio, Science/AAAS, ICMJE, COPE, Elsevier, Springer Nature (positions as of November 2026; verify current policy at submission).
 6. NatSci corpus: 868 Nature/Science records, 317 full texts, 1,504 parsed figure captions.
 7. Mirror-world project: design.md/design-ref1–4, final bilingual Perspective, revision/audit records, figure prompts, full author conversation and prior writing-skill evaluations. The reusable lessons are in nature-perspective-production.md and mirror-world-case-study.md.
+8. AI writing and image policy sources: Nature Portfolio, Nature Methods (2026), Nature Materials (2026), Nature Geoscience, Science/AAAS cover-image policy, Elsevier (June 2026), Cell Press, Springer Nature, PLOS, ICMJE (2026), COPE, and the 2026 arXiv survey on AI-generated figures. The consolidated rules are in ai-use-and-writing-integrity.md and ai-figures-and-visual-integrity.md.
 7. AI style sources: Wikipedia Signs of AI writing; AI Smells field guide; Chinese zh-cues; Editage AIGC style words; CASS AI-tone analysis. The consolidated zero-tolerance tables are in writing-diagnostics section 3A.
 
 ## 2. Coverage matrix
@@ -25,6 +26,9 @@ Version 1.2.2; updated 2026-11-23. This document answers whether the author's ea
 | Editing fidelity | SKILL 3.3; editing-scope-and-change-log; case study | new in 1.2.2 |
 | Conceptual figures and theory packaging | nature-perspective-production §7; conceptual-figure-brief; SKILL 9.7 | new in 1.2.2 |
 | Project-derived lessons | mirror-world-case-study; production §12; writing-diagnostics 3A | new in 1.2.2 |
+| AI writing negative list | ai-use-and-writing-integrity §10–15; SKILL 3.1/10/11; ai-negative-checklist | new in 1.2.5 |
+| AI figure policy and provenance | ai-figures-and-visual-integrity; SKILL 9.0; ai-image-provenance-record | new in 1.2.5 |
+| AI image copyright and reproducibility | ai-figures-and-visual-integrity §6/§9; figure refs | new in 1.2.5 |
 | Perspective and conceptual writing | perspective-and-insight; SKILL 4.3; manuscript-production | strengthened in 1.2.1 |
 | Nature section craft | nature-section-craft; SKILL 4.2; journal-style-evidence | strengthened in 1.2.1 |
 | Figures and visual quality | figure-craft-and-information-density; figure-production; figure-standards; project overlay | integrated |
@@ -84,7 +88,7 @@ Field- or workflow-specific upstream modules (patent drafting, PPT generation, p
 - The corpus is a local analysis set; aggregate statistics are documented, full texts are not redistributed.
 - Passing these checks does not guarantee acceptance; it reduces avoidable editorial, statistical, stylistic, integrity and production risk.
 
-## 8. Verification performed for 1.2.2
+## 8. Verification performed for 1.2.5
 
 - Package and installed-copy validator pass.
 - YAML frontmatter, author metadata, companion links valid.
@@ -92,7 +96,7 @@ Field- or workflow-specific upstream modules (patent drafting, PPT generation, p
 - No absolute paths, personal data, secrets or stale private names.
 - Python and R figure starters run and export SVG/PDF/600-dpi raster.
 - Installer copies both skills; zip extraction passes validation.
-- Manifest current; version 1.2.2.
+- Manifest current; version 1.2.5.
 
 ## 9. Conclusion
 

@@ -1,6 +1,6 @@
 # 覆盖审计：已整合与未整合的内容
 
-版本 1.2.2；更新日期 2026-11-23。本文回答：作者此前的写作/图件要求、nature-skills 最新内容、当前期刊 AI 政策与独立写作 skill，是否已有机整合进 NatSci-Writing-skills。
+版本 1.2.5；更新日期 2026-11-24。本文回答：作者此前的写作/图件要求、nature-skills 最新内容、当前期刊 AI 政策与独立写作 skill，是否已有机整合进 NatSci-Writing-skills。
 
 ## 一、审计范围
 
@@ -11,6 +11,7 @@
 5. 期刊 AI 政策：Nature Portfolio、Science/AAAS、ICMJE、COPE、Elsevier、Springer Nature（截至 2026-11；投稿前核对当期政策）。
 6. NatSci 语料：868 篇 Nature/Science 记录、317 篇全文、1,504 条图注。
 7. 镜像世界项目：design.md/design-ref1–4、最终中英 Perspective、修订/审读记录、图件 prompt、完整作者对话与前期写作 skill 评估。可复用经验见 nature-perspective-production-zh.md 与 mirror-world-case-study-zh.md。
+8. AI 写作与图像政策来源：Nature Portfolio、Nature Methods（2026）、Nature Materials（2026）、Nature Geoscience、Science/AAAS 封面图政策、Elsevier（2026 年 6 月）、Cell Press、Springer Nature、PLOS、ICMJE（2026）、COPE，以及 2026 年 arXiv AI 图件调查。汇总规则见 ai-use-and-writing-integrity-zh.md 与 ai-figures-and-visual-integrity-zh.md。
 7. AI 文风来源：Wikipedia Signs of AI writing、AI Smells 指南、中文 zh-cues、意得辑 AIGC 风格词、中国社科院"AI 味"分析；汇总的零容忍句式表见 writing-diagnostics-zh.md 第 3A 节。
 
 ## 二、覆盖矩阵
@@ -25,6 +26,9 @@
 | 编辑保真 | SKILL 3.3；editing-scope-and-change-log；案例 | 1.2.2 新增 |
 | 概念图与理论文章封装 | nature-perspective-production 第 7 节；conceptual-figure-brief；SKILL 9.7 | 1.2.2 新增 |
 | 项目经验 | mirror-world-case-study；生产文件第 12 节；writing-diagnostics 3A | 1.2.2 新增 |
+| AI 写作负面清单 | ai-use-and-writing-integrity 第 10–15 节；SKILL 3.1/10/11；ai-negative-checklist | 1.2.5 新增 |
+| AI 图件政策与溯源 | ai-figures-and-visual-integrity；SKILL 9.0；ai-image-provenance-record | 1.2.5 新增 |
+| AI 图像版权与可复现 | ai-figures-and-visual-integrity 第 6/9 节；图件参考 | 1.2.5 新增 |
 | Perspective 与概念写作 | perspective-and-insight；SKILL 4.3；manuscript-production | 1.2.1 强化 |
 | Nature 章节技艺 | nature-section-craft；SKILL 4.2；journal-style-evidence | 1.2.1 强化 |
 | 图件与视觉质量 | figure-craft-and-information-density；figure-production；figure-standards；项目叠加 | 已整合 |
@@ -83,7 +87,7 @@
 - 语料是本地分析集；只记录汇总统计，不分发全文。
 - 通过检查不保证接收；它降低可避免的编辑、统计、风格、诚信与制作风险。
 
-## 八、1.2.2 已执行验证
+## 八、1.2.5 已执行验证
 
 - 包与已安装副本校验通过。
 - YAML frontmatter、作者元数据、companion 链接有效。
@@ -91,7 +95,7 @@
 - 无绝对路径、个人信息、密钥或旧私有名称。
 - Python 与 R 图件脚本运行并导出 SVG/PDF/600 dpi。
 - 安装器复制两个技能；zip 解压后校验通过。
-- manifest 当前；版本 1.2.2。
+- manifest 当前；版本 1.2.5。
 
 ## 九、结论
 

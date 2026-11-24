@@ -1,6 +1,6 @@
 # AI use, disclosure and writing integrity
 
-Version 1.2.1; updated 2026-11-23. Read whenever AI/LLM tools are used to draft, revise, translate, search, code or prepare figures for a manuscript. Journal policies override every default here; verify the current target-journal policy before submission.
+Version 1.2.5; updated 2026-11-24. Read whenever AI/LLM tools are used to draft, revise, translate, search, code or prepare figures for a manuscript. Journal policies override every default here; verify the current target-journal policy before submission.
 
 ## 1. The non-negotiables
 
@@ -104,3 +104,59 @@ AI assistance is allowed only if the final text still reads as a scientist's arg
 - Final text read and defended by a human author.
 - Disclosure consistent across manuscript, cover letter and submission system.
 - AI-generated images, if any, are illustrative, disclosed and not presented as data.
+
+## 10. AI writing negative list (zero tolerance)
+
+- AI listed as author, co-author, contributor or corresponding contact.
+- Fabricated references, DOIs, ISBNs, URLs, accession numbers, trial registrations or ethics approvals.
+- Citations that do not support the sentence, or citation padding to simulate scholarship.
+- Hallucinated methods, parameters, software versions, sample sizes, statistics or results.
+- Fabricated data, images, microscopy, gels, blots, structures or source data.
+- Text recycling, self-plagiarism, duplicate submission or salami slicing.
+- Paper-mill patterns: tortured phrases, template abstracts, fake affiliations, purchased authorship, citation manipulation.
+- AI-generated peer-review reports, editorial decisions or reviewer identities.
+- Uploading unpublished, confidential, peer-review, patient or third-party material to a public model.
+- Prompt injection or hidden instructions in a submitted file.
+- AI paraphrasing to evade detection, disguise authorship or hide the extent of assistance.
+- Undisclosed translation, ghostwriting or substantial AI drafting.
+- Fake funding, conflicts of interest, acknowledgements, author contributions or permissions.
+- AI-generated cover letters, highlights or significance statements that overstate the paper.
+- Using AI to write the entire manuscript without substantive human analysis, interpretation and verification.
+- Claiming "no AI was used" when it was, or naming a tool without describing the task and oversight.
+- Copyright or licence violations: copyrighted text/images, restricted data, tool terms that forbid publication.
+- Unverified AI-suggested collaborators, reviewers or editors.
+- AI-generated images presented as data or as completed experiments (see ai-figures-and-visual-integrity.md).
+
+## 11. 2026 policy clarifications to verify
+
+- **Nature Portfolio:** Nature Methods (2026) states that generative AI may help write or edit sections, with declaration in Methods; Nature Materials (2026) asks authors to declare other AI uses in Methods with the model and training described. AI-generated images must not misrepresent data; some Nature Portfolio journals prohibit AI-generated images and videos.
+- **Science/AAAS:** AI-generated text, images and graphics require explicit editor permission; undisclosed AI use in visual content is inconsistent with editorial standards. The 2026 cover-image correction shows that the policy applies to cover imagery as well as figures.
+- **Elsevier:** the June 2026 update requires AI use in each image to be disclosed in that image's caption (tool, version, how used) and in the general AI declaration. Basic grammar/spelling checks may not need a declaration; substantive restructuring does.
+- **Cell Press:** AI-generated figures must be clearly labelled; AI in data figures requires editorial review.
+- **PLOS:** AI content is allowed with disclosure when it does not misrepresent primary research, introduce invalid content or expose personal/sensitive data.
+- **ICMJE (2026):** authors should disclose if, where and how AI was used, including language and grammar correction; journals should state their AI policy; AI cannot be an author.
+- **COPE:** AI tools cannot be authors; authors remain accountable; undeclared AI image creation is an integrity case, not a formatting issue.
+- **Springer Nature:** aligns with Nature Portfolio; reproducibility and human oversight are central.
+
+## 12. Figures and images
+
+AI-generated or AI-assisted figures have their own policy, provenance and negative checklist. Read ai-figures-and-visual-integrity.md before using any generative image tool. Key defaults: data figures come from real data and code; conceptual schematics may use AI with disclosure and human verification; no generative fill or synthetic research images; archive prompt, tool/version, output hash and manual edits.
+
+## 13. Reviewer and editor boundaries
+
+Reviewers should not upload manuscripts, figures or unpublished data to public AI tools; AI-generated review reports are generally unacceptable; the reviewer remains responsible for the judgement. Editors and publishers apply their own AI policies to editorial content. Authors should not treat editorial AI use as permission for their own use.
+
+## 14. Detection, translation and licensing
+
+AI-text detectors are unreliable; do not optimize for evading them. Optimize for accuracy, specificity and human responsibility. Disclose translation assistance when the journal requires it; the translated text must preserve claims, numbers, citations, certainty and emphasis. Check the tool's terms for input/output rights, training use, commercial restrictions and publication permissions. Confirm that the publisher's licence permits all generated or third-party content.
+
+## 15. Additional audit checks
+
+- AI writing negative list checked item by item.
+- AI figure provenance record exists for every AI-assisted image.
+- Journal policy URL/date recorded; disclosure placement verified.
+- All AI-suggested references, numbers and methods verified.
+- Confidential and patient material kept out of public tools.
+- Reviewer/editor boundaries respected.
+- Copyright, licence and tool terms checked.
+- AI detection not used as a substitute for human review.

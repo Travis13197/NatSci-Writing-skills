@@ -1,6 +1,6 @@
 # 图件生产：从论断到投稿级成图
 
-版本 1.0.0；更新日期 2026-11-23。与 figure-standards-nature-science-zh.md（期刊规格、图注语法、统计呈现）和 figure-design-and-audit.md（作者项目的几何、颜色与发布门槛）配合使用。本文件整合 nature-skills 图件体系与语料证据，给出端到端流程。
+版本 1.2.5；更新日期 2026-11-24。与 figure-standards-nature-science-zh.md（期刊规格、图注语法、统计呈现）和 figure-design-and-audit.md（作者项目的几何、颜色与发布门槛）配合使用。本文件整合 nature-skills 图件体系与语料证据，给出端到端流程。
 
 ## 一、图件合同（写代码之前）
 
@@ -124,3 +124,9 @@ svglite::svglite("fig1.svg", width = 183/25.4, height = 60/25.4); print(p); dev.
 ~~~
 
 模板只是起点；决定面板的是合同、原型和证据逻辑，不是模板。
+
+## 十一、AI 生成与 AI 辅助图件
+
+选工具前先判断图件类型。数据图（显微、凝胶、印迹、成像、光谱、定量图、结构）用真实数据和代码生成；生成式图像模型不得创建或修改数据图。概念示意图、图形摘要和封面按目标期刊 AI 图像政策处理；许多期刊要求编辑许可和披露。AI 辅助排版或字体可以使用，实质协助需披露，最终矢量要核对。
+
+禁用生成式填充、移除物体、合成显微、凭空增加细节的 AI 放大、假比例尺或编造分子结构。保留溯源记录：工具/版本/后端、日期、完整 prompt、seed/参数、输出哈希、人工修改、源数据/代码和核验人。期刊允许时在 Methods、图注和 cover letter 披露。读 ai-figures-and-visual-integrity-zh.md；用 assets/templates/ai-image-provenance-record.md 记录。

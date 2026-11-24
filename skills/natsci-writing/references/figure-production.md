@@ -1,6 +1,6 @@
 # Figure production: from claim to submission-grade artwork
 
-Version 1.1.0; updated 2026-11-23. Read with figure-standards-nature-science.md (journal specifications, caption grammar, statistical display) and figure-design-and-audit.md (the author's project geometry, colour and release gates). This file is the end-to-end production workflow synthesized from the nature-skills figure system and the corpus evidence.
+Version 1.2.5; updated 2026-11-24. Read with figure-standards-nature-science.md (journal specifications, caption grammar, statistical display) and figure-design-and-audit.md (the author's project geometry, colour and release gates). This file is the end-to-end production workflow synthesized from the nature-skills figure system and the corpus evidence.
 
 ## 1. The figure contract (before any code)
 
@@ -128,3 +128,9 @@ svglite::svglite("fig1.svg", width = 183/25.4, height = 60/25.4); print(p); dev.
 ~~~
 
 These templates are starting points; the contract, archetype and evidence logic decide the panels, not the template.
+
+## 11. AI-generated and AI-assisted figures
+
+Before choosing a tool, classify the figure. Data figures (microscopy, gels, blots, imaging, spectra, plots, structures) come from real data and code; a generative image model must not create or alter them. Conceptual schematics, graphical abstracts and cover art follow the target journal's AI-image policy; many journals require editor permission and disclosure. AI-assisted layout or typography is allowed, with substantive assistance disclosed and the final vector checked.
+
+Never use generative fill, object removal, synthetic microscopy, AI upscaling that invents detail, fake scale bars or fabricated molecular structures. Keep a provenance record: tool/version/backend, date, full prompt, seed/settings, output hash, manual edits, source data/code and human reviewer. Put the disclosure in Methods, figure legend and cover letter when the journal permits AI-assisted figures. Read ai-figures-and-visual-integrity.md; record with assets/templates/ai-image-provenance-record.md.

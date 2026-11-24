@@ -21,6 +21,8 @@
 | Perspective production | design docs/author text | six-section manuscript, Box/figures, bilingual package, template |
 | Author-faithful edit | source file + mode | revised copy, change log, residual questions |
 | Theory-paper audit | manuscript + claims | evidence ledger, three-discipline review, figure/format audit |
+| AI writing audit | manuscript + AI log | policy check, AI negative list, disclosure and verification record |
+| AI figure audit | figure + generation record | figure class, provenance record, disclosure, image negative checklist |
 | Pre-submission review | manuscript | three reviewer reports + synthesis |
 
 ## 2. What to supply
@@ -106,13 +108,19 @@ Preserve reviewer comments verbatim; classify each item; map to an action and a 
 - Editing: agree on light polish / author-faithful expansion / structural rewrite / translation / tracked revision; protect the author's claim order and wording; copy the source; keep a change log.
 - Bilingual: identical claims, numbers, citations, certainty and emphasis; natural Chinese and matching academic English.
 
-## 13. AI, literature and proofreading gates
+## 13. AI writing and AI figure gates
+
+- AI writing: check the journal policy, log tools/tasks, verify references/numbers/methods, run the AI negative list, and confirm no fabricated data, paper-mill patterns or detection evasion.
+- AI figures: classify data vs conceptual; data figures use real data and code; conceptual AI figures need permission, disclosure, human verification and a provenance record; no synthetic research images, generative fill, fake scale bars or undisclosed cover art.
+- Final: complete ai-negative-checklist.md and, for each AI-assisted figure, ai-image-provenance-record.md.
+
+## 14. AI, literature and proofreading gates
 
 - AI integrity: check the target journal policy; log tools/tasks; remove confidential material; verify every AI-suggested reference/number; draft the required disclosure; confirm a human can defend every sentence.
 - Literature: document databases, strings and dates; screen and extract; synthesize by question/mechanism; verify every DOI/title/author and preprint/retraction status; keep the library.
 - Proofreading: run five passes, then numbers, units, statistics, references, figure/table citations and markup; list residual author questions.
 
-## 14. Common failure modes to avoid
+## 15. Common failure modes to avoid
 
 - Asking for prose before the claim and evidence are fixed.
 - Supplying figures without source data or statistics; captions cannot be completed honestly.

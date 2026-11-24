@@ -24,7 +24,7 @@ Topics: agent-skills, academic-writing, scientific-writing, nature, science, man
 ~~~bash
 git init
 git add .
-git commit -m "NatSci-Writing-skills v1.2.2"
+git commit -m "NatSci-Writing-skills v1.2.5"
 git branch -M main
 git remote add origin https://github.com/<user>/NatSci-Writing-skills.git
 git push -u origin main
@@ -32,10 +32,10 @@ git push -u origin main
 
 Then create a release:
 
-- Tag: v1.2.2
-- Title: NatSci-Writing-skills v1.2.2
-- Attach: NatSci-Writing-skills-v1.2.2.zip (generated from the repository root)
-- Release notes: copy the 1.2.2 section of CHANGELOG.md.
+- Tag: v1.2.5
+- Title: NatSci-Writing-skills v1.2.5
+- Attach: NatSci-Writing-skills-v1.2.5.zip (generated from the repository root)
+- Release notes: copy the 1.2.5 section of CHANGELOG.md.
 
 ## 4. Post-publish checks
 

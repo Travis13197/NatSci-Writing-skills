@@ -39,6 +39,8 @@ The agent then loads only the references needed for the current mode. This keeps
 | Literature and citation | references/literature-search-and-citation.md | search strategy, source hierarchy, screening, synthesis, citation verification |
 | AI integrity | references/ai-use-and-writing-integrity.md | authorship ban, disclosure, permitted/prohibited use, journal policy table |
 | Proofreading | references/proofreading-and-polish.md | five-pass proofreading, sentence polish, grounding/rhythm, consistency |
+| AI figures | references/ai-figures-and-visual-integrity.md | data vs conceptual figures, publisher AI-image policies, disclosure, provenance, copyright, QC |
+| AI writing negative list | references/ai-use-and-writing-integrity.md §10–15 | fabricated citations/data, paper-mill patterns, detection evasion, reviewer boundaries, licensing |
 | Production | references/manuscript-production.md | complete-manuscript pipeline, section/paper-type playbooks, journal formats, package, statements |
 | Revision | references/revision-and-response.md | polishing, phrasebank, response letters, reviewer simulation |
 | Figure production | references/figure-production.md | contract, archetypes, backends, design system, chart selection, QA |
@@ -48,7 +50,7 @@ The agent then loads only the references needed for the current mode. This keeps
 | Data and HTML | references/html-and-data-verification.md | full-document revision, data authenticity, calculation checks |
 | Project specifics | seal-project.md, translation-validation.md, dimension-annotation.md | SEAL terminology, validation, annotation |
 | Prompt | references/academic-prompt-zh.md | reusable Chinese task prompt |
-| Assets | assets/templates, assets/code | 17 working templates (manuscript, figure, cover letter, innovation canvas, editorial audit, reporting checklist, response, statements, AI disclosure, literature search plan, data/code/materials) and tested Python/R figure starters |
+| Assets | assets/templates, assets/code | 19 working templates (manuscript, figure, cover letter, innovation canvas, editorial audit, reporting checklist, response, statements, AI disclosure, literature search plan, data/code/materials) and tested Python/R figure starters |
 
 ## 4. Why two language skills instead of one bilingual skill
 

@@ -21,8 +21,8 @@ Everything runs from the folder: references, templates and scripts are local, li
 
 | Skill | Language | Version | Folder | 说明 |
 |---|---|---|---|---|
-| natsci-writing | English | 1.2.2 | skills/natsci-writing/ | 英文写作与作图 |
-| natsci-writing-zh | 中文 | 1.2.2 | skills/natsci-writing-zh/ | 中文写作与作图 |
+| natsci-writing | English | 1.2.5 | skills/natsci-writing/ | 英文写作与作图 |
+| natsci-writing-zh | 中文 | 1.2.5 | skills/natsci-writing-zh/ | 中文写作与作图 |
 
 ## What it can do  |  Skill能做什么
 
@@ -39,6 +39,7 @@ Everything runs from the folder: references, templates and scripts are local, li
 - **Audit statistics and integrity.** Independent unit, replication, exact n and P values, Reporting Summary, image integrity, data/code/materials statements.  |  检查独立实验单位、重复、精确 n 和 P、Reporting Summary、图像诚信、数据/代码/材料声明。
 - **Control information density.** Decide what belongs in the main text, captions and SI; keep revisions from making the paper longer and looser.  |  决定什么进正文、图注和补充材料；返修时控制篇幅，让信息更集中。
 - **Search and cite properly.** Build a documented search, screen with a PRISMA-style record, verify every reference and manage RIS/BibTeX/Zotero.  |  写检索计划，按 PRISMA 式流程筛选，逐条核对文献，管理 RIS/BibTeX/Zotero。
+- **Audit AI writing and AI-assisted figures.** Check disclosure, image provenance, synthetic-image bans, licensing and the AI negative checklist before submission.  |  投稿前检查 AI 披露、图像溯源、合成图像禁令、许可和 AI 负面清单。
 
 ### Revise and submit  |  修改与投稿
 
@@ -54,6 +55,7 @@ Everything runs from the folder: references, templates and scripts are local, li
 - **An evidence ledger.** Claims carry their status: established, definitional, model-dependent, hypothesis or prospective experiment.  |  每条断言标明状态：已确立、定义性、模型依赖、假说或前瞻实验。
 - **Full paragraphs.** Manuscript prose uses connected paragraphs. Lists stay outside the argument, and key insights get one bold sentence at a time.  |  正文用连贯段落；列表留在论证之外；洞见用单句加粗。
 - **A style gate.** A checker scans for template contrast, defensive language, AI vocabulary and related patterns; CI runs it on the READMEs.  |  文风检查器扫描模板对立、防御性表达和高频 AI 词，CI 会检查 README。
+- **AI negative lists.** Text, citations, data and images have explicit banned patterns, so the final audit checks behavior, not just tone.  |  文字、引文、数据和图像都有明确的禁用项，终检查行为，不只查语气。
 - **Author fidelity.** Light polish preserves claim order and wording; tracked revisions work on a copy and leave the source untouched.  |  轻度润色保留断言顺序和措辞；修订模式在副本上操作，源文件不动。
 
 
@@ -73,7 +75,11 @@ Keep unpublished, confidential, peer-review and patient material in controlled e
 
 When the target journal requires disclosure, state the tool, the task, the sections affected and how the output was checked.  |  目标期刊要求披露时，写清工具、任务、涉及章节和核验过程。
 
-Full policy table, disclosure template and audit: references/ai-use-and-writing-integrity.md; record template: assets/templates/ai-disclosure.md. Policies change; check the target journal before submission.  |  完整政策表、披露模板和审计清单见 references/ai-use-and-writing-integrity.md；记录模板见 assets/templates/ai-disclosure.md。政策会变，投稿前按目标期刊核对。
+Full policy table, 2026 updates, AI-writing negative list and audit: references/ai-use-and-writing-integrity.md; record template: assets/templates/ai-disclosure.md. Policies change; check the target journal before submission.  |  完整政策表、2026 更新、AI 写作负面清单和审计见 references/ai-use-and-writing-integrity.md；记录模板见 assets/templates/ai-disclosure.md。政策会变，投稿前按目标期刊核对。
+
+AI-assisted figures follow a separate policy. Data figures come from real data and code; conceptual schematics, graphical abstracts and covers need journal permission, disclosure, human verification and a provenance record. Generative fill, synthetic research images, fake scale bars and undisclosed AI cover art are excluded.  |  AI 辅助图件走独立政策。数据图用真实数据和代码；概念示意图、图形摘要和封面需要期刊许可、披露、人工核验和溯源记录。生成式填充、合成研究图像、假比例尺和未披露的 AI 封面都不允许。
+
+Figure policy, provenance and negative checklist: references/ai-figures-and-visual-integrity.md; templates: ai-image-provenance-record.md and ai-negative-checklist.md.  |  图件政策、溯源和负面清单见 references/ai-figures-and-visual-integrity.md；模板见 ai-image-provenance-record.md 和 ai-negative-checklist.md。
 
 ## Quick start  |  快速开始
 
@@ -96,8 +102,8 @@ Four ways to start:
 ## What is inside  |  包里有什么
 
 - **SKILL.md**: the operating manual with modes, standards, routing and release gates.  |  操作手册，写清交付模式、标准、路由和发布门槛。
-- **references/**: 30 English and 31 Chinese references covering editorial fit, innovation, main-text discipline, statistics, language taste, AI integrity, literature and citation, proofreading, Nature section craft, Perspective production, the mirror-world case, figure craft, journal rules, writing diagnostics and project figure standards.  |  30 个英文、31 个中文参考文件，覆盖编辑契合、创新、正文纪律、统计、语言品味、AI 诚信、文献与引用、校对、Nature 章节写法、Perspective 生产、镜像世界案例、图件技艺、期刊规则、写作诊断和项目图件规范。
-- **assets/templates/**: 17 working templates covering manuscript outline, figure contract, caption, response letter, data statements, terminology ledger, cover letter/submission, innovation canvas, editorial audit, reporting checklist, figure evidence map, AI disclosure, literature search plan, data/code/materials checklist, Perspective outline, editing scope/change log and conceptual-figure brief.  |  17 个工作模板，覆盖论文提纲、图件合同、图注、回复信、数据声明、术语表、投稿包、创新画布、编辑审核、报告检查、图件证据地图、AI 披露、文献检索计划、数据/代码/材料检查、Perspective 提纲、编辑范围与修改记录、概念图设计单。
+- **references/**: 31 English and 32 Chinese references covering editorial fit, innovation, main-text discipline, statistics, language taste, AI integrity, literature and citation, proofreading, Nature section craft, Perspective production, the mirror-world case, AI figure policy and provenance, figure craft, journal rules, writing diagnostics and project figure standards.  |  31 个英文、32 个中文参考文件，覆盖编辑契合、创新、正文纪律、统计、语言品味、AI 诚信、文献与引用、校对、Nature 章节写法、Perspective 生产、镜像世界案例、AI 图件政策与溯源、图件技艺、期刊规则、写作诊断和项目图件规范。
+- **assets/templates/**: 19 working templates covering manuscript outline, figure contract, caption, response letter, data statements, terminology ledger, cover letter/submission, innovation canvas, editorial audit, reporting checklist, figure evidence map, AI disclosure, literature search plan, data/code/materials checklist, Perspective outline, editing scope/change log, conceptual-figure brief, AI-image provenance record and AI-use negative checklist.  |  19 个工作模板，覆盖论文提纲、图件合同、图注、回复信、数据声明、术语表、投稿包、创新画布、编辑审核、报告检查、图件证据地图、AI 披露、文献检索计划、数据/代码/材料检查、Perspective 提纲、编辑范围与修改记录、概念图设计单、AI 图像溯源记录、AI 使用负面清单。
 - **assets/code/**: tested Python and R starters that draw a three-panel figure and export SVG/PDF/600-dpi raster.  |  已测试的 Python 和 R 脚本，能画三联图并导出 SVG/PDF/600 dpi 图。
 - **tools/**: validator, prose-style checker, installer, manifest builder and CI.  |  校验器、文风检查器、安装器、manifest 生成器和 CI。
 - **docs/**: architecture, usage, migration, publishing and the coverage audit.  |  架构、使用、迁移、发布和覆盖审计，包含已整合与未整合清单。
@@ -141,7 +147,7 @@ Journal limits, figure specifications, reporting rules and AI policies change. T
 
 ## Version, license, provenance and citation  |  版本、许可、来源与引用
 
-Current version: 1.2.2 (2026-11-23).  |  当前版本 1.2.2（2026-11-23），版本记录见 CHANGELOG.md。
+Current version: 1.2.5 (2026-11-24).  |  当前版本 1.2.5（2026-11-24），版本记录见 CHANGELOG.md。
 
 **License:** source-available and free for non-commercial academic, research and teaching use; copy, modify and redistribute with attribution. Commercial or profit-generating use requires a separate written license. See LICENSE.  |  源码可用，非商业的学术、科研和教学用途免费；可以复制、修改、再分发，需要署名。商业或盈利性用途需要单独书面许可，详见 LICENSE。
 

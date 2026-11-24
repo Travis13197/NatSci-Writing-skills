@@ -39,6 +39,8 @@ agent 先读 SKILL.md。SKILL.md 是操作手册而非百科：
 | 文献与引用 | references/literature-search-and-citation-zh.md | 检索策略、来源层级、筛选、综合、引用核对 |
 | AI 诚信 | references/ai-use-and-writing-integrity-zh.md | 作者禁令、披露、允许/禁止用途、期刊政策表 |
 | 校对 | references/proofreading-and-polish-zh.md | 五轮校对、句子润色、概念落地/节奏、一致性 |
+| AI 图件 | references/ai-figures-and-visual-integrity-zh.md | 数据图/概念图、出版社 AI 图像政策、披露、溯源、版权、质检 |
+| AI 写作负面清单 | references/ai-use-and-writing-integrity-zh.md 第 10–15 节 | 编造文献/数据、论文工厂、规避检测、审稿边界、许可 |
 | 生产 | references/manuscript-production.md | 完整论文流水线、章节/论文类型 playbook、期刊格式、稿件包、声明 |
 | 修订 | references/revision-and-response.md | 润色、句式库、审稿回复、审稿模拟 |
 | 图件生产 | references/figure-production.md | 图件合同、原型、后端、设计系统、图型选择、QA |
@@ -48,7 +50,7 @@ agent 先读 SKILL.md。SKILL.md 是操作手册而非百科：
 | 数据与 HTML | references/html-and-data-verification.md | 全文修订、数据真实性、计算核验 |
 | 专题 | seal-project.md、translation-validation.md、dimension-annotation.md | SEAL 术语、回译、注释 |
 | 提示词 | references/academic-prompt-zh.md | 可复用中文任务提示词 |
-| 资产 | assets/templates、assets/code | 17 个工作模板（论文、图件、cover letter、创新画布、编辑审核、报告检查、回复、声明、AI 披露、文献检索、数据/材料）与已测试的 Python/R 图件脚本 |
+| 资产 | assets/templates、assets/code | 19 个工作模板（论文、图件、cover letter、创新画布、编辑审核、报告检查、回复、声明、AI 披露、文献检索、数据/材料）与已测试的 Python/R 图件脚本 |
 
 ## 四、为什么是两个语言技能
 

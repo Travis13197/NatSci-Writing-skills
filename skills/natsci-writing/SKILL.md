@@ -12,7 +12,7 @@ description: >-
   editorial fit, statistics and reporting integrity, information architecture and
   end-to-end production workflows measured from 800+ Nature/Science papers.
 metadata:
-  version: "1.2.2"
+  version: "1.2.5"
   updated: "2026-11-23"
   author: "Chuanyang Liu"
   system: "NatSci-Writing-skills"
@@ -43,7 +43,8 @@ Resources:
 - references/main-text-and-information-architecture.md — result classification, shortest evidence chain, main-text/caption/SI split, revision-accretion control, claim repetition, display budgets.
 - references/statistics-and-reporting-integrity.md — independent unit and replication, Nature statistical requirements, figure statistics, image integrity, data/code/materials reporting, severity labels.
 - references/language-and-taste.md — prose rhythm, voice, house style, taste diagnostics, model shapes, Chinese-specific checks.
-- references/ai-use-and-writing-integrity.md — AI authorship ban, disclosure, permitted/prohibited uses, confidentiality, AI-tone control, audit.
+- references/ai-use-and-writing-integrity.md — AI authorship ban, disclosure, permitted/prohibited uses, 2026 policy updates, AI-writing negative list, confidentiality, AI-tone control, audit.
+- references/ai-figures-and-visual-integrity.md — AI-generated/AI-assisted figure policy, data vs conceptual figures, publisher positions, disclosure, provenance, copyright, QC and negative checklist.
 - references/literature-search-and-citation.md — search strategy, source hierarchy, screening, evidence synthesis, citation verification and reference management.
 - references/proofreading-and-polish.md — five-pass proofreading, sentence polish, grounding/rhythm, number/reference consistency.
 - references/perspective-and-insight.md — Perspective intellectual centre, sequence of discoveries, speculation and accountability, formal content, audit.
@@ -59,7 +60,7 @@ Resources:
 - references/html-and-data-verification.md — complete HTML revision, data authenticity and calculation checks.
 - references/academic-prompt-zh.md — reusable Chinese task prompt.
 - Project references (seal-project.md, translation-validation.md, dimension-annotation.md) — only for that project.
-- assets/templates/ — manuscript outline, figure contract, caption, response letter, data statements, terminology ledger, cover letter/submission package, innovation canvas, editorial audit, reporting/statistics checklist, figure evidence map, AI-disclosure record, literature-search plan, data/code/materials checklist, Perspective outline (perspective-manuscript-outline.md), editing-scope/change log (editing-scope-and-change-log.md), conceptual-figure brief (conceptual-figure-brief.md).
+- assets/templates/ — manuscript outline, figure contract, caption, response letter, data statements, terminology ledger, cover letter/submission package, innovation canvas, editorial audit, reporting/statistics checklist, figure evidence map, AI-disclosure record, literature-search plan, data/code/materials checklist, Perspective outline (perspective-manuscript-outline.md), editing-scope/change log (editing-scope-and-change-log.md), conceptual-figure brief (conceptual-figure-brief.md), AI-image provenance record (ai-image-provenance-record.md), AI-use negative checklist (ai-negative-checklist.md).
 
 Project-specific values are dated evidence records, not universal facts; the latest author decision and verified analyses supersede them. Skill use does not authorize external publication or source-data changes.
 
@@ -147,7 +148,9 @@ Seven diagnostics (detail in writing-diagnostics.md): abstraction stacking; temp
 
 ### 3.1 AI assistance boundary
 
-AI tools may help with language editing, structure, literature triage, formatting, code and figure layout, but AI cannot be an author and authors remain fully responsible. Disclose AI use where the target journal requires it; never upload unpublished, confidential, peer-review or patient material to public models; never use AI to generate data, research images, references, statistics or approvals. Treat AI-suggested references as unverified leads and verify every citation and number. The final text must still read as the authors' argument: specific, evidence-linked and free of AI-tone clusters. Policy table, disclosure template and audit: ai-use-and-writing-integrity.md; record template in assets/templates/ai-disclosure.md.
+AI tools may help with language editing, structure, literature triage, formatting, code and figure layout, but AI cannot be an author and authors remain fully responsible. Disclose AI use where the target journal requires it; never upload unpublished, confidential, peer-review or patient material to public models; never use AI to generate data, research images, references, statistics or approvals. Treat AI-suggested references as unverified leads and verify every citation and number. The final text must still read as the authors' argument: specific, evidence-linked and free of AI-tone clusters. Policy table, disclosure template, 2026 updates, AI-writing negative list and audit: ai-use-and-writing-integrity.md; record template in assets/templates/ai-disclosure.md.
+
+AI figures follow a separate gate. Data figures come from real data and code; generative models must not create or alter microscopy, gels, blots, imaging, plots or structures. Conceptual schematics, graphical abstracts and covers follow the target journal's AI-image policy, with disclosure, human verification, a conceptual label and a provenance record. Never use generative fill, object removal, synthetic research images, fake scale bars or undisclosed AI cover art. Read ai-figures-and-visual-integrity.md before any image generation; record with assets/templates/ai-image-provenance-record.md; audit with assets/templates/ai-negative-checklist.md.
 
 ### 3.2 Proofreading and final language pass
 
@@ -266,6 +269,8 @@ Verify that files were created and report what remains unresolved. A completed w
 
 Read figure-production.md, figure-craft-and-information-density.md and figure-standards-nature-science.md for any figure task, plus figure-design-and-audit.md and its companion contracts for project figures.
 
+**9.0 AI figure gate.** Classify every figure before choosing a tool: data figure, conceptual schematic, graphical abstract/cover, AI-assisted layout or AI-assisted processing. Data figures use real data and code; a generative image model must not create or alter them. Conceptual AI-assisted figures need journal permission, disclosure in Methods/legend/cover letter, human verification of every label and relationship, a conceptual label, and a provenance record (tool/version/date/prompt/output hash/manual edits). Covers and graphical abstracts need editor permission. Check the journal policy before generation; policies differ and change. Full policy and negative list: ai-figures-and-visual-integrity.md.
+
 **Figure-level claim and evidence architecture.** Start from one Results-level question and one figure-level claim; state what could overturn it. Give panels distinct inferential roles (setup, representative example, primary quantitative evidence, baseline/control, decomposition, stratification, orthogonal validation, perturbation/stress test, boundary/failure case, mechanistic evidence). Prefer role diversity over metric diversity; a mirror layout of the same metric is one role, not four. Use a chain: establish → compare/control → stress-test/discriminate → broaden → bound. Across figures, each figure should raise the next question rather than repeat “X performs well”.
 
 **9.1 Contract.** Write the figure's one-sentence conclusion, archetype, panel map (each panel one question), evidence hierarchy, statistics, source-data mapping and reviewer risks before coding. Every panel answers a unique question; the hero panel gets the clearest axis and largest area; controls stay quieter.
@@ -305,6 +310,7 @@ Read figure-production.md, figure-craft-and-information-density.md and figure-st
 - Editing fidelity: record the mode, protect the author's claim order and wording, keep the source unchanged, use tracked changes/yellow highlights on a copy, and return a change log plus residual questions.
 - Proofreading: run the five passes, then verify numbers, units, statistics, references, figure/table citations and markup; list residual author questions instead of guessing.
 - AI integrity: check the journal policy, log AI-assisted tasks, remove confidential material, verify AI-suggested references/numbers, draft the required disclosure and confirm the final text is human-defensible.
+- AI negative gate: run the AI-writing negative list and, for any AI-assisted figure, complete the image provenance record and AI-use negative checklist. Verify no fabricated citations/data/images, no undisclosed AI, no data or patient leakage, and no copyright/licence problem.
 
 ## 11. Final quality check
 
@@ -335,6 +341,8 @@ Read figure-production.md, figure-craft-and-information-density.md and figure-st
 - Figure panels have distinct inferential roles; figure order escalates; information density is adequate; the caption contract and journal stage-specific figure requirements are met.
 - The submission package is complete for the recorded stage; missing facts are marked, not invented.
 - AI use follows the target-journal policy: no AI authorship, no fabrication, no confidential uploads, disclosed where required, every AI-suggested citation/number verified.
+- AI writing negative list passes: no fabricated references/data/results, no citation manipulation, no paper-mill patterns, no undisclosed translation/ghostwriting, no detection evasion.
+- AI figure gate passes: data figures from real data/code; conceptual AI figures disclosed, labelled and verified; provenance record complete; no synthetic research images, generative fill, fake scale bars or undisclosed cover art.
 - Literature search and citations are documented and verified; synthesis is by question/mechanism; preprints/retractions handled.
 - A five-pass proofread is complete; numbers, units, statistics, references, figure/table citations and markup are consistent.
 - Section craft passes the abstract hidden-names test, Introduction reverse outline, Results claim ladder and Discussion synthesis audit.

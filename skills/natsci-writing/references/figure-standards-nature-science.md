@@ -1,6 +1,6 @@
 # Figure standards for Nature and Science
 
-Version 1.1.0; updated 2026-11-23. Read with the parent SKILL.md and with figure-design-and-audit.md (the author's project geometry and colour overlay). Journal specifications below were checked against Nature author guidance in November 2026; confirm the current target-journal instructions at submission because production rules change.
+Version 1.2.5; updated 2026-11-24. Read with the parent SKILL.md and with figure-design-and-audit.md (the author's project geometry and colour overlay). Journal specifications below were checked against Nature author guidance in November 2026; confirm the current target-journal instructions at submission because production rules change.
 
 ## 1. A figure is one claim
 
@@ -138,3 +138,9 @@ Record the audit result. A figure that fails the 5-pt test, the greyscale test o
 ## 9. Relationship to the project overlay
 
 figure-design-and-audit.md defines the author's project conventions: near-square data boxes (0.9–1.1 aspect), blue-led Okabe–Ito palette, wide-panel exceptions, larger type for HTML (essential text ≥6 pt, panel letters 9.5–10 pt) and audit records. Those conventions refine, and do not replace, the journal rules above. The larger HTML type is for screens and embedded documents; for journal submission, follow the target journal's 5–7 pt range at final printed size. When a project convention conflicts with a journal requirement (for example, a wide panel that would not fit a single column), follow the journal for final artwork and record the project exception.
+
+## 12. AI image policy and image integrity
+
+AI-generated or AI-altered research images are not acceptable data. Nature Portfolio requires AI use to be documented and AI-generated images must not misrepresent data; some Nature journals prohibit AI-generated images and videos. Science requires explicit editor permission for AI-generated text, images and graphics and treats undisclosed AI visual content as an editorial-integrity issue. Elsevier (June 2026) requires image-level caption disclosure of the tool, version and use, plus the general AI declaration. Verify the target journal before generation.
+
+For a conceptual AI-assisted figure: label it conceptual, disclose tool/version/use in the caption, verify all labels and relationships, keep the prompt/output/manual-edit provenance, and obtain editor permission for covers or graphical abstracts. Data figures come from real data and code. Full policy, provenance and negative checklist: ai-figures-and-visual-integrity.md.

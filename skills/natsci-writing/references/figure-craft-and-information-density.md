@@ -1,6 +1,6 @@
 # Figure craft, evidence architecture and information density
 
-Version 1.1.0; updated 2026-11-23. Read when planning or auditing a multi-panel figure, deciding what belongs in a main figure versus Extended Data/Supplementary Information, judging visual hierarchy and information density, or designing a schematic/graphical abstract. Pair with figure-production.md, figure-standards-nature-science.md and the project figure overlay.
+Version 1.2.5; updated 2026-11-24. Read when planning or auditing a multi-panel figure, deciding what belongs in a main figure versus Extended Data/Supplementary Information, judging visual hierarchy and information density, or designing a schematic/graphical abstract. Pair with figure-production.md, figure-standards-nature-science.md and the project figure overlay.
 
 ## 1. Start from the figure-level claim
 
@@ -142,3 +142,7 @@ Do not confuse initial-submission and accepted-in-principle requirements.
 - Do figure order, Results claims and Discussion synthesis escalate rather than repeat?
 - Can the caption explain what is shown without replaying the Results?
 - At final physical size, are all labels, ticks and annotations legible and collision-free?
+
+## 12. AI-generated visual content
+
+An AI-generated image is not evidence. Conceptual schematics and graphical abstracts may use AI when the journal permits it, the figure is labelled conceptual, the authors verify every label and relationship, and the provenance record is archived. Data figures remain code-generated from real data. AI-assisted layout, colour or typography is acceptable with disclosure; AI-generated text labels must be rebuilt and checked. Bans: synthetic data images, generative fill/object removal, AI upscaling that invents detail, fabricated structures, fake scale bars or significance marks, undisclosed AI in covers/graphical abstracts, and copyrighted or patient material in prompts. Read ai-figures-and-visual-integrity.md.

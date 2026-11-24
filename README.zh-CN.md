@@ -21,8 +21,8 @@
 
 | 技能 | 语言 | 版本 | 目录 | 说明 |
 |---|---|---|---|---|
-| natsci-writing | English | 1.2.2 | skills/natsci-writing/ | 英文写作与作图 |
-| natsci-writing-zh | 中文 | 1.2.2 | skills/natsci-writing-zh/ | 中文写作与作图 |
+| natsci-writing | English | 1.2.5 | skills/natsci-writing/ | 英文写作与作图 |
+| natsci-writing-zh | 中文 | 1.2.5 | skills/natsci-writing-zh/ | 中文写作与作图 |
 
 ## 能做什么
 
@@ -39,6 +39,7 @@
 - **检查统计与诚信**：检查独立实验单位、重复、精确 n 和 P、Reporting Summary、图像诚信、数据/代码/材料声明。
 - **控制信息量**：决定什么进正文、图注和补充材料；返修时控制篇幅，让信息更集中。
 - **系统检索和引用**：写检索计划，按 PRISMA 式流程筛选，逐条核对文献，管理 RIS/BibTeX/Zotero。
+- **审查 AI 写作与 AI 图件**：投稿前检查 AI 披露、图像溯源、合成图像禁令、许可和 AI 负面清单。
 
 ### 修改与投稿
 
@@ -54,6 +55,7 @@
 - **证据台账**：每条断言标明状态，例如已确立、定义性、模型依赖、假说或前瞻实验。
 - **整段正文**：正文用连贯段落，列表留在论证之外，洞见用单句加粗。
 - **文风检查器**：扫描模板对立、防御性表达和高频 AI 词，CI 会检查 README。
+- **AI 负面清单**：文字、引文、数据和图像都有明确禁用项，终检查行为，不只查语气。
 - **作者保真**：轻度润色保留断言顺序和措辞；修订模式在副本上操作，源文件不动。
 - **真实案例**：镜像世界假说项目提供六节蓝图、Box、三幅图和 Nature 风格稿件的生产经验。
 
@@ -73,7 +75,11 @@ AI 可以辅助语言编辑、结构梳理、文献初筛、格式处理、写�
 
 目标期刊要求披露时，写清工具、任务、涉及章节和核验过程。
 
-完整政策表、披露模板和审计清单见 references/ai-use-and-writing-integrity-zh.md；记录模板见 assets/templates/ai-disclosure.md。政策会变，投稿前按目标期刊核对。
+完整政策表、2026 更新、AI 写作负面清单和审计见 references/ai-use-and-writing-integrity-zh.md；记录模板见 assets/templates/ai-disclosure.md。政策会变，投稿前按目标期刊核对。
+
+AI 辅助图件走独立政策。数据图用真实数据和代码；概念示意图、图形摘要和封面需要期刊许可、披露、人工核验和溯源记录。生成式填充、合成研究图像、假比例尺和未披露的 AI 封面都不允许。
+
+图件政策、溯源和负面清单见 references/ai-figures-and-visual-integrity-zh.md；模板见 ai-image-provenance-record.md 和 ai-negative-checklist.md。
 
 ## 快速开始
 
@@ -96,8 +102,8 @@ python tools/install.py --target ~/.agents/skills --skills both
 ## 包里有什么
 
 - **SKILL.md**：操作手册，写清交付模式、标准、路由和发布门槛。
-- **references/**：30 个英文、31 个中文参考文件，覆盖编辑契合、创新、正文纪律、统计、语言品味、AI 诚信、文献与引用、校对、Nature 章节写法、Perspective 生产、镜像世界案例、图件技艺、期刊规则、写作诊断和项目图件规范。
-- **assets/templates/**：17 个工作模板，覆盖论文提纲、图件合同、图注、回复信、数据声明、术语表、投稿包、创新画布、编辑审核、报告检查、图件证据地图、AI 披露、文献检索计划、数据/代码/材料检查、Perspective 提纲、编辑范围与修改记录、概念图设计单。
+- **references/**：31 个英文、32 个中文参考文件，覆盖编辑契合、创新、正文纪律、统计、语言品味、AI 诚信、文献与引用、校对、Nature 章节写法、Perspective 生产、镜像世界案例、AI 图件政策与溯源、图件技艺、期刊规则、写作诊断和项目图件规范。
+- **assets/templates/**：19 个工作模板，覆盖论文提纲、图件合同、图注、回复信、数据声明、术语表、投稿包、创新画布、编辑审核、报告检查、图件证据地图、AI 披露、文献检索计划、数据/代码/材料检查、Perspective 提纲、编辑范围与修改记录、概念图设计单、AI 图像溯源记录、AI 使用负面清单。
 - **assets/code/**：已测试的 Python 和 R 脚本，能画三联图并导出 SVG/PDF/600 dpi 图。
 - **tools/**：校验器、文风检查器、安装器、manifest 生成器和 CI。
 - **docs/**：架构、使用、迁移、发布和覆盖审计，包含已整合与未整合清单。
@@ -141,7 +147,7 @@ python tools/build_manifest.py
 
 ## 版本、许可、来源与引用
 
-当前版本：**1.2.2**（2026-11-23），版本记录见 CHANGELOG.md。
+当前版本：**1.2.5**（2026-11-24），版本记录见 CHANGELOG.md。
 
 **许可**：源码可用，非商业的学术、科研和教学用途免费；可以复制、修改、再分发，需要署名。商业或盈利性用途需要单独书面许可，详见 LICENSE。
 

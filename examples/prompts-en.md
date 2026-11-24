@@ -31,3 +31,11 @@
 ## Bilingual revision
 
 "Use natsci-writing. Revise this English manuscript and provide a corresponding Chinese version, bolding every changed span in both languages."
+
+## AI writing audit
+
+"Use natsci-writing. Audit this manuscript against the target journal's AI policy and the AI-writing negative list: authorship, disclosure, citations, numbers, confidential material, third-party rights and fabrication risk. Return a pass/fix table, required disclosure text and residual questions."
+
+## AI figure audit
+
+"Use natsci-writing. Classify each figure as data, conceptual, graphical abstract or AI-assisted layout. For any AI-assisted figure, build the provenance record, check the target journal's image policy, and return disclosure text, QC findings and a negative-checklist result."
