@@ -24,8 +24,8 @@
   }
  ],
  "totals": {
-  "files": 141,
-  "bytes": 1202745
+  "files": 147,
+  "bytes": 1213234
  },
  "files": [
   {
@@ -87,6 +87,36 @@
    "path": "RELEASE_NOTES_v1.2.5.md",
    "bytes": 1215,
    "sha256": "19c144d3c4738418120bfd2f2d5b5b1436442ceaeab195f57a5353dec30f5fbb"
+  },
+  {
+   "path": "RELEASE_NOTES_v1.2.6.3.md",
+   "bytes": 1244,
+   "sha256": "ee9911f88e1608fedccd0e0c2d26d55a0e8032e74f454d4c4ed8521bbcae9b8c"
+  },
+  {
+   "path": "RELEASE_NOTES_v1.2.6.4.md",
+   "bytes": 1083,
+   "sha256": "8527774058af5d5ebff8295a7e908e49c909e7b18c72d52eef5bded5fc6b5f4f"
+  },
+  {
+   "path": "RELEASE_NOTES_v1.2.6.6.md",
+   "bytes": 2011,
+   "sha256": "09fd9b8fa6b92838e3233f401aca7efa3f68d7f36ca49fe8d33a33cff44ff941"
+  },
+  {
+   "path": "RELEASE_NOTES_v1.2.6.7.md",
+   "bytes": 1503,
+   "sha256": "4b153b88cfde9c3341c07934f4ffcbc5ab2ec79af0cbf9fd5eb74f8c044d285b"
+  },
+  {
+   "path": "RELEASE_NOTES_v1.2.6.8.md",
+   "bytes": 1965,
+   "sha256": "55ca76aa56be0674335b7dd5eabffc4cb0e585d605d40827658351326b2e5e46"
+  },
+  {
+   "path": "RELEASE_NOTES_v1.2.7.0.md",
+   "bytes": 2683,
+   "sha256": "51785d712e86047bcdbd79c032e0e7c2cd15595346a7f527c267392bc85976fe"
   },
   {
    "path": "VERSION",
