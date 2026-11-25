@@ -10,10 +10,12 @@ description: >-
   annotations, bilingual revision and continuation of the SEAL project. Encodes
   corpus-calibrated argument architecture, diction, hedging, figure conventions,
   editorial fit, statistics and reporting integrity, information architecture and
-  end-to-end production workflows measured from 800+ Nature/Science papers.
+  end-to-end production workflows measured from 800+ Nature/Science papers. Includes
+  defensive-writing control (press-release principle, argument selection, experiment duties)
+  and measurable anti-AI-prose gates for English and Chinese drafts.
 metadata:
-  version: "1.2.6.8"
-  updated: "2026-11-24"
+  version: "1.2.7.0"
+  updated: "2026-11-25"
   author: "Chuanyang Liu"
   system: "NatSci-Writing-skills"
   language: "en"
@@ -144,7 +146,7 @@ Avoid opaque phrases (for example 高加性读出中仍可识别连通响应, �
 
 Seven diagnostics (detail in writing-diagnostics.md): abstraction stacking; template contrast; connective inflation; evaluative adjectives; defensive/self-limiting prose; list-paragraphs and module catalogues; meta-commentary. Corpus watchlist density is 2–4 per 1,000 words, mostly statistical/technical; more than ~5 per 1,000 or two in one paragraph signals generated-sounding prose. Run the delete-20%, actor, so-what and read-aloud tests.
 
-**Zero-tolerance patterns.** Do not use template contrast ("not X but Y", "not only X but also Y", "not just X, it is Y", "rather than", "far from"), defensive disclaimers ("it is important to note", "to some extent", "further research is needed", "the findings should be interpreted with caution"), self-limiting framing, outline-like transitions ("In summary", "In conclusion", "Overall"), or their Chinese equivalents (不是……而是……, 并非……而是……, 不仅……而且……, 值得注意的是, 在一定程度上, 有待进一步研究, 综上所述). State claims affirmatively. When two explanations genuinely compete, write two affirmative sentences and let the discriminating evidence separate them. The same ban applies to READMEs, cover letters, figure text and author notes that will be read by others. Check deliverables with python tools/check_prose_style.py; ERROR hits are must-fix. Full pattern tables, rewrites, structural tells and sources: writing-diagnostics.md section 3A.
+**Zero-tolerance patterns.** Do not use template contrast ("not X but Y", "not only X but also Y", "not just X, it is Y", "rather than", "far from"), defensive disclaimers ("it is important to note", "to some extent", "further research is needed", "the findings should be interpreted with caution"), self-limiting framing, outline-like transitions ("In summary", "In conclusion", "Overall"), or their Chinese equivalents (不是……而是……, 并非……而是……, 不仅……而且……, 值得注意的是, 在一定程度上, 有待进一步研究, 综上所述). State claims affirmatively. When two explanations genuinely compete, write two affirmative sentences and let the discriminating evidence separate them. The same ban applies to READMEs, cover letters, figure text and author notes that will be read by others. Check deliverables with python tools/check_prose_style.py; ERROR hits are must-fix. Full pattern tables, rewrites, structural tells and sources: writing-diagnostics.md sections 3A and 4A. For argument-level selection - what the paper claims, which experiments survive, and how to separate a necessary caveat from a defensive one - read defensive-writing-and-argument-selection.md and run the gates in section 17.
 
 ### 3.1 AI assistance boundary
 
@@ -346,6 +348,7 @@ column is last. Header legend, panel title and letter bboxes must remain separat
 - Chinese and English align paragraph by paragraph; bolding represents actual changes.
 - Closing paragraph names a specific scientific consequence, not a promise.
 - Zero-tolerance style ban passes: no template contrast ("not X but Y"), defensive disclaimers, self-limiting framing, outline-like transitions or their Chinese equivalents; the prose style checker reports no ERROR hits.
+- Defensive-argument gate passes: one limitation paragraph only, no abstract or conclusion caveat, every hedge survives the deletion test, the headline claim carries a number and a condition, and check_prose_style.py --gate reports no defensive/AI marker and no out-of-band rhythm metric (sentence-length CV, recap tails, triads, nominalisation, em dashes).
 - Perspective/theory package: one thesis, six-section logic, five-level evidence ledger, full paragraphs, no lists in the argument, boundaries in one paragraph, 2–3 bold single-sentence insights per subsection, conceptual figures with legends at the end, references before periods and placeholder fields marked.
 - Bilingual parity: identical claims, numbers, citations, certainty and emphasis; natural Chinese prose and matching academic English.
 - Text reads as a scientific argument a biologist can follow without decoding AI jargon.
@@ -410,4 +413,16 @@ column is last. Header legend, panel title and letter bboxes must remain separat
 - Density contour grids extend about 6% beyond the observed data range.
 - Points at 0, 1 or thresholds receive a marker margin of 2–4% of the axis span.
 - Rendered rasters are checked at final display width; HTML serves versioned raster URLs or no-store headers.
+
+## 17. v1.2.7.0 defensive-writing control and AI-prose gates
+
+A manuscript fails stylistically for two reasons that look different and are cured by one decision: it argues against itself (defensive writing), or it argues nothing in particular (generated prose). Decide what the paper wins, then spend every paragraph on it. Argument-level rules: defensive-writing-and-argument-selection.md; surface patterns: writing-diagnostics.md section 3A and 4A.
+
+- **Argument selection precedes wording.** Name the one claim this paper alone can make, with its measure and its condition. If "what do we win / by how much / on what ground" has no number and no condition, the analysis is unfinished; prose cannot repair it.
+- **Space follows argument, not effort.** Every experiment carries one duty — existence, mechanism, regime, exclusion or value. Experiments with no duty are deleted, merged or demoted. Chronology ("we first did X, then tried Y") is banned; failed branches appear only when they exclude an alternative a reader would hold.
+- **One limitation paragraph.** At most three sentences, condition -> scope -> consequence, at the end of the discussion. Zero limitation sentences in the abstract and in the conclusion; a caveat that qualifies one result stays in that result's sentence.
+- **Deletion test for every hedge.** Remove it, then ask whether a careful reader could now be misled about what was measured. If not, delete it; if so, keep it and make it specific. Rhetorical hedging is banned; epistemic calibration is mandatory.
+- **The ban is never a licence.** No claim without evidence, no deletion of a limitation that changes the reading, no null rewritten as a positive, no generalisation past the system, no hidden comparator. Statistics, reporting integrity and AI-use rules override every stylistic preference in this skill.
+- **Rhythm is part of the diagnosis.** Targets: sentence-length CV 0.30-0.65; recap tails <=1 per 1,000 words; triads <=2 per 500 words; nominalisation <=12% of content words; em dashes <=2 per 1,000 words; hedge markers <=4 per 1,000 words (English) and <=3 per 1,000 characters (Chinese); limitation markers <=2 per 1,000 words. Run python tools/check_prose_style.py --gate <file>; a defect is an ERROR hit, a defensive/AI marker or an out-of-band metric. Use --genre perspective for proposals and theory papers, where proposal modality is calibration rather than hedging, and --genre report for reports, where the metrics are informational.
+- **Scope.** Manuscript, abstract, cover letter, response letter, figure text, reports and Chinese drafts. Chinese-specific forms (self-deprecating 谦辞, procedural narration, hollow modifiers, four-character parallelism) are listed in the Chinese reference and checked by the same gate.
 

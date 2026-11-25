@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.7.0 — 2026-11-25
+
+- Added references/defensive-writing-and-argument-selection.md: press-release principle, argument selection, experiment duties, per-section defensive audit, rhetorical-hedging versus epistemic-calibration boundary, seven-pass revision protocol and measured gates.
+- Added section 17 (defensive-writing control and AI-prose gates) and a defensive-argument bullet in the final check; section 3 now links the new reference.
+- writing-diagnostics section 4A adds structure-level AI tells and their metrics.
+- tools/check_prose_style.py gains defensive/AI rule families plus --metrics and --gate.
+
 ## 1.2.6.8 — 2026-11-25
 
 - Reflow addendum: a log-scaled axis can inflate the measured row pitch and leave a large internal blank band even when every artist is inside the axes. If a plate develops an unexplained blank band, test the log axis; for a narrow dynamic range use a linear axis, or reserve enough explicit vertical space and recheck the content-extent audit.

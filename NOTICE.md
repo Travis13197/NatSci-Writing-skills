@@ -18,6 +18,16 @@ Parts of this package adapt design patterns and structural ideas from the open-s
 
 Adapted material has been rewritten, reorganized, translated and integrated with the author's standards. It is not a verbatim redistribution of the upstream skill files. The Apache-2.0 portions remain available under Apache-2.0; nothing in the NatSci non-commercial license restricts the rights granted by Apache-2.0 for those portions.
 
+## Third-party attribution: anti-defensive-writing
+
+Version 1.2.7.0 integrates the open-source **anti-defensive-writing** skill:
+
+- Original author: **Adkid-Zephyr**
+- Repository: https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill
+- License: MIT (text in LICENSES/MIT-anti-defensive-writing.txt)
+
+Adapted material — the press-release principle, narrative rules, experiment duties, default decision order and the pre-submission checklist — has been rewritten, merged with the author's calibration and integrity rules, translated into Chinese and integrated into `references/defensive-writing-and-argument-selection.md`. It is not a verbatim redistribution: the integrated text adds the rhetorical-hedging versus epistemic-calibration boundary, the measured gates and the per-section audit that the upstream skill does not contain. The MIT-licensed portions remain available under MIT.
+
 ## Citation
 
 A related paper is in preparation and will be updated when available. If you use NatSci-Writing-skills in your research, teaching or software, please cite the related paper (when published) and this repository. Citation metadata is in CITATION.cff.

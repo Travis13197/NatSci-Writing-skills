@@ -211,3 +211,31 @@ Do not scrub the text into telegraphic fragments, remove every qualification, or
 - Chinese AI cues (zh-cues): https://github.com/prism-shadow/penguin-harness/blob/main/plugins/humanizer/skills/humanizer/reference/zh-cues.md
 - Editage, AIGC style words: https://www.editage.cn/sci-writing/6791/
 - CASS, 智能写作的"AI味"问题: http://ling.cass.cn/news/xuejie/202607/t20260703_6057568.html
+
+
+## 4A. Rhythm and paragraph shape (structure-level AI tells)
+
+Lexicon checks catch words; generation shows up first in **rhythm**. Three structural signatures, all measurable:
+
+1. **Uniform sentence length.** Generated prose clusters at 18–26 words with low variance. Human scientific prose mixes a 6-word verdict with a 40-word mechanism sentence.
+2. **The template paragraph.** Topic sentence → three supports → recap. Every paragraph the same shape, every section the same length, every subsection ending in a summary.
+3. **Glue instead of content.** Transition sentences ("Building on this, we next examine …") that carry no object, number or mechanism.
+
+Repair by rebuilding the paragraph, not by swapping synonyms:
+
+| Before (template) | After (argued) |
+|---|---|
+| "Our method achieves strong performance across multiple benchmarks. First, it improves accuracy. Second, it reduces cost. Third, it generalises well. Overall, these results demonstrate its effectiveness." | "The gain is 0.08 in held-out families (Fig. 2a) and disappears when the alignment step is removed, so the step, not the extra parameters, carries the effect." |
+
+Measured gates (`python tools/check_prose_style.py --metrics <file>`):
+
+| Metric | Target | Reading |
+|---|---|---|
+| Sentence-length CV | 0.30–0.65 | <0.30 machine rhythm; >0.65 choppy |
+| Paragraphs whose first sentence states the claim | ≥80% | lower means the paragraph warms up before saying anything |
+| Recap tails per 1,000 words | ≤1 | "Overall/In summary/Taken together" |
+| Triad density | ≤1 per 500 words | three-item lists used as default rhythm |
+| Nominalisation ratio | ≤12% of content words | -tion/-ment/-ance/-ity chains |
+| Em dashes per 1,000 words | ≤2 | definition-colon and dash habits |
+
+The argument-level counterpart — which claims to keep, which experiments to drop, and how to tell a necessary caveat from a defensive one — is `defensive-writing-and-argument-selection.md`.

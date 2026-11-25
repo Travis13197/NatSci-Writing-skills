@@ -55,9 +55,21 @@ def read(path):
         return fh.read()
 
 
+def display_path(path):
+    """Return a package-relative path, or the absolute path when it lives elsewhere.
+
+    Installs land outside PKG (often on another drive, where os.path.relpath
+    raises ValueError); validation must still report the offending file.
+    """
+    try:
+        return os.path.relpath(path, PKG)
+    except ValueError:
+        return path
+
+
 def check_text(path, errors, warnings, strict_placeholders=True):
     text = read(path)
-    rel = os.path.relpath(path, PKG)
+    rel = display_path(path)
     if not text.strip():
         errors.append(rel + ": empty file")
         return text

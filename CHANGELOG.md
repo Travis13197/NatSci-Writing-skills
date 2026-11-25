@@ -2,6 +2,17 @@
 
 All notable changes to NatSci-Writing-skills are documented here. The system follows semantic versioning.
 
+## 1.2.7.0 — 2026-11-25
+
+Defensive-writing control and anti-AI-prose release, integrating the open-source **anti-defensive-writing** skill.
+
+- New reference defensive-writing-and-argument-selection.md (English) and -zh (Chinese): the press-release principle, argument selection before wording, the three-question test, battlefield choice ("name the game you win"), space-follows-argument, one-duty-per-experiment, a ban on chronology, permission to restructure the story, a per-section defensive audit, a seven-pass revision protocol and a measured gate table.
+- Added the boundary that keeps anti-defensive rules from becoming overclaiming: rhetorical hedging versus epistemic calibration, a deletion test, a hedge-diagnosis table and six absolute prohibitions (no claim without evidence; no deletion of a reading-changing limitation; no null rewritten as a positive; no generalisation past the system; no hidden comparator; integrity rules override style).
+- writing-diagnostics section 4A in both languages: structural AI tells — uniform sentence length, the template paragraph (topic, three supports, recap), glue sentences — with a before/after pair and the metric table.
+- tools/check_prose_style.py: new rule families (defensive.one_might_argue, defensive.still_lags, defensive.plays_role, ai.roadmap, contrast.comma_not; Chinese ai.zh_suizhe, ai.zh_yiyi, ai.zh_yaocai, defensive.zh_qianxu, defensive.zh_tiaojian, ai.zh_chubu), an advisory tier for marks that are sometimes legitimate, and two new modes: --metrics (sentence-length CV, hedge, recap, limitation, triad, nominalisation and em-dash densities) and --gate (fails on an ERROR hit, a defensive or AI marker, or an out-of-band metric).
+- SKILL section 17 (English) and 十七 (Chinese) state the operative rules; the final-check list gains a defensive-argument gate; section 3 links to the new reference.
+- Fixed while releasing: skills/natsci-writing-zh/VERSION still read 1.2.6.6, and CITATION.cff still carried placeholder repository URLs.
+
 ## 1.2.6.8 — 2026-11-25
 
 - Reflow addendum: a log-scaled axis can inflate the measured row pitch and leave a large internal blank band even when every artist is inside the axes. If a plate develops an unexplained blank band, test the log axis; for a narrow dynamic range use a linear axis, or reserve enough explicit vertical space and recheck the content-extent audit.
