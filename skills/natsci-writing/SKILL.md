@@ -12,8 +12,8 @@ description: >-
   editorial fit, statistics and reporting integrity, information architecture and
   end-to-end production workflows measured from 800+ Nature/Science papers.
 metadata:
-  version: "1.2.5"
-  updated: "2026-11-23"
+  version: "1.2.6.8"
+  updated: "2026-11-24"
   author: "Chuanyang Liu"
   system: "NatSci-Writing-skills"
   language: "en"
@@ -269,6 +269,25 @@ Verify that files were created and report what remains unresolved. A completed w
 
 Read figure-production.md, figure-craft-and-information-density.md and figure-standards-nature-science.md for any figure task, plus figure-design-and-audit.md and its companion contracts for project figures.
 
+**9.0b Legend, tick and significance gate.** Legends, direct labels and series text must
+not cover data, intervals, matrices or structures. Use one-word labels for short series;
+move more than four series to a horizontal header legend or a reserved right column. Keep
+direct labels as an axes-fraction stack and remeasure after final panel scaling. Resolve
+crowded ticks without deleting x or y axis titles; preserve at least two interpretable
+ticks per axis and select categorical labels evenly from rendered bounding boxes. Derive
+panel letter and title height from the actual top tick. Linear extrema must not touch the
+frame; non-negative proportions keep zero and add upper headroom. Significance brackets
+come only from a real same-group, same-unit, same-denominator, same-direction comparison,
+with forest q values outside the plotting area. Require `zero_text_collisions`,
+`zero_legend_data_occlusion`, `axis_tick_completeness` and `typography_compliant`.
+
+**9.0c Star and horizontal-legend gate.** Use `****/***/**/*/n.s.` inside figures and
+keep exact q values in caption and source table. Continuous effect curves show the matching
+CI band; one continuous significant run labels representative first, middle and last points,
+with state changes and the last point retained. The default legend is a horizontal
+multi-column band below the title; direct endpoint labels are second choice and a right
+column is last. Header legend, panel title and letter bboxes must remain separate.
+
 **9.0 AI figure gate.** Classify every figure before choosing a tool: data figure, conceptual schematic, graphical abstract/cover, AI-assisted layout or AI-assisted processing. Data figures use real data and code; a generative image model must not create or alter them. Conceptual AI-assisted figures need journal permission, disclosure in Methods/legend/cover letter, human verification of every label and relationship, a conceptual label, and a provenance record (tool/version/date/prompt/output hash/manual edits). Covers and graphical abstracts need editor permission. Check the journal policy before generation; policies differ and change. Full policy and negative list: ai-figures-and-visual-integrity.md.
 
 **Figure-level claim and evidence architecture.** Start from one Results-level question and one figure-level claim; state what could overturn it. Give panels distinct inferential roles (setup, representative example, primary quantitative evidence, baseline/control, decomposition, stratification, orthogonal validation, perturbation/stress test, boundary/failure case, mechanistic evidence). Prefer role diversity over metric diversity; a mirror layout of the same metric is one role, not four. Use a chain: establish → compare/control → stress-test/discriminate → broaden → bound. Across figures, each figure should raise the next question rather than repeat “X performs well”.
@@ -339,6 +358,8 @@ Read figure-production.md, figure-craft-and-information-density.md and figure-st
 - Every result has an assigned destination; the shortest sufficient evidence chain is in the main text; SI does not hide conclusion-changing results; revision additions pass the deletion check.
 - Statistics define the independent unit, n, error definition, test, tail, correction and exact values; Reporting Summary, image integrity and data/code/materials statements are complete and consistent.
 - Figure panels have distinct inferential roles; figure order escalates; information density is adequate; the caption contract and journal stage-specific figure requirements are met.
+- HTML figures are audited at their final CSS width; source raster width, save dpi, displayed width and effective point size are recorded together, and nominal 10 pt text remains at least 10 pt after browser scaling.
+- Fixed grids use one physical canvas and complete-cell gutter contract. Long labels, legends and ordered length-by-condition combinations cannot widen a column; ordered variables remain continuous and use shape, colour and hatch for secondary conditions.
 - The submission package is complete for the recorded stage; missing facts are marked, not invented.
 - AI use follows the target-journal policy: no AI authorship, no fabrication, no confidential uploads, disclosed where required, every AI-suggested citation/number verified.
 - AI writing negative list passes: no fabricated references/data/results, no citation manipulation, no paper-mill patterns, no undisclosed translation/ghostwriting, no detection evasion.
@@ -348,3 +369,45 @@ Read figure-production.md, figure-craft-and-information-density.md and figure-st
 - Section craft passes the abstract hidden-names test, Introduction reverse outline, Results claim ladder and Discussion synthesis audit.
 - Perspective work has one intellectual centre, a discovery sequence, marked evidence status and a concrete ending.
 - Files exist, are the audited versions, and unresolved items are reported.
+
+## 13. v1.2.6.6 projection, structural cartoon and HTML bold gates
+
+- Projection panels take limits from the full data extent and record
+  clipped_point_fraction = 0; PCA/t-SNE/UMAP use equal x/y unit length, equal spans and a
+  square axes box.
+- Fold-evidence panels use cartoon/ribbon geometry, never surface only; non-focal loops and
+  contexts are grey at 20% transparency, and each structure tile carries an auditable label
+  band that never covers molecule ink.
+- Before rendering, validate the structure file: element columns, guide atoms equal to
+  C-alpha count, non-empty FASTA. Rewrite element columns and record SHA-256 when validation
+  fails.
+- In HTML reports, bold the topic sentence of each Results subsection, decisive numbers and
+  logical turns, the abstract's conclusion and each figure caption's inference clause (1-3
+  spans per paragraph, never the whole paragraph).
+- Display figures as 600 dpi raster and link SVG/PDF separately; confirm the page paints the
+  figure by screenshot at its vertical position, not only by naturalWidth.
+
+## 14. v1.2.6.7 evidence-density and visual-finish gates
+
+- Every analytical panel has at least three evidence layers (observations, distribution, estimate with CI, reference, effect size, contrast, structural annotation); the count is audited.
+- No means-only bars and no single series without a band, points or rug; a two-bar panel requires a companion distribution in the same figure.
+- Do not repeat the same chart across algorithm, rule and environment without adding a distribution, contrast or mechanism layer.
+- No default black whiskers or edges; use semantic fills and an alpha hierarchy.
+- Each figure row carries a distinct evidence role; dimension-swap repetitions fail.
+
+## 15. v1.2.6.8 data-extent gates
+
+- Every quantitative panel covers the full data extent on both axes; hard-coded stale limits fail.
+- Threshold views either extend to the full range or carry a full-range companion in the same panel.
+- The panel-extent audit records clipped-point counts and overshoot; all panels pass.
+- Inverted, log and image/matrix axes are audited in value space; legend proxies and default collection offsets are ignored.
+- After changing limits, explicit ticks replace auto-locators that would fall outside the view.
+
+## 16. v1.2.6.8 addendum gates
+
+- Audit every data-artist path (PolyCollection, LineCollection, patches, images), not only scatter offsets.
+- Violin/KDE bodies extend beyond the observed data range by about 1.5 bandwidths; flat caps fail.
+- Density contour grids extend about 6% beyond the observed data range.
+- Points at 0, 1 or thresholds receive a marker margin of 2–4% of the axis span.
+- Rendered rasters are checked at final display width; HTML serves versioned raster URLs or no-store headers.
+

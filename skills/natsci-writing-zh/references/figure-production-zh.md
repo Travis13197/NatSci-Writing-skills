@@ -1,6 +1,6 @@
 # 图件生产：从论断到投稿级成图
 
-版本 1.2.5；更新日期 2026-11-24。与 figure-standards-nature-science-zh.md（期刊规格、图注语法、统计呈现）和 figure-design-and-audit.md（作者项目的几何、颜色与发布门槛）配合使用。本文件整合 nature-skills 图件体系与语料证据，给出端到端流程。
+版本 1.2.6.8；更新日期 2026-11-24。与 figure-standards-nature-science-zh.md（期刊规格、图注语法、统计呈现）和 figure-design-and-audit.md（作者项目的几何、颜色与发布门槛）配合使用。本文件整合 nature-skills 图件体系与语料证据，给出端到端流程。
 
 ## 一、图件合同（写代码之前）
 
@@ -49,6 +49,11 @@
 
 **字体。** Arial/Helvetica（回退 DejaVu Sans），全图一致；SVG/PDF 文字可编辑；仅在渲染器支持时使用数学字体。期刊印刷字号 5–7 pt；作者 HTML/项目叠加使用较大角色（10 pt 正文、10.5 pt 轴标签、11 pt 粗体面板标题、11.5 pt 结构标题、12.5 pt 面板字母），同一交付物中不得混用。不得为缓解拥挤把字号压到发布下限以下；应扩大画布、稀疏刻度、缩短标签或把精确数值移入图注/源表。
 
+嵌入 3×3 HTML 综合图的结构 raster 标签使用最终显示大小计算，目标 5–7 pt；1600 px
+结构画布以 48–56 px source label 为起始值，并在最终截图复核。结构标题仍为 11.5 pt，
+panel letter 为 12.5 pt。残基标签过大会遮住侧链和 Cartoon，不得用正文 10 pt 的规则
+机械放大 raster 标签。
+
 **坐标与边框。** 只保留左、下边框；上/右边框关闭；图例无框；默认无网格。每个分析面板（含矩阵和类别面板）都必须有轴标题；自动定位器产生超出数据范围的刻度时手动设定范围。
 
 **颜色。** 每图一个中性族、一个信号族、一个强调族。语义稳定优先于色相多样：同一对象/方法/状态在面板、图和正文中保持同一颜色；通过填充、形状、网纹、线型或直接标签编码证据状态，不通过重新着色对象。使用色盲友好色（Okabe–Ito 作为色相来源）；定性面板最多三种彩色类别，超过则加形状/线型/直接标签；连续量用单调色阶；双向偏离用砖红—中性—深蓝发散色阶。禁用 jet/rainbow/hsv、装饰性循环和低于 4.5:1 的文字对比；矩阵单元不写文字，支持信息用标记或轮廓编码；项目语义色板（navy #0D5673、secondary #4E8EAD、teal #16786F、ochre #C77A24、brick #B8453E、plum #6C5079、neutral #586B75、text #132B36）在 figure-design-and-audit.md 和 figure-colour-audit-contract.md 中定义。
@@ -84,6 +89,19 @@
 - 位图面板检查外边界内容范围和内部空白带；只裁剪完全空白的外边距；保持分子纵横比；结构面板内容范围不低于 85%。
 - 记录发布文件：面板几何、间距、逐轴字号、颜色角色、遮挡结果、源数据映射、导出检查。项目审计文件与阈值见 figure-design-and-audit.md、panel-layout-and-letter-placement.md、figure-colour-audit-contract.md、figure-r50-regression-checklist.md。
 - 保存后不得压缩设计间距；保存的成图必须是审核过的版式。旧的 PASS 不能证明新的渲染；每次重新测量当前文件。
+
+### 7A. 最终 HTML 有效字号与固定 canvas
+
+Matplotlib 的 10 pt 是源 raster 的点值，不是页面显示值。浏览器把 6,500–9,700 px 的三列图压到约 1,384 px 时，原本 10 pt 的标签只剩约 2–7 pt；即使原图 validator 全部通过，读者仍然无法读图。每张 HTML 图必须记录：
+
+- raster 宽、宽高和保存 dpi；
+- 最终内容列和图像 CSS 宽；
+- 每类文字角色的有效 CSS pt：`raw_pt × save_dpi / 72 × css_width / raster_width ÷ (96 / 72)`；
+- 有效字号是否达到 10 pt、轴标题是否达到 10.5 pt。
+
+三列综合图先固定一个物理 canvas family：72 mm 数据框、28.8 mm 完整 cell 净空、14.4 mm 标题与字母带，并为 y 标签留出独立外侧带。不要先生成任意 `figsize`，再对旧网格追加 `set_box_aspect(1)` 或用 `tight_layout` 压实。`bbox_inches="tight"` 不得在审计后改变 gutter；保存后只允许裁掉完全空白的外边距。
+
+长 y 刻度先缩写，再按固定宽度换行；完整 estimand、单位和比较方向放在轴标题、图注与源表。禁止用 `set_label_coords(-0.55, 0.5)` 或 `set_label_coords(1.55, 0.5)` 把标签推进 gutter。所有图输出 `effective_font_size_audit.tsv`、`column_cell_width_audit.tsv` 和 `panel_role_audit.tsv`。
 
 ## 八、与正文的衔接
 
@@ -130,3 +148,59 @@ svglite::svglite("fig1.svg", width = 183/25.4, height = 60/25.4); print(p); dev.
 选工具前先判断图件类型。数据图（显微、凝胶、印迹、成像、光谱、定量图、结构）用真实数据和代码生成；生成式图像模型不得创建或修改数据图。概念示意图、图形摘要和封面按目标期刊 AI 图像政策处理；许多期刊要求编辑许可和披露。AI 辅助排版或字体可以使用，实质协助需披露，最终矢量要核对。
 
 禁用生成式填充、移除物体、合成显微、凭空增加细节的 AI 放大、假比例尺或编造分子结构。保留溯源记录：工具/版本/后端、日期、完整 prompt、seed/参数、输出哈希、人工修改、源数据/代码和核验人。期刊允许时在 Methods、图注和 cover letter 披露。读 ai-figures-and-visual-integrity-zh.md；用 assets/templates/ai-image-provenance-record.md 记录。
+
+## 十二、v1.2.6.3 图例与刻度实现顺序
+
+先完成数据绘制，再移除未定位图例并决定三种布局：不超过四个短系列且有真实右侧空白
+时使用 axes-fraction 直接标签；空间不足时在图题下横排；仍不足时放入右侧独立列。
+直接标签整组一起平移，保证最小间距；不得在轴框边缘逐标签裁剪。图例、直接标签和
+系列文本在最终发布前统一执行数据遮挡检测。
+
+轴标题在碰撞处理前登记为不可删除对象。数值轴设 4–6 个主要刻度；类别轴标签缩短后，
+从原 tick positions 中按 rendered bbox 均匀选择 2–4 个，再调用显式 `set_xticks` 或
+`set_yticks`。这样刻度不会在下一次 draw 中重新出现。每个轴至少保留两个刻度；轴标题
+继续保持可见并增加 label padding。
+
+panel 标题和字母在最终 axes 尺寸已知后重放。锚点高度取顶部 y 刻度文字上界、文字高度
+和至少 4 mm 净空的最大值。数据范围在最终 autoscale 后加入 headroom；保存前再次执行
+文字—文字、文字—数据、图例—数据和画布边界审计，并同时写出
+`axis_tick_completeness` 与 `legend_data_occlusions`。
+
+## 十三、v1.2.6.4 星号与水平图例实现
+
+统计字符串先经统一函数转成 `****/***/**/*/n.s.`，图中不再拼接 q 文本。效应曲线增加
+同点 95% CI 带；同一连续显著区段用首、中、末代表点标星，状态变化处和末点始终保留。
+森林图的外置显著性列使用同一星号映射。
+
+fig.legend 的布局顺序固定为：标题下水平多列 → axes 端点直接标签 → 右侧单列。顶部图例
+使用 `lower center` 放在数据框上缘，标记 `_cellauto_legend_mode="header"`；标题和
+panel letter 的动态锚点读取该 legend 的 y1，再整体上移。`target_reached`、`complete`、
+`timeout`、`blocked` 的转移缩写为 `C/T/B→C/T/B`。可放上方的图例占右侧列、图内出现
+`q=` 文本或相邻星号碰撞，均阻止发布。
+
+## 十四、v1.2.6.6 投影和结构 cartoon 实现
+
+投影面板先计算 `span=1.06 × max(x_range,y_range)`，以各自数据中心设置相同跨度的 x/y
+limits，启用等比例坐标并固定方形数据框，再显式设置刻度。保存前逐点断言所有点均在
+limits 内，输出越界点数必须为 0。
+
+结构 cartoon 渲染前从原子名重写元素列并保留电荷列为空，记录源文件和修正文件哈希；
+检查 guide atom 数为 Cα 数。PyMOL/ChimeraX 中由真实坐标生成 rounded-ribbon cartoon，
+非重点链、loop 和上下文使用灰色 20% 透明度（约 80% 可见），焦点折叠不透明。标签带
+与分子墨迹分离。
+
+## 十五、v1.2.6.7 密度实现配方
+
+分布 panel 采用分层画法：violin 透明度约 0.18、box 约 0.35、抖动个体点 alpha 约 0.55、
+点大小 3–5，中位数/CI 用文字色标记。散点 panel 加回归线与 bootstrap 带，或 hexbin 并在
+图注给出边际摘要。剂量–响应 panel 画估计值与 CI 带，同时保留个体终点 rug。禁止使用默认
+黑色箱线须线；whiskerprops、capprops、medianprops 必须使用已注册颜色。导出前逐 panel
+审计证据层数与未注册颜色。
+
+## 十六、v1.2.6.8 范围实现配方
+
+用统一 helper 计算范围：pad = 0.04 × (max − min) 或 0.02 × |value|；xlim = (min − pad,
+max + pad)；必须保持 0/100 的百分比轴不加边距。分布 panel 要包含 violin/KDE 体，而不只是
+观测点；对数轴在对数空间加边距。设置范围后显式设置刻度。导出前运行全 panel 范围审计，
+任何 panel 出现越界点或相对越界 >0.5% 即判定构建失败。
+

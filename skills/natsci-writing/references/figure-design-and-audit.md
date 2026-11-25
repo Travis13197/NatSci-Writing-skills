@@ -421,3 +421,226 @@ Before accepting a plate, confirm all of the following:
 - scatter, line collections, interval artists, bar patches and identity lines all enter the text-mark occlusion audit;
 - final PNG compact under the 0.95/0.14 rules;
 - HTML references the current artifact and both viewport checks use that artifact.
+
+## 10. Final HTML typography and fixed-cell regression
+
+Validate source point size and rendered point size together. Compute effective pt as
+`raw_pt × save_dpi / 72 × css_width / raster_width ÷ (96 / 72)`. Record every role
+in `effective_font_size_audit.tsv`; a nominal 10 pt label that falls below 10 pt in
+the rendered report fails.
+
+Use one physical canvas family for each grid. Keep axes width and height identical,
+freeze complete panel cells, and measure the union of axes, letter, title, ticks,
+axis labels, direct annotations and legends. Never use absolute
+`set_label_coords(-0.55/1.55)` placement to push long labels into a gutter. Abbreviate
+comparison names in the tick rail, with the full estimand in the axis title, caption
+and source table. Write `column_cell_width_audit.tsv` and `panel_role_audit.tsv`.
+
+Reject duplicate estimands. A panel that only changes plot type, threshold, seed or
+colour has the same inference role. Replace it with sample-level pairing, denominator
+anatomy, independent validation, matched background or a failure-state decomposition.
+
+For multi-panel figures with designed 0.38–0.42 w complete-cell gutters, allow a
+full-image internal blank row or column band up to 0.18; isolated structure rasters
+remain at 0.14 because title and label bands are not part of their declared gutter.
+
+## 11. v1.2.6.3 legend, tick and significance regression
+
+**Legends never cover data.** Legends, direct labels and series labels all enter the
+final data-occlusion audit. Prefer one-word abbreviations; keep the full estimand in the
+caption and source table. Use direct endpoint labels only for at most four series and only
+when a true right-side corridor exists. For more series, or when values crowd the edge,
+place a horizontal legend below the title or a one-column legend in a reserved right
+corridor. Store direct-label positions as axes fractions and translate the whole label
+stack together to preserve minimum spacing. Per-label clipping reintroduces collisions at
+the frame boundary. Record `legend_data_occlusions` and `zero_legend_data_occlusion`.
+
+**Never remove an axis title to solve a collision.** Resolve crowding through ticks,
+abbreviations, wrapping and label padding. Numeric axes normally retain four to six ticks.
+Write categorical ticks as one word or a short two-word phrase. Rotate at 45° only when
+labels are genuinely long or multiline and at most four labels remain visible. For denser
+category axes, use short registered abbreviations and retain two to four evenly spaced
+labels selected from rendered bounding boxes. Do not use the unstable pattern “every other
+tick plus the forced last tick”. Preserve at least two interpretable ticks per axis and
+record `axis_tick_completeness` and `all_axes_have_visible_ticks`.
+
+**Derive the panel header from the rendered top tick.** Anchor the title and letter above
+the full bbox of the top y tick, then add text height and at least 4 mm clearance from the
+axes top. A fixed header ratio is insufficient. Re-measure after final panel scaling.
+Keep the title centred, bold and single-line; keep the letter in the outer upper-left of
+the complete panel cell. Axis titles must never appear in `sparsified_tick_labels`.
+
+**Reserve range headroom.** Linear-axis extrema must not touch the frame. For non-negative
+data, keep the zero baseline and add about 10% headroom above the observed maximum; add
+about 4% below when required. Expand log axes multiplicatively. For near-saturated
+proportions, show baseline-relative change, recovery gain or completion gain while retaining
+the denominator, direction and zero reference.
+
+**Use significance only for real comparisons.** Bars, boxes and violins receive effect
+markers only for the same grouping, independent unit, denominator and contrast direction;
+the bracket height derives from the data span, and the label reports adjusted q or a
+predefined P value. Forest plots place q values in a separate column outside the plotting
+area. When no formal comparison or paired unit exists, keep the panel descriptive. Scatter
+points use about 0.50 alpha; violin fill uses about 0.28 and box fill about 0.38 so that
+distribution shape, summary and observations remain simultaneously visible.
+
+## 12. v1.2.6.4 star notation and legend layout
+
+**Use conventional stars inside figures.** `*` marks q<0.05, `**` q<0.01, `***`
+q<0.001, `****` q<0.0001 and `n.s.` marks q≥0.05. Do not print `q=0.349` inside a plot;
+keep the exact q value, adjustment method and comparison key in the caption and source
+table. Forest plots use an outside star column.
+
+**Pair continuous effects with intervals and stars.** Draw the real 95% CI as a
+semi-transparent band and place stars on the matching adjusted test. Repeating a 20 px-wide
+star label at every adjacent point causes collisions. For one continuous significant run,
+label the first, middle and last representative point; always add state changes and the
+last point. Never solve crowding by deleting tests or moving stars into the tick rail.
+
+**Prefer a horizontal legend above the data.** After registered abbreviation, try a
+multi-column horizontal legend below the title and outside the data rectangle. Use direct
+labels only when the header really exceeds the complete panel width, and a right-side
+column last. Encode state transitions as `C→C`, `T→C`, `T→T` and `B→B`, with full names in
+the caption. Dynamic title and letter anchors sit above this header legend.
+
+**Audit every panel after a full redraw.** Check legend mode, abbreviated labels, axis
+titles, star thresholds, CI bands, header/tick clearance, significance columns, data
+occlusion and final CSS font size. A right legend that could fit above is a failure; q text
+inside a plot is a failure; colliding repeated stars are a failure.
+
+## 13. v1.2.6.6 projection extent, equal units and structural cartoons
+
+**Show the complete projection.** Limits for an embedding or projection panel come from the
+full current data extent with at most 6% padding, never from a previous round's values. Any
+point outside the axes is a failure; record clipped_point_fraction = 0 together with the
+data minimum and maximum. If a legend or annotation forces a narrower view, split the panel
+instead of hiding points.
+
+**Use equal x/y unit length for projections.** PCA, t-SNE and UMAP panels set equal aspect
+and pad the shorter range so both spans match. The axes box remains square
+(height/width 0.98-1.02) and a unit in PC1 equals a unit in PC2 on the page. Ticks are
+declared explicitly for each projection instead of relying on an automatic locator that can
+leave stale labels after a limit change.
+
+**Cartoon first for fold evidence.** Panels that claim a fold class use ribbon/cartoon
+geometry, not a surface-only render. Helices use rounded ribbon style; sheets keep arrow
+ends. Non-focal chains, loops or contexts are grey and 20% transparent (about 80% visible);
+the focal fold stays opaque and saturated. Surface renders remain acceptable only when the
+panel's claim is about shape or pocket, and the caption must say so.
+
+**Annotate inside a reserved label band.** Each structural tile reserves a white band for a
+short class label or TM bucket at 10 pt equivalent; labels never sit on molecule ink. The
+caption expands the abbreviation into architecture name, TM value and source identifier.
+Bake labels only when the renderer cannot produce auditable text, and record the font size in
+source pixels.
+
+**Validate the structure file before any cartoon render.** Predicted-structure writers may
+left-justify element symbols and treat atom-name prefixes as elements, so CA is read as
+calcium. Check that columns 77-78 hold a right-justified element, that the number of guide
+atoms equals the number of C-alpha atoms, and that loading the file returns a non-empty FASTA
+sequence. If any check fails, rewrite the element columns from the atom name, record source
+and corrected SHA-256, and rerender. A cartoon that renders blank or as a thin line is a data
+problem before it is a style problem.
+
+## 14. v1.2.6.7 evidence density and visual finish
+
+**Every analytical panel carries at least three evidence layers.** Choose from individual
+observations (strip or jitter), a distribution (violin, box, hexbin, density contour), a
+central estimate with interval (median/mean plus CI), a reference or threshold line, an
+effect size, a cross-condition contrast, and a structural annotation. A panel with only
+mean bars, or one line without a band or observations, fails. Record the layer count in the
+panel audit; three is the floor, four is the target for main figures.
+
+**Two-category panels need a companion distribution.** A two-bar comparison is allowed only
+as a control or validation panel when the same figure already shows the distribution of the
+same variable; otherwise add the observations and an interval. A single-series curve must
+add a confidence band, individual points, or an event rug.
+
+**Use the third dimension instead of repeating the same chart.** With n >= 30 and at least
+two categorical variables, encode one variable on the position axis, one on colour or marker,
+and the response on size, coverage or a second summary inside the same panel. Three stacked
+bars that differ only by algorithm, rule and environment are a failure; at least one of them
+must show a distribution, a contrast or a mechanism layer.
+
+**Reference and uncertainty are part of the panel.** Add threshold, zero, identity or
+baseline lines; define the interval in the caption; do not leave a floating mean without a
+dispersion estimate. Forest plots keep the null line and exact intervals.
+
+**Visual finish is auditable.** Use semantic fills with an alpha hierarchy (about 0.15 for
+bands, 0.55 for observations, 1.0 for estimates), never matplotlib default black whiskers or
+edges (#000000 is an unregistered colour), keep tick lengths and frame weights consistent,
+and remove panels that are mostly empty. A panel that survives only when enlarged is a
+failure at the final CSS width.
+
+**Figure-level rhythm.** Each row has a distinct evidence role (occupancy, composition,
+structure, outcome, mechanism, control). Repeating the same bar chart with only the dimension
+swapped is a failure even when every individual panel is technically valid.
+
+## 16. v1.2.6.8 universal data-extent gate
+
+**Every quantitative panel displays the complete data extent on both axes.** Limits are
+computed from the current data with a small margin; hard-coded limits copied from an earlier
+dataset version fail. This applies to all marks that carry data: scatter points, bars, error
+bars, CI bands, violin bodies, rugs, regression lines and density bands.
+
+**Threshold views need a full-range companion.** A panel that deliberately starts at a
+threshold (for example TM >= 0.2) must either extend to the full data range or show the full
+range in the same panel. A zoomed view without a full-range companion fails.
+
+**Audit in value space, not by eye.** Compare data minima and maxima with axis limits on
+sorted limits (inverted axes) and on the original scale (log axes); check raster images and
+matrices with their half-pixel extent. Ignore legend proxies and default collection offsets;
+count explicit scatter offsets and line vertices. Record clipped-point counts and relative
+overshoot per axis in a panel-extent audit table, and require all panels to pass.
+
+**After extending a range, reset tick locators.** Extending a limit can leave auto-locator
+ticks outside the visible view; those labels still enter text-collision checks. Set explicit
+ticks inside the new range.
+
+**Lessons from the PGv3 audit.** The common causes were stale hard-coded y-limits, threshold
+views that hid zero-valued endpoints, long tails in control distributions, CI upper bounds
+outside the mean range, natural-sequence composition reaching 1.0, and KDE bodies clipped at
+the frame. Inverted and log axes plus default collection offsets generated false positives,
+so the audit must be geometry-aware rather than a visual check.
+
+## 17. v1.2.6.8 addendum: visible bodies, markers and raster completeness
+
+**A data-extent check that reads only scatter offsets is insufficient.** Distribution
+bodies (violins, KDE contours, CI bands, box whiskers) are drawn by PolyCollection and
+LineCollection paths, not by PathCollection offsets. Audit every data artist path after the
+data transform, or the plate can pass while the visible bodies are cut.
+
+**Violin bodies must not be flat-cut at the data minimum or maximum.** The default
+matplotlib violin evaluates the KDE only inside the observed range, producing a flat cap at
+the extreme observation. Extend the kernel grid beyond the data by about 1.5 bandwidths,
+draw the extended body, then set the axis range from the body extent plus a margin. A flat
+violin cap is a failure even when every observation is inside the frame.
+
+**Contours and CI bands need a kernel margin.** Density contours evaluated only between the
+data minima and maxima terminate at the data boundary. Extend the grid by about 6% beyond
+the observed range and expand the axis to the resulting contour extent.
+
+**Markers centred on a limit are half-clipped.** Points at exactly 0, 1 or a threshold touch
+the spine. Add a marker margin of about 2–4% of the axis span so the full symbol is visible.
+Apply the same rule to category labels and bars touching the frame.
+
+**Audit the raster, not only the vector geometry.** After export, inspect the rendered panel
+image at the HTML display width for ink that touches or is cut by the axes frame. The final
+HTML must serve versioned raster URLs or no-store headers; a regenerated PNG with an
+unchanged URL can be hidden by the browser cache and read as a stale, truncated plate.
+
+**Case study (PGv3, 2026-11-25).** A first geometry pass reported zero clipped panels while
+readers still saw: (i) Fig. 2b violins flat at +-0.006; (ii) Fig. 2c contours ending near
+-0.1; (iii) Fig. 2d/g markers on 0 and 1; (iv) Fig. 4b violins flat at the 50% data maximum;
+(v) Fig. 4h contours and points on 0/1; (vi) Fig. 4i points too small. The causes were
+data-only audit logic, default violin truncation, contour grids limited to the data range,
+no marker margin, and unversioned raster URLs. The fixes were extended KDE bodies, extended
+contour grids, marker margins, a full artist-geometry audit, and versioned image URLs.
+
+**Rule.** The extent gate passes only when the union of all data-artist paths, including
+distribution bodies and CI bands, lies inside the visible axes box with a small margin, and
+when the rendered raster confirms the same at final display width.
+
+## 18. v1.2.6.8 reflow addendum
+
+- Reflow addendum: a log-scaled axis can inflate the measured row pitch and leave a large internal blank band even when every artist is inside the axes. If a plate develops an unexplained blank band, test the log axis; for a narrow dynamic range use a linear axis, or reserve enough explicit vertical space and recheck the content-extent audit.

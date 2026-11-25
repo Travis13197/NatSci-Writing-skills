@@ -2,6 +2,153 @@
 
 All notable changes to NatSci-Writing-skills are documented here. The system follows semantic versioning.
 
+## 1.2.6.8 — 2026-11-25
+
+- Reflow addendum: a log-scaled axis can inflate the measured row pitch and leave a large internal blank band even when every artist is inside the axes. If a plate develops an unexplained blank band, test the log axis; for a narrow dynamic range use a linear axis, or reserve enough explicit vertical space and recheck the content-extent audit.
+
+- Visible-body addendum: audit PolyCollection/LineCollection paths, not only scatter offsets; extend violin KDE grids by about 1.5 bandwidths (flat caps fail); extend density-contour grids by about 6%; give points on 0/1/thresholds a 2-4% marker margin; check rendered rasters at final display width; serve versioned raster URLs or no-store headers.
+
+
+Universal data-extent release, derived from a full panel audit of the PGv3
+six-figure plate set where several axes still truncated real observations,
+confidence intervals or long-tailed controls.
+
+- Every quantitative panel must display the full data extent on both axes;
+  limits are computed from the current data, not copied from earlier versions.
+- Threshold views require a full-range companion; hidden zero-valued endpoints
+  fail.
+- The audit compares data extrema with sorted limits in value space, handles
+  inverted and log axes, and records clipped-point counts and overshoot per
+  panel.
+- Default collection offsets and legend proxies are excluded from the count.
+- After extending limits, explicit ticks replace auto-locators outside view.
+
+## 1.2.6.7 — 2026-11-25
+
+Evidence-density and visual-finish release, derived from the PGv3 six-figure
+review where technically valid plates still read as sparse and rough.
+
+- Every analytical panel must carry at least three evidence layers
+  (observations, distribution, estimate with interval, reference line, effect
+  size, cross-condition contrast, structural annotation); the layer count is
+  audited.
+- Means-only bars and single series without band, points or rug fail; a
+  two-category bar panel requires a companion distribution in the same figure.
+- Repeated dimension-swap charts (algorithm, rule, environment with the same
+  encoding) fail unless one variant adds a distribution, contrast or mechanism
+  layer.
+- Visual finish: semantic fills with an alpha hierarchy, registered colours for
+  every whisker and edge, no default #000000, no mostly empty panels.
+- Figure-level rhythm: each row carries a distinct evidence role.
+- Implementation recipes added for layered distributions, regression bands and
+  dose-response ribbons.
+
+## 1.2.6.6 — 2026-11-24
+
+Projection-extent, structural-cartoon and HTML-claim release, derived from a
+full redraw of the PGv3 exploratory growth plates.
+
+- Projection panels must cover the complete data extent: zero clipped points,
+  limits recomputed from the current data, explicit ticks instead of a stale
+  automatic locator.
+- PCA/t-SNE/UMAP panels require equal x/y unit length with equal spans and a
+  square axes box.
+- Fold-evidence panels must use cartoon/ribbon geometry; surface-only renders
+  are no longer acceptable as fold evidence.
+- Non-focal loops and background chains use grey at 20% transparency (about
+  80% visible); focal folds stay opaque.
+- Structure tiles reserve an auditable label band at 10 pt equivalent; labels
+  never cover molecule ink.
+- Added a pre-render structure-file gate: element columns 77-78 right
+  justified, guide atoms equal to C-alpha count, non-empty FASTA. Predicted
+  PDB writers that left-justify elements turn CA into calcium and produce
+  blank cartoons; the rule records source and corrected SHA-256.
+- HTML reports must bold Results topic sentences, decisive numbers, logical
+  turns, abstract conclusions and caption inference clauses (1-3 spans per
+  paragraph).
+- HTML figure elements must display a 600 dpi raster and link SVG/PDF
+  separately; rendered-page screenshots at the figure position replace the
+  naturalWidth check alone.
+
+## 1.2.6.4 — 2026-11-24
+
+Star-notation and horizontal-legend release, derived from a second
+panel-by-panel audit of the CellAuto figures.
+
+- Replaced in-plot q text with conventional `****/***/**/*/n.s.` markers.
+- Kept exact q values, adjustment methods and comparison keys in captions
+  and source tables.
+- Added CI bands and representative significance markers to continuous
+  effect curves so adjacent star labels cannot collide.
+- Changed legend priority to horizontal header first, direct labels second
+  and right-side columns last.
+- Added compact state-transition labels (`C→C`, `T→C`, `T→T`, `B→B`).
+- Made panel title and letter anchors rise above the rendered header legend.
+- Added full-panel regressions for Fig. 12 g/h, Fig. 14e and Fig. 15b.
+- BioNoether structure regression: context cartoons use ChimeraX
+  `transparency 20` (about 80% visible) with a white depth cue beginning at
+  0.75; opaque key cartoons and side-chain sticks remain the foreground.
+- A structure panel contains one molecular object. Complete and local views are
+  separate panels, and local views retain six residues on each side of the hit.
+- BioNoether complete-cell gutters use the author-confirmed `0.27–0.29 w`
+  range, default `0.28 w`, replacing the earlier `0.40 w` spacing.
+- Structure raster labels use 52 px source type, audited at 5–7 pt in the final
+  HTML; the ordinary 10 pt screen rule is not applied mechanically to raster
+  residue labels.
+- Biological terminology and reader-facing language rules now cover GB1,
+  1PGA, Olson data, q/Q scores, forbidden AI-style labels and per-panel
+  semantics.
+
+## 1.2.6.3 — 2026-11-24
+
+Legend, tick, headroom and significance regression release, derived from a
+panel-by-panel audit of the CellAuto report.
+
+- Added a hard legend–data separation gate. Short series use one-word labels;
+  direct labels are limited to four series and preserve spacing as an
+  axes-fraction stack; denser series move to a horizontal header legend or a
+  reserved right-side column.
+- Added `legend_data_occlusions` and `zero_legend_data_occlusion` to the release
+  contract. A plate fails when any legend, direct label or series text covers a
+  point, line, interval, bar, matrix or structure.
+- Protected x/y axis titles during tick-collision handling. Numeric axes retain
+  four to six major ticks. Categorical labels are abbreviated, rotated only
+  when genuinely long, and reduced to two to four evenly spaced ticks selected
+  from rendered bounding boxes rather than every-other-plus-last sampling.
+- Added `axis_tick_completeness` and `all_axes_have_visible_ticks`; every axis
+  keeps at least two interpretable ticks, and `sparsified_tick_labels` cannot
+  contain an axis title.
+- Made panel header height depend on the top y-tick bbox, text height and a
+  minimum clearance above the axes. Fixed header ratios remain only a lower
+  bound and are remeasured after final panel scaling.
+- Added linear and log range headroom. Non-negative proportions keep zero and
+  add upper space; near-saturated variables may use baseline-relative change,
+  recovery gain or completion gain with the denominator retained.
+- Added real-comparison significance rules. Bar, box and violin brackets use
+  the same grouping, independent unit, denominator and direction; forest plots
+  place adjusted q values outside the plotting area; panels without a formal
+  comparison remain descriptive.
+- Added distribution transparency guidance: observations about 0.50 alpha,
+  violin fill about 0.28 and box fill about 0.38.
+- Updated bilingual figure design, production, craft, journal-standard, panel
+  layout, R50, HTML/data verification, academic-prompt and SKILL gates.
+
+## 1.2.6.2 — 2026-11-24
+
+Final-footprint and evidence-density regression release, derived from a full
+audit of the CellAuto report's main, supplementary and generation figures.
+
+- Added the HTML effective-font rule: native Matplotlib point sizes are not accepted unless the final PNG width, browser CSS width and downsampling ratio are recorded together. A nominally 10 pt label in a 6,500–9,700 px raster displayed at about 1,384 CSS px failed because its effective size fell to roughly 2–7 pt.
+- Added fixed physical canvas families for regular grids. A 3×3 plate now starts from a 72 mm data-box target, 28.8 mm complete-cell gutters and a fixed outer label band; a single long legend, y tick or comparison name cannot expand one column into a central blank corridor.
+- Prohibited absolute `set_label_coords(-0.55/1.55)` positioning for long y labels. Comparison names are abbreviated in the tick rail, exact estimands remain in axis titles, captions and source tables, and axes use fixed label padding.
+- Added a release gate that reports `effective_font_size_audit.tsv`, `column_cell_width_audit.tsv` and `panel_role_audit.tsv` for every quantitative figure; the last table records points, intervals, bars, matrices, thresholds and direct annotations per panel.
+- Added the duplicate-estimand rejection: Main Fig. 7 g/h previously repeated the completion and recovery-defined summaries in e. They now show damage-matched before/after recovery tracks and damage-denominator anatomy.
+- Added numeric-length layouts for distance-response figures, avoiding 12–24 long categorical bars whose labels widened columns and removed readable axes area.
+- Added the ordered-dimension rule: length, time, dose and information levels stay on continuous axes; action arms and conditions use colour/shape/hatch instead of one categorical tick per length-by-condition combination.
+- Added rendered-page lazy-image verification: supplement cards must reserve an aspect ratio/minimum height, every collapsed `<details>` is opened, and all images must reach `complete && naturalWidth > 0`.
+- Calibrated internal blank-band acceptance: multi-panel figures with 0.38–0.42 w complete-cell gutters use a 0.18 full-image limit; isolated structure rasters keep 0.14.
+- Updated the prompt library, figure production, information-density, journal standards, panel layout and R50 regression references with these checks.
+
 ## 1.2.5 — 2026-11-24
 
 AI writing and AI figure integrity release, based on a broad policy review of Nature Portfolio, Science/AAAS, Cell Press, Elsevier, Springer Nature, PLOS, ICMJE, COPE and current surveys.

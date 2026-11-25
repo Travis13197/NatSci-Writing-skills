@@ -146,3 +146,37 @@ Do not confuse initial-submission and accepted-in-principle requirements.
 ## 12. AI-generated visual content
 
 An AI-generated image is not evidence. Conceptual schematics and graphical abstracts may use AI when the journal permits it, the figure is labelled conceptual, the authors verify every label and relationship, and the provenance record is archived. Data figures remain code-generated from real data. AI-assisted layout, colour or typography is acceptable with disclosure; AI-generated text labels must be rebuilt and checked. Bans: synthetic data images, generative fill/object removal, AI upscaling that invents detail, fabricated structures, fake scale bars or significance marks, undisclosed AI in covers/graphical abstracts, and copyrighted or patient material in prompts. Read ai-figures-and-visual-integrity.md.
+
+## 13. Final HTML footprint and ordered dimensions
+
+Source Matplotlib point size is not the displayed size. Record the source raster width, save dpi, final CSS width and effective point size for every typography role. A 6,500–9,700 px composite displayed in a roughly 1,400 px column can reduce a nominal 10 pt label to 2–7 pt. Use a fixed physical canvas, complete-cell gutters and a measured label band; one long y label or legend must not widen a column.
+
+Length, time, dose and information level are ordered numerical variables. Keep them on continuous axes and encode arms or conditions with colour, marker and hatch. Do not expand ordered dimensions into 12–24 combined categorical ticks. Show failure-state and success-conditioned denominators around the same numerical centre. Reject repeated panels that merely change a metric, threshold or seed.
+
+## 14. v1.2.6.3 legend and statistical density
+
+A legend occupies its own information space. Short series receive one-word labels; keep
+the full definition in the caption and source table. Direct labels support at most four
+series and preserve a minimum separation as a complete axes-fraction stack. More series
+move to a horizontal legend below the title or a one-column right corridor. Legends,
+direct labels and series text all enter the data-occlusion audit.
+
+Significance marks encode statistical evidence. Add brackets to bars, boxes or violins only
+for a real comparison with the same grouping, independent unit, denominator and contrast
+direction. Forest plots use a separate outside column for q values. Leave the space blank
+when no test exists. Combined distributions keep violin, box and observations visible with
+transparent fills and points.
+
+When observations touch the upper limit, first test whether a baseline-relative difference,
+recovery gain or completion gain is the stronger estimand. If the original proportion remains
+the right quantity, add upper headroom instead of truncating the axis or magnifying a trivial
+difference.
+
+## 15. v1.2.6.4 statistical density
+
+Use `****/***/**/*/n.s.` and move exact q values outside the plot. Continuous effect
+figures pair CI and stars at the same observation, with first/middle/last representatives
+for one significant run so marks never become denser than the data. Forest star columns
+align one-to-one with interval rows. Legends start as a horizontal band below the title;
+only insufficient width permits endpoint labels or a right column. Use `C/T/B→C/T/B`
+state codes and keep full states plus q values in caption and source table.

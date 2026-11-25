@@ -112,3 +112,25 @@ uncertainty, matching, thresholds, controls, direct measurements or independent 
 Do not add decorative frames, saturated colour cycling, arbitrary icons or synthetic sample
 clouds. A low-emphasis reading grid may use the registered pale neutral role; it must remain
 behind the data and does not count as an additional evidence encoding.
+
+## 7. v1.2.6.3 dynamic header band
+
+Derive the vertical title/letter anchor from the full bbox of the top y tick, the actual
+letter and title text height, and at least 4 mm of clearance above the axes. A fixed ratio
+is only a lower bound before tick text exists. Re-measure after the final panel scale and
+reapply the anchors; remeasure every row and complete-cell boundary if the header height
+changes. Keep the title top-aligned, bold, centred and single-line, with the letter in the
+outer upper-left of the complete cell.
+
+Resolve crowded ticks by editing ticks and labels, never axis titles. Abbreviate categories,
+then retain two to four evenly spaced labels based on rendered bounding boxes. Every axis
+keeps at least two interpretable ticks.
+
+## 8. v1.2.6.4 horizontal legend and title order
+
+Place a legend first as a horizontal multi-column band below the title, then try direct
+endpoint labels, and use a right column only as the last fallback. The header legend y1
+enters panel-header geometry; title and letter sit wholly above it and never share its
+baseline. Abbreviate state transitions as `C→C/T→T/B→B` and preserve full names in the
+caption. A right legend is a layout failure when its header width fits inside the complete
+axes.

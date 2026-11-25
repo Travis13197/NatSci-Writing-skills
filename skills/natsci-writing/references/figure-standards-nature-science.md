@@ -144,3 +144,25 @@ figure-design-and-audit.md defines the author's project conventions: near-square
 AI-generated or AI-altered research images are not acceptable data. Nature Portfolio requires AI use to be documented and AI-generated images must not misrepresent data; some Nature journals prohibit AI-generated images and videos. Science requires explicit editor permission for AI-generated text, images and graphics and treats undisclosed AI visual content as an editorial-integrity issue. Elsevier (June 2026) requires image-level caption disclosure of the tool, version and use, plus the general AI declaration. Verify the target journal before generation.
 
 For a conceptual AI-assisted figure: label it conceptual, disclose tool/version/use in the caption, verify all labels and relationships, keep the prompt/output/manual-edit provenance, and obtain editor permission for covers or graphical abstracts. Data figures come from real data and code. Full policy, provenance and negative checklist: ai-figures-and-visual-integrity.md.
+
+## 13. v1.2.6.3 layout and statistical marks
+
+Legends must not cover points, lines, intervals, bars, matrices or structures. Prefer a
+horizontal legend below the panel title; use a reserved right corridor when the title band
+cannot accommodate it. Direct labels are limited to at most four short series. Never remove
+an axis title to resolve tick collisions. Abbreviate category labels and retain two to four
+evenly spaced ticks; every axis keeps at least two.
+
+Observed values must not touch a linear upper limit. Non-negative proportions retain the
+zero baseline and add about 10% headroom. Significance brackets correspond to real
+comparisons and report adjusted q values; forest q values occupy a separate outside column.
+Combined distributions keep observations, violin and box transparent enough to remain
+simultaneously visible.
+
+## 14. v1.2.6.4 stars and legend order
+
+Use stars inside figures: `*` q<0.05, `**` q<0.01, `***` q<0.001, `****` q<0.0001 and
+`n.s.` otherwise. Exact q values belong in caption and source table. The default legend is
+a horizontal multi-column band below the panel title and above the data; a right column is
+the last fallback. Use first/middle/last representative stars for a continuous significant
+run, retaining state changes and the last point so adjacent stars cannot collide.

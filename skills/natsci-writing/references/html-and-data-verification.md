@@ -131,3 +131,58 @@ Check document-wide terminology, repeated numbers, units, methods descriptions, 
 Run text searches for risky wording as a final aid, then inspect each match in context. Exact phrase matching can miss paraphrases and can flag legitimate scientific wording. Human-readable meaning remains the criterion.
 
 Verify that the final file exists and contains the intended revised content. Report the output path, actual scope completed and any substantive unresolved items concisely. Keep a detailed verification record separate when needed. Declare final deliverables through the host artifact tool when available; exclude backups, working scripts and temporary files.
+
+### Rendered lazy-image galleries
+
+File-existence checks do not prove that a browser loaded an image. Gallery images need
+an explicit `aspect-ratio` and minimum height so they retain a nonzero intersection box;
+otherwise a lazy image inside a collapsed `<details>` can remain at
+`naturalWidth = 0`. During browser QA, open every `<details>`, scroll through the
+expanded document, and require every declared image to satisfy
+`complete && naturalWidth > 0`. Store these counts with the final screenshots.
+
+## 9. v1.2.6.3 figure-release regression
+
+Every quantitative figure in the HTML reads its same-stem audit JSON and requires all of
+`zero_text_collisions`, `zero_out_of_canvas`, `layout_spacing_compliant`,
+`typography_compliant`, `all_panels_evidence_dense`,
+`zero_text_data_occlusion` and `zero_legend_data_occlusion`. Also require at least two
+visible ticks for every axis in `axis_tick_completeness`, no axis title in
+`sparsified_tick_labels`, and effective font sizes above the project thresholds at final
+CSS width.
+
+Legends and direct labels are checked again after final panel scaling. File existence is
+not sufficient: verify that the current HTML references the hashes produced in this build
+and no legacy figure remains referenced. Every significance bracket and q value traces to
+a real comparison in the source summary, with comparison key, independent unit,
+denominator and adjustment recorded.
+
+## 10. v1.2.6.4 star and legend-mode audit
+
+The HTML caption declares `*` q<0.05, `**` q<0.01, `***` q<0.001, `****` q<0.0001 and
+`n.s.` otherwise. No q text may remain inside a plot. Quantitative audits also check legend
+mode: a right legend is a failure when the header accommodates its width; horizontal
+legend y1, panel title and letter bboxes must remain separate; repeated continuous stars
+appear only at representative points or significance-state changes. Re-run 38 charts, 128
+visual assets and browser checks at 1440/390/320 after the final report build.
+
+## 11. v1.2.6.6 bold claims, raster figure display and extent audit
+
+**Bold the claims that carry the argument.** In a scientific HTML report, bold each Results
+subsection's topic sentence, the decisive numbers and the logical turn of the conclusion; the
+abstract's conclusion sentence and the inference clause of every figure caption also carry
+bold. Use one to three spans per paragraph and never bold a whole paragraph. The rendered
+weight must be visibly heavier than body text (700 weight, heading colour), because a claim
+that is only emphasised in the prose plan but not on the page does not exist for the reader.
+
+**Display figures as raster and link vector.** Show the 600 dpi PNG (or JPG) as the visible
+figure element and link SVG/PDF separately. A very large SVG is not a reliable display path in
+embedded viewers even when the browser reports it as loaded. Test by screenshotting the page
+at the figure's vertical position; complete and naturalWidth > 0 is necessary but not
+sufficient.
+
+**Audit figure geometry against the source.** For every projection panel assert that all
+points fall inside the axes and that x/y unit lengths match; for every structure panel assert
+cartoon geometry, 20% background transparency and label-band placement. Report the data
+minimum and maximum next to the axis limits.
+

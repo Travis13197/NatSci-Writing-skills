@@ -39,3 +39,7 @@
 ## AI 图件审计
 
 "使用 natsci-writing-zh。把每幅图分类为数据图、概念图、图形摘要或 AI 辅助排版。对任何 AI 辅助图建立溯源记录，核对目标期刊图像政策，给出披露文字、质检结果和负面清单结论。"
+
+## HTML 图件有效字号与固定拼图
+
+"使用 natsci-writing-zh。读取全部图件和 HTML，按最终 CSS 宽计算每类文字的有效 pt；固定 3×3 canvas、完整 cell gutter 和列宽，找出长 y 标签、图例或重复估计量造成的间距与信息密度问题。逐 panel 给出问题、证据角色、修复，再重绘并输出 effective_font_size、column_cell_width 与 panel_role 审计。"

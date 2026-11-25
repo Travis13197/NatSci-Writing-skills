@@ -134,3 +134,72 @@ These templates are starting points; the contract, archetype and evidence logic 
 Before choosing a tool, classify the figure. Data figures (microscopy, gels, blots, imaging, spectra, plots, structures) come from real data and code; a generative image model must not create or alter them. Conceptual schematics, graphical abstracts and cover art follow the target journal's AI-image policy; many journals require editor permission and disclosure. AI-assisted layout or typography is allowed, with substantive assistance disclosed and the final vector checked.
 
 Never use generative fill, object removal, synthetic microscopy, AI upscaling that invents detail, fake scale bars or fabricated molecular structures. Keep a provenance record: tool/version/backend, date, full prompt, seed/settings, output hash, manual edits, source data/code and human reviewer. Put the disclosure in Methods, figure legend and cover letter when the journal permits AI-assisted figures. Read ai-figures-and-visual-integrity.md; record with assets/templates/ai-image-provenance-record.md.
+
+## 12. v1.2.6.3 legend and tick implementation order
+
+Draw the data first. Then remove the unplaced legend and choose one of three layouts: direct
+axes-fraction labels when at most four short series have a genuine right-side corridor; a
+horizontal legend below the title when that band has room; or a one-column legend in a
+reserved right corridor. Translate direct labels as one stack and preserve a minimum
+separation. Do not clip each label independently at the frame boundary. Audit legends,
+direct labels and series text for data occlusion before release.
+
+Register axis titles as protected objects before collision handling. Use four to six major
+ticks on numeric axes. For categorical axes, abbreviate first, then choose two to four
+evenly spaced labels from the original tick positions using rendered bounding boxes and set
+those ticks explicitly with `set_xticks` or `set_yticks`. Explicit selection prevents hidden
+labels from reappearing on the next draw. Preserve at least two ticks and keep every axis
+title visible with sufficient label padding.
+
+Reapply panel titles and letters after the final axes size is known. Derive the anchor from
+the topmost y-tick bbox, text height and at least 4 mm clearance. Add range headroom after
+final autoscaling. Before saving, rerun text–text, text–data, legend–data and canvas-boundary
+audits and write `axis_tick_completeness` and `legend_data_occlusions`.
+
+## 13. v1.2.6.4 star notation and horizontal legend implementation
+
+Convert every significance string through one function to `****/***/**/*/n.s.`; never
+assemble q text inside a plot. Effect curves carry their matching 95% CI band. For one
+continuous significant run, label representative first, middle and last points, and always
+keep state changes and the last point. Forest outside columns use the same star mapping.
+
+Legend order is fixed: multi-column horizontal header below the title, direct endpoint
+labels second, one-column right-side legend last. Place the header with `lower center` just
+outside the data rectangle and mark `_cellauto_legend_mode="header"`. The dynamic title and
+letter anchor reads that legend's y1 and moves above it. Encode state transitions as
+`C/T/B→C/T/B`. A right legend that could fit above, in-plot `q=` text or colliding adjacent
+stars blocks release.
+
+## 14. v1.2.6.6 implementation recipe for projections and cartoons
+
+Projection panels: compute span = max(x.max()-x.min(), y.max()-y.min()) * 1.06; set both
+limits to the same span around each centre; enable equal aspect with a fixed square box; then
+set explicit ticks. Assert every point lies inside the limits and store the count of points
+outside (must be zero). Keep the axes box square after saving.
+
+Cartoon panels: before loading, rewrite the element columns of the PDB from atom names
+(element = name[0] if name[0].isalpha() else name[1]), keep charge columns blank, and save a
+corrected copy with source and corrected hashes. In PyMOL, assign secondary structure, enable
+round helices before rebuild, colour helix/sheet/loop by role, set loop transparency to 0.20
+only for loop selections, render with the opaque white background and orthographic camera,
+and crop to ink before composing. Reserve a 200 px label band per tile at 2,800 px canvas
+width for 10 pt labels. Never ship a surface-only panel as fold evidence.
+
+## 15. v1.2.6.7 density implementation recipe
+
+Layer distributions with strip plots: draw a violin at alpha 0.18, a box at alpha 0.35, jittered
+observations at alpha 0.55 and size 3-5, and a median/CI marker in the text colour. For
+scatter panels add a regression line with a bootstrap band, or a hexbin plus marginal summary
+text in the caption. For dose-response panels plot the estimate with a CI band and keep the
+individual endpoint rug. Never use default black boxplot whiskers; set whiskerprops,
+capprops and medianprops to registered colours. Audit every panel for evidence-layer count
+and for unregistered colours before export.
+
+## 16. v1.2.6.8 extent implementation recipe
+
+Compute limits with a helper such as: pad = 0.04 * (max - min) or 0.02 * abs(value); xlim =
+(min - pad, max + pad); skip the pad for percentage axes that must stay at 0/100. For
+distributions include the violin/KDE body extent, not only the observations. For log axes pad
+in log space. Set explicit ticks after setting limits. Run a panel-extent audit over every axis
+before export and fail the build if any panel has clipped points or more than 0.5% overshoot.
+

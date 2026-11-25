@@ -1,6 +1,6 @@
 # Complete HTML revision and scientific verification
 
-Updated: 2026-11-18. Read this reference in full when the user requests a complete HTML or long-document revision, verification of data authenticity, or inspection of scientific calculations. Combine it with SKILL.md and research-and-language.md.
+Updated: 2026-11-24; NatSci-Writing-skills 1.2.6.8. Read this reference in full when the user requests a complete HTML or long-document revision, verification of data authenticity, or inspection of scientific calculations. Combine it with SKILL.md and research-and-language.md.
 
 ## 1. Establish the source and preserve it
 
@@ -123,8 +123,9 @@ Measure the complete visual gap between neighboring panels after the final typog
 suppression and legend placement. The panel boundary is the union of the data box, panel
 letter, single-line centred title, all ticks and offset text, axis labels, direct
 annotations and external legend. Reserve approximately one fifth of the panel width as
-blank separation at each side, so horizontal and vertical gaps are `0.38–0.42` of the
-regular panel data-box width, with `0.40` as the default. Audit axes-only or grid-cell-only
+blank separation at each side. For BioNoether, horizontal and vertical gaps are
+`0.27–0.29` of the regular panel data-box width, with `0.28` as the author-required
+default after a 30% reduction from the earlier `0.40`. Audit axes-only or grid-cell-only
 gaps do not establish this condition. Write the measured millimetre gaps and
 `gap / panel_width` values to `panel_visual_gutter_audit.tsv`, then freeze the layout. If
 the save routine repeats `subplots_adjust` or automatic title placement, the exported PNG
@@ -159,6 +160,14 @@ mode retains mode and camera, that controls keep a 44 px effective height, and t
 secondary-structure assignment, cylinder parameters, export hashes, raster occupancy
 and maximum internal blank bands in the structural render record.
 
+Lazy image galleries need a reserved intrinsic aspect ratio before browser QA. An image
+inside a closed or zero-height card can remain at `naturalWidth = 0` even when its file
+exists, so `document.images` reports it as missing during scrolling. Give gallery images
+explicit `aspect-ratio` and `min-height`, open every `<details>` during the test, scroll
+through the expanded page, and require all declared images to reach
+`complete && naturalWidth > 0`. File-existence audits do not replace this rendered-page
+check.
+
 ## 8. Verify coverage and delivery
 
 Re-read all revised scientific text in reading order. Reconcile the coverage ledger against the original inventory: each original content block has a reviewed counterpart or a documented, justified removal. Added sections require the same language and evidence checks.
@@ -168,3 +177,36 @@ Check document-wide terminology, repeated numbers, units, methods descriptions, 
 Run text searches for risky wording as a final aid, then inspect each match in context. Exact phrase matching can miss paraphrases and can flag legitimate scientific wording. Human-readable meaning remains the criterion.
 
 Verify that the final file exists and contains the intended revised content. Report the output path, actual scope completed and any substantive unresolved items concisely. Keep a detailed verification record separate when needed. Declare final deliverables through the host artifact tool when available; exclude backups, working scripts and temporary files.
+
+## 9. v1.2.6.3 全图件发布回归
+
+HTML 中每幅定量图必须读取同名审计 JSON，并同时要求
+`zero_text_collisions`、`zero_out_of_canvas`、`layout_spacing_compliant`、
+`typography_compliant`、`all_panels_evidence_dense`、
+`zero_text_data_occlusion` 和 `zero_legend_data_occlusion` 为真。另查
+`axis_tick_completeness` 中每个轴至少两个可见刻度、
+`sparsified_tick_labels` 不含轴标题，以及最终 CSS 宽下的 effective font size 不低于
+项目阈值。
+
+图例与直接标签必须在最终面板缩放后再次检查。报告中的图不可只凭文件存在就通过；需要
+核对当前 HTML 引用的哈希等于本轮生成文件，并确保旧版图不再被引用。所有显著性括号和
+q 值来自源 summary 的真实比较，审计记录中保留比较键、独立单位、分母和校正字段。
+
+## 10. v1.2.6.4 星号与图例模式审计
+
+HTML 图注统一声明 `*` q<0.05、`**` q<0.01、`***` q<0.001、`****` q<0.0001、
+`n.s.` q≥0.05。图内不得存在 q 文本。定量图审计同时核对 legend mode：顶部可容纳却出现
+右侧图例为失败；水平图例 y1、panel title 和 letter 的 bbox 必须分离；连续星号只能出
+现在代表点或显著状态变化处。最终报告重新跑全部图、视觉资产和 1440/390/320 浏览器
+回归。
+
+## 11. v1.2.6.6 HTML 强调、raster 展示与范围审计
+
+每个 Results 小节的主题句、决定性数字和结论转折加粗；摘要结论句与每条图注的推断句也
+加粗。每段使用 1–3 个 `<strong>`，禁止整段加粗；浏览器中必须显示为 700 字重和标题色，
+只在写作计划里“强调”而页面未呈现视为未完成。
+
+图件以 600 dpi PNG/JPG 显示，SVG/PDF 单独链接；嵌入式浏览器对超大 SVG 的支持不稳定。
+在图的纵向位置截图核验实际绘出，`complete && naturalWidth>0` 只能说明文件加载。每个
+投影面板同时记录数据最小/最大值、axes limits 和 `clipped_point_fraction=0`；每个结构
+面板记录 cartoon 表示、20% 背景透明度和标签带位置。
