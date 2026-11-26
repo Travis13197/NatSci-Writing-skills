@@ -1,0 +1,229 @@
+{
+  "journal": "science",
+  "article_type": "research-article",
+  "display_name": "Science (Research Article)",
+  "version": "2026-11",
+  "provenance": {
+    "generated_by": "NatSci-Writing-skills",
+    "status": "compiled",
+    "official_template_required": false,
+    "note": "Compiled from the AAAS/Science information for authors; verify against the current guide at submission.",
+    "sources": [
+      {
+        "id": "science-initial-manuscript",
+        "url": "https://www.science.org/content/page/instructions-preparing-initial-manuscript",
+        "confidence": "official",
+        "accessed": "2026-11-26",
+        "note": "bot challenge on site; values transcribed from the published instructions"
+      },
+      {
+        "id": "science-latex",
+        "url": "https://www.science.org/content/page/preparing-manuscripts-using-latex",
+        "confidence": "official",
+        "accessed": "2026-11-26"
+      }
+    ]
+  },
+  "page": {
+    "size": "Letter",
+    "margins_in": {
+      "top": 1,
+      "bottom": 1,
+      "left": 1,
+      "right": 1
+    },
+    "line_numbers": true,
+    "page_numbers": true,
+    "confidence": "secondary"
+  },
+  "typography": {
+    "body": {
+      "font": "Times New Roman",
+      "size_pt": 12,
+      "line_spacing": 2,
+      "align": "left",
+      "space_before_pt": 0,
+      "space_after_pt": 0,
+      "first_line_indent_in": 0
+    },
+    "title": {
+      "font": "Arial",
+      "size_pt": 14,
+      "bold": true,
+      "line_spacing": 1.5,
+      "align": "left"
+    },
+    "authors": {
+      "font": "Arial",
+      "size_pt": 12,
+      "bold": false,
+      "line_spacing": 1.5,
+      "align": "left"
+    },
+    "affiliations": {
+      "font": "Arial",
+      "size_pt": 10,
+      "bold": false,
+      "italic": true,
+      "line_spacing": 1,
+      "align": "left"
+    },
+    "heading1": {
+      "font": "Arial",
+      "size_pt": 12,
+      "bold": true,
+      "line_spacing": 2,
+      "align": "left"
+    },
+    "heading2": {
+      "font": "Arial",
+      "size_pt": 12,
+      "bold": true,
+      "italic": true,
+      "line_spacing": 2,
+      "align": "left"
+    },
+    "abstract": {
+      "font": "Times New Roman",
+      "size_pt": 12,
+      "bold": false,
+      "line_spacing": 2,
+      "align": "left"
+    },
+    "caption": {
+      "font": "Arial",
+      "size_pt": 10,
+      "bold": false,
+      "line_spacing": 1,
+      "align": "left"
+    },
+    "reference": {
+      "font": "Times New Roman",
+      "size_pt": 12,
+      "line_spacing": 2,
+      "align": "left"
+    },
+    "table": {
+      "font": "Arial",
+      "size_pt": 10,
+      "line_spacing": 1
+    },
+    "confidence": "secondary"
+  },
+  "sections": [
+    {
+      "id": "title",
+      "kind": "title",
+      "required": true
+    },
+    {
+      "id": "authors",
+      "kind": "paragraph",
+      "required": true
+    },
+    {
+      "id": "affiliations",
+      "kind": "paragraph",
+      "required": true
+    },
+    {
+      "id": "abstract",
+      "kind": "abstract",
+      "required": true,
+      "word_range": [
+        100,
+        125
+      ],
+      "unreferenced": true,
+      "heading": "Abstract"
+    },
+    {
+      "id": "main",
+      "kind": "body",
+      "required": true,
+      "word_range": [
+        3000,
+        4500
+      ],
+      "heading": null
+    },
+    {
+      "id": "references",
+      "kind": "references",
+      "required": true,
+      "max_items": 80,
+      "heading": "References and Notes"
+    },
+    {
+      "id": "acknowledgements",
+      "kind": "paragraph",
+      "required": true,
+      "heading": "Acknowledgments"
+    },
+    {
+      "id": "funding",
+      "kind": "paragraph",
+      "required": false,
+      "heading": "Funding"
+    },
+    {
+      "id": "author_contributions",
+      "kind": "paragraph",
+      "required": true,
+      "heading": "Author contributions"
+    },
+    {
+      "id": "competing_interests",
+      "kind": "paragraph",
+      "required": true,
+      "heading": "Competing interests"
+    },
+    {
+      "id": "data_availability",
+      "kind": "paragraph",
+      "required": true,
+      "heading": "Data and materials availability"
+    },
+    {
+      "id": "supplementary",
+      "kind": "paragraph",
+      "required": false,
+      "heading": "Supplementary Materials"
+    },
+    {
+      "id": "figure_legends",
+      "kind": "paragraph",
+      "required": true,
+      "heading": "Figure legends"
+    }
+  ],
+  "references": {
+    "style": "science-numeric",
+    "citation_in_text": "superscript",
+    "numbering": "sequential by first citation",
+    "et_al_rule": "list all authors up to ten, then et al.",
+    "template": "1. A. B. Author, C. D. Author, Title of the paper. Science 370, 123-128 (2020).",
+    "confidence": "secondary"
+  },
+  "figures": {
+    "max_display_items": 7,
+    "width_mm_single": 55,
+    "width_mm_mid": 121,
+    "width_mm_double": 183,
+    "max_height_mm": 240,
+    "min_dpi": 300,
+    "letters": "uppercase bold, 8 pt, top-left of each panel",
+    "confidence": "secondary"
+  },
+  "checks": {
+    "abstract_word_range": [
+      100,
+      125
+    ],
+    "double_spacing": true,
+    "line_numbers": true,
+    "section_order_strict": true,
+    "reference_cap": 80,
+    "display_item_cap": 7
+  }
+}

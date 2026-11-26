@@ -1,5 +1,11 @@
 # 变更记录
 
+## 1.2.8.0 — 2026-11-26
+
+- 新增 references/journal-templates-and-assembly-zh.md 与第十八节：期刊规格、生成模板与官方模板、稿件组装、格式检查与六道投稿门（默认 Nature，Science 为第二格式）。
+- 新增工具：make_journal_template.py、build_manuscript.py、check_journal_format.py、fetch_journal_templates.py、journal_spec.py、journal_template_sources.json；规格与生成模板位于 assets/journal-templates/。
+- examples/journal-demo/ 提供两种期刊的可运行示例。
+
 ## 1.2.7.0 — 2026-11-25
 
 - 新增 references/defensive-writing-and-argument-selection-zh.md：发布会原则、论证取舍、实验职责、分章节防御性审计、修辞性减弱与认识论校准的边界、七步修订流程与可执行门禁。

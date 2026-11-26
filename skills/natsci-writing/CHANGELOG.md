@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.8.0 — 2026-11-26
+
+- Added references/journal-templates-and-assembly.md and section 18: journal specs, generated and official templates, assembly, format checking and the six-gate submission order (Nature default, Science second).
+- New tooling: make_journal_template.py, build_manuscript.py, check_journal_format.py, fetch_journal_templates.py, journal_spec.py, journal_template_sources.json; specs and generated templates under assets/journal-templates/.
+- Examples under examples/journal-demo/ for both journals.
+
 ## 1.2.7.0 — 2026-11-25
 
 - Added references/defensive-writing-and-argument-selection.md: press-release principle, argument selection, experiment duties, per-section defensive audit, rhetorical-hedging versus epistemic-calibration boundary, seven-pass revision protocol and measured gates.

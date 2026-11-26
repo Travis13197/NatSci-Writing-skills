@@ -1,0 +1,34 @@
+{
+  "journal": "nature",
+  "article_type": "article",
+  "base": "generated",
+  "sections_found": [
+    "abstract",
+    "main",
+    "methods",
+    "references",
+    "acknowledgements",
+    "author_contributions",
+    "competing_interests",
+    "data_availability",
+    "figure_legends",
+    "title",
+    "authors",
+    "affiliations"
+  ],
+  "sections_missing": [],
+  "word_counts": {
+    "abstract": 165,
+    "main": 97,
+    "methods": 27,
+    "references": 38,
+    "acknowledgements": 8,
+    "author_contributions": 12,
+    "competing_interests": 6,
+    "data_availability": 13,
+    "figure_legends": 19
+  },
+  "citations": 3,
+  "references": 3,
+  "output": "examples\\journal-demo\\out\\nature-demo.docx"
+}

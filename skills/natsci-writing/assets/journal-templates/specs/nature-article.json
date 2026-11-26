@@ -1,0 +1,240 @@
+{
+  "journal": "nature",
+  "article_type": "article",
+  "display_name": "Nature (Article)",
+  "version": "2026-11",
+  "provenance": {
+    "generated_by": "NatSci-Writing-skills",
+    "status": "compiled",
+    "official_template_required": false,
+    "note": "Compiled from the Nature Portfolio formatting requirements and cross-checked against a 2026 secondary summary; verify against the current guide at submission. Fields carry a confidence tag: official (stated by the publisher), secondary (third-party summary), default (safe fallback).",
+    "sources": [
+      {
+        "id": "nature-formatting-guide",
+        "url": "https://www.nature.com/nature/for-authors/formatting-guide",
+        "confidence": "official",
+        "accessed": "2026-11-26",
+        "note": "interactive browser required; values transcribed from the published guide"
+      },
+      {
+        "id": "scholarspec-2026",
+        "url": "https://scholarspec.com/guides/nature-journal-formatting-guidelines",
+        "confidence": "secondary",
+        "accessed": "2026-11-26"
+      }
+    ]
+  },
+  "page": {
+    "size": "A4",
+    "margins_in": {
+      "top": 1,
+      "bottom": 1,
+      "left": 1,
+      "right": 1
+    },
+    "line_numbers": true,
+    "page_numbers": true,
+    "confidence": "secondary"
+  },
+  "typography": {
+    "body": {
+      "font": "Times New Roman",
+      "size_pt": 12,
+      "line_spacing": 2,
+      "align": "left",
+      "space_before_pt": 0,
+      "space_after_pt": 0,
+      "first_line_indent_in": 0
+    },
+    "title": {
+      "font": "Arial",
+      "size_pt": 14,
+      "bold": true,
+      "line_spacing": 1.5,
+      "align": "left"
+    },
+    "authors": {
+      "font": "Arial",
+      "size_pt": 12,
+      "bold": false,
+      "line_spacing": 1.5,
+      "align": "left"
+    },
+    "affiliations": {
+      "font": "Arial",
+      "size_pt": 10,
+      "bold": false,
+      "italic": true,
+      "line_spacing": 1,
+      "align": "left"
+    },
+    "heading1": {
+      "font": "Arial",
+      "size_pt": 12,
+      "bold": true,
+      "line_spacing": 2,
+      "align": "left"
+    },
+    "heading2": {
+      "font": "Arial",
+      "size_pt": 12,
+      "bold": true,
+      "italic": false,
+      "line_spacing": 2,
+      "align": "left"
+    },
+    "abstract": {
+      "font": "Times New Roman",
+      "size_pt": 12,
+      "bold": false,
+      "line_spacing": 2,
+      "align": "left"
+    },
+    "caption": {
+      "font": "Arial",
+      "size_pt": 10,
+      "bold": false,
+      "line_spacing": 1,
+      "align": "left"
+    },
+    "reference": {
+      "font": "Times New Roman",
+      "size_pt": 12,
+      "line_spacing": 2,
+      "align": "left"
+    },
+    "table": {
+      "font": "Arial",
+      "size_pt": 10,
+      "line_spacing": 1
+    },
+    "confidence": "secondary"
+  },
+  "sections": [
+    {
+      "id": "title",
+      "kind": "title",
+      "required": true
+    },
+    {
+      "id": "authors",
+      "kind": "paragraph",
+      "required": true
+    },
+    {
+      "id": "affiliations",
+      "kind": "paragraph",
+      "required": true
+    },
+    {
+      "id": "abstract",
+      "kind": "abstract",
+      "required": true,
+      "word_range": [
+        150,
+        200
+      ],
+      "unreferenced": true,
+      "heading": "Abstract"
+    },
+    {
+      "id": "main",
+      "kind": "body",
+      "required": true,
+      "word_range": [
+        2500,
+        5000
+      ],
+      "heading": null
+    },
+    {
+      "id": "references",
+      "kind": "references",
+      "required": true,
+      "max_items": 50,
+      "heading": "References"
+    },
+    {
+      "id": "acknowledgements",
+      "kind": "paragraph",
+      "required": true,
+      "heading": "Acknowledgements"
+    },
+    {
+      "id": "author_contributions",
+      "kind": "paragraph",
+      "required": false,
+      "heading": "Author contributions"
+    },
+    {
+      "id": "competing_interests",
+      "kind": "paragraph",
+      "required": true,
+      "heading": "Competing interests"
+    },
+    {
+      "id": "figure_legends",
+      "kind": "paragraph",
+      "required": true,
+      "heading": "Figure legends"
+    },
+    {
+      "id": "tables",
+      "kind": "tables",
+      "required": false,
+      "heading": "Tables"
+    },
+    {
+      "id": "methods",
+      "kind": "body",
+      "required": true,
+      "heading": "Methods"
+    },
+    {
+      "id": "data_availability",
+      "kind": "paragraph",
+      "required": true,
+      "heading": "Data availability"
+    },
+    {
+      "id": "code_availability",
+      "kind": "paragraph",
+      "required": false,
+      "heading": "Code availability"
+    },
+    {
+      "id": "extended_data",
+      "kind": "paragraph",
+      "required": false,
+      "heading": "Extended Data"
+    }
+  ],
+  "references": {
+    "style": "nature-numeric",
+    "citation_in_text": "superscript",
+    "numbering": "sequential by first citation",
+    "et_al_rule": "list up to five authors, then et al.",
+    "template": "Author, A. B., Author, C. D. & Author, E. F. Title of the paper. Nature 555, 1-9 (2018).",
+    "confidence": "secondary"
+  },
+  "figures": {
+    "max_display_items": 8,
+    "width_mm_single": 89,
+    "width_mm_double": 183,
+    "max_height_mm": 240,
+    "min_dpi": 300,
+    "letters": "lowercase bold, 8 pt, upright, top-left of each panel",
+    "confidence": "secondary"
+  },
+  "checks": {
+    "abstract_word_range": [
+      150,
+      200
+    ],
+    "double_spacing": true,
+    "line_numbers": true,
+    "section_order_strict": true,
+    "reference_cap": 50,
+    "display_item_cap": 8
+  }
+}

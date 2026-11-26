@@ -1,0 +1,41 @@
+{
+  "note": "Official publisher template locations. These pages sit behind interactive interstitials, so the files are downloaded in a browser and imported with fetch_journal_templates.py --from-dir. sha256 is recorded on first import and checked afterwards.",
+  "templates": [
+    {
+      "id": "nature-word",
+      "journal": "nature",
+      "page": "https://www.nature.com/nature/for-authors/formatting-guide",
+      "file": "Nature Portfolio manuscript template (.docx); download from the formatting guide or the journal's submission page",
+      "note": "Word template. If the journal no longer ships one, the generated template (make_journal_template.py) encodes the same page setup, type and section order.",
+      "dest": "nature-template.docx",
+      "sha256": null
+    },
+    {
+      "id": "nature-latex",
+      "journal": "nature",
+      "page": "https://www.overleaf.com/latex/templates/tagged/nature",
+      "file": "Nature / Nature Portfolio LaTeX template (.zip, from Overleaf: Menu > Download source)",
+      "note": "Overleaf gallery template; download the source archive while signed in.",
+      "dest": "nature-latex.zip",
+      "sha256": null
+    },
+    {
+      "id": "science-word",
+      "journal": "science",
+      "page": "https://www.science.org/content/page/instructions-preparing-initial-manuscript",
+      "file": "Science manuscript Word template (.docx), linked from the instructions page",
+      "note": "AAAS Word template for Research Articles; the page is behind a bot challenge, so download it in a browser.",
+      "dest": "science-template.docx",
+      "sha256": null
+    },
+    {
+      "id": "science-latex",
+      "journal": "science",
+      "page": "https://www.science.org/content/page/preparing-manuscripts-using-latex",
+      "file": "Science LaTeX package (.zip), linked from the LaTeX instructions page",
+      "note": "AAAS LaTeX style and sample document.",
+      "dest": "science-latex.zip",
+      "sha256": null
+    }
+  ]
+}

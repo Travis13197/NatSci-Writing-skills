@@ -9,8 +9,8 @@ description: >-
   统计与报告诚信、信息架构、投稿包与端到端生产流程。内置防御性写作控制（发布会原则、
   论证取舍、实验职责）与可执行的去 AI 腔门禁，覆盖中英文稿。
 metadata:
-  version: "1.2.7.0"
-  updated: "2026-11-25"
+  version: "1.2.8.0"
+  updated: "2026-11-26"
   author: "Chuanyang Liu"
   system: "NatSci-Writing-skills"
   language: "zh"
@@ -407,4 +407,16 @@ Nature 正刊的方法统计段须覆盖检验、单双侧、独立单位、重�
 - **这条禁令不是许可证。** 无证据不主张，不删会改变解读的局限，不把阴性改写成阳性，不从单一体系外推，不隐瞒对照。本技能的统计、报告诚信与 AI 使用规则高于任何风格偏好。
 - **节奏也是诊断对象。** 目标：句长变异系数 0.30–0.65；收尾总结句 ≤1/千词；三项并列 ≤2/500 词；名词化实词 ≤12%；破折号 ≤2/千词；限定词 ≤4/千词（英）、≤3/千字（中）；局限标记 ≤2/千词。运行 python tools/check_prose_style.py --gate <文件>；不合格指 ERROR 命中、防御性/AI 标记命中，或度量越界。提案与理论文章用 --genre perspective（提案中的可能性表述属于校准，不是防御），报告用 --genre report（度量仅供参考）。
 - **适用范围。** 论文、摘要、cover letter、回复信、图内文字、报告与中文稿。中文特有形式（谦辞自贬、程序性叙述、空转定语、四字格排比）在同名中文参考文件中列出，并由同一个门禁检查。
+
+## 十八、v1.2.8.0 期刊模板与稿件组装
+
+默认目标是 **Nature**，Science 是第二格式。稿件最终要交付为一份必须通过机械检查的文档，所以装进模板，而不是手工排版。
+
+- **权威文件。** 规格在 assets/journal-templates/specs/（页面、字号、章节顺序、上限、参考文献风格、图幅），模板在 generated/ 或 official/，组装器 tools/build_manuscript.py，检查器 tools/check_journal_format.py，来源登记 tools/journal_template_sources.json。规格每块带置信标记：official、secondary、default。
+- **组装。** python tools/build_manuscript.py draft.md --journal nature --out build/draft.docx --report build/draft.json。输入是带二级标题的 markdown 或同结构 JSON；引言、结果、讨论并入正文并降为三级小标题；[1] 式引用转上标；作者与单位来自 front matter，绝不自动生成。
+- **章节顺序固定。** Nature：题目、作者、单位、摘要、正文、参考文献、致谢、作者贡献、利益冲突、图注、表格、方法、数据可用性、代码可用性、扩展数据。方法放在参考文献之后；放到引言之后是最常见的机械退稿原因。
+- **验证。** python tools/check_journal_format.py build/draft.docx --journal nature。关键项（页面、边距、连续行号、正文与摘要的字体字号行距、必需章节、章节顺序、上标引用）必须 PASS；摘要字数与参考文献计数是 WARN，超出时必须写下理由。
+- **官方模板。** python tools/fetch_journal_templates.py --list 列出出版社页面；--from-dir 导入浏览器下载的文件；--check 校验。组装时用 --template 传入，组装器保留官方样式并清空正文。绝不改模板样式去迁就文字。
+- **投稿门顺序。** 组装 → 格式 → 文字（第十七节）→ 主张与统计 → 图件 → 投稿包。六道全通过才提交；WARN 在写下理由之前不算通过。
+- **诚实边界。** 规格值经编译与交叉核对，但出版社随时会改；投稿前重新核对并更新规格。本包不绕过出版社中转页，也不重新分发出版社模板。
 

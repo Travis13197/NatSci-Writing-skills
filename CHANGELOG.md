@@ -2,6 +2,18 @@
 
 All notable changes to NatSci-Writing-skills are documented here. The system follows semantic versioning.
 
+## 1.2.8.0 — 2026-11-26
+
+Journal-template and manuscript-assembly release: papers are filled into a journal template and mechanically verified, with **Nature as the default format** and Science as the second target.
+
+- **Specs** (`assets/journal-templates/specs/`): page geometry, typography, fixed section order, abstract range, reference cap and style, figure widths and dpi for Nature Article and Science Research Article. Every block carries a confidence tag (official / secondary / default).
+- **Templates**: `tools/make_journal_template.py` generates a .docx (A4/Letter, 1-inch margins, 12 pt Times New Roman, double spacing, continuous line numbers, page numbers, one style per element) and a LaTeX skeleton, so assembly works without the publisher's file. `tools/fetch_journal_templates.py` lists the official publisher pages, imports a browser download, records its sha256 and verifies it; the builder then borrows the official styles.
+- **Assembly** (`tools/build_manuscript.py`): markdown or JSON in, formatted .docx out. Introduction/Results/Discussion fold into the main text as level-3 subheadings, [1]-style citations become superscripts, authors and affiliations come from front matter, missing required sections are reported and never invented. A JSON build report records sections, word counts and reference counts.
+- **Checking** (`tools/check_journal_format.py`): page size, margins, continuous line numbering, body and abstract font/size/line spacing, required sections, section order and superscript citations are critical; abstract length and reference count are warnings.
+- **Submission gate order** (SKILL section 18 / 十八): assembly → format → prose gate → claims and statistics → figures → package. All six pass before submission.
+- Examples: `examples/journal-demo/` contains working Nature and Science manuscripts plus their build reports.
+- The official publisher templates are not redistributed: `tools/journal_template_sources.json` records where they live and the importer verifies them after a manual download.
+
 ## 1.2.7.0 — 2026-11-25
 
 Defensive-writing control and anti-AI-prose release, integrating the open-source **anti-defensive-writing** skill.

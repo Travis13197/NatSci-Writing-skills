@@ -14,8 +14,8 @@ description: >-
   defensive-writing control (press-release principle, argument selection, experiment duties)
   and measurable anti-AI-prose gates for English and Chinese drafts.
 metadata:
-  version: "1.2.7.0"
-  updated: "2026-11-25"
+  version: "1.2.8.0"
+  updated: "2026-11-26"
   author: "Chuanyang Liu"
   system: "NatSci-Writing-skills"
   language: "en"
@@ -425,4 +425,16 @@ A manuscript fails stylistically for two reasons that look different and are cur
 - **The ban is never a licence.** No claim without evidence, no deletion of a limitation that changes the reading, no null rewritten as a positive, no generalisation past the system, no hidden comparator. Statistics, reporting integrity and AI-use rules override every stylistic preference in this skill.
 - **Rhythm is part of the diagnosis.** Targets: sentence-length CV 0.30-0.65; recap tails <=1 per 1,000 words; triads <=2 per 500 words; nominalisation <=12% of content words; em dashes <=2 per 1,000 words; hedge markers <=4 per 1,000 words (English) and <=3 per 1,000 characters (Chinese); limitation markers <=2 per 1,000 words. Run python tools/check_prose_style.py --gate <file>; a defect is an ERROR hit, a defensive/AI marker or an out-of-band metric. Use --genre perspective for proposals and theory papers, where proposal modality is calibration rather than hedging, and --genre report for reports, where the metrics are informational.
 - **Scope.** Manuscript, abstract, cover letter, response letter, figure text, reports and Chinese drafts. Chinese-specific forms (self-deprecating 谦辞, procedural narration, hollow modifiers, four-character parallelism) are listed in the Chinese reference and checked by the same gate.
+
+## 18. v1.2.8.0 journal templates and manuscript assembly
+
+Default target is **Nature**; Science is the second supported format. A manuscript is delivered as a document that must pass mechanical checks, so assemble it into a template instead of hand-formatting it.
+
+- **Authoritative files.** Specs in assets/journal-templates/specs/ (page, type, section order, caps, reference style, figure widths), the template in assets/journal-templates/generated/ or .../official/, the builder tools/build_manuscript.py, the checker tools/check_journal_format.py, and the source registry tools/journal_template_sources.json. Every spec block carries a confidence tag: official, secondary or default.
+- **Assemble.** python tools/build_manuscript.py draft.md --journal nature --out build/draft.docx --report build/draft.json. Input is markdown with level-2 section headings or an equivalent JSON; Introduction, Results and Discussion fold into the main text as level-3 subheadings; [1]-style citations become superscripts; authors and affiliations come from front matter and are never generated.
+- **Section order is fixed.** Nature: Title, Authors, Affiliations, Abstract, Main text, References, Acknowledgements, Author contributions, Competing interests, Figure legends, Tables, Methods, Data availability, Code availability, Extended Data. Methods sits after the reference list; placing it after the Introduction is the most common mechanical rejection.
+- **Verify.** python tools/check_journal_format.py build/draft.docx --journal nature. Critical checks (page, margins, continuous line numbers, body and abstract font, size and spacing, required sections, section order, superscript citations) must PASS; abstract length and reference count are warnings that must be written down when exceeded.
+- **Official templates.** python tools/fetch_journal_templates.py --list shows the publisher pages; --from-dir imports a browser download; --check verifies it. Pass --template to the builder, which keeps the official styles and clears the body. Never edit a template's styles to fit the text.
+- **Submission gate order.** Assembly -> format -> prose (section 17) -> claims and statistics -> figures -> package. All six pass before submission; a warning is not a pass until it is recorded as a deliberate decision.
+- **Honest limits.** Spec values are compiled and cross-checked but publishers change them; re-verify at submission and update the spec. The package neither bypasses publisher interstitials nor redistributes publisher templates.
 

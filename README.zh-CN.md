@@ -21,8 +21,8 @@
 
 | 技能 | 语言 | 版本 | 目录 | 说明 |
 |---|---|---|---|---|
-| natsci-writing | English | 1.2.7.0 | skills/natsci-writing/ | 英文写作与作图 |
-| natsci-writing-zh | 中文 | 1.2.7.0 | skills/natsci-writing-zh/ | 中文写作与作图 |
+| natsci-writing | English | 1.2.8.0 | skills/natsci-writing/ | 英文写作与作图 |
+| natsci-writing-zh | 中文 | 1.2.8.0 | skills/natsci-writing-zh/ | 中文写作与作图 |
 
 ## 能做什么
 
@@ -146,7 +146,7 @@ python tools/build_manifest.py
 
 ## 版本、许可、来源与引用
 
-当前版本：**1.2.7.0**（2026-11-25），版本记录见 CHANGELOG.md。
+当前版本：**1.2.8.0**（2026-11-25），版本记录见 CHANGELOG.md。
 
 **许可**：源码可用，非商业的学术、科研和教学用途免费；可以复制、修改、再分发，需要署名。商业或盈利性用途需要单独书面许可，详见 LICENSE。
 

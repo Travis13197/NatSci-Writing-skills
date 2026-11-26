@@ -1,0 +1,33 @@
+{
+  "journal": "science",
+  "article_type": "research-article",
+  "base": "generated",
+  "sections_found": [
+    "abstract",
+    "main",
+    "references",
+    "acknowledgements",
+    "author_contributions",
+    "competing_interests",
+    "data_availability",
+    "figure_legends",
+    "title",
+    "authors",
+    "affiliations"
+  ],
+  "sections_missing": [],
+  "word_counts": {
+    "abstract": 97,
+    "main": 43,
+    "methods": 8,
+    "references": 23,
+    "acknowledgements": 8,
+    "author_contributions": 12,
+    "competing_interests": 6,
+    "data_availability": 9,
+    "figure_legends": 8
+  },
+  "citations": 2,
+  "references": 2,
+  "output": "examples\\journal-demo\\out\\science-demo.docx"
+}

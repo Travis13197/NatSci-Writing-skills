@@ -3,29 +3,29 @@
  "author": "Chuanyang Liu",
  "license": "NatSci-Writing-skills Non-Commercial License 1.0",
  "third_party": "nature-skills by Yuan Yizhe (Apache-2.0)",
- "version": "1.2.7.0",
- "generated": "2026-11-25",
+ "version": "1.2.8.0",
+ "generated": "2026-11-26",
  "skills": [
   {
    "name": "natsci-writing",
    "language": "en",
-   "version": "1.2.7.0",
-   "references": 32,
+   "version": "1.2.8.0",
+   "references": 33,
    "templates": 19,
    "code_files": 2
   },
   {
    "name": "natsci-writing-zh",
    "language": "zh",
-   "version": "1.2.7.0",
-   "references": 34,
+   "version": "1.2.8.0",
+   "references": 35,
    "templates": 19,
    "code_files": 2
   }
  ],
  "totals": {
-  "files": 147,
-  "bytes": 1213234
+  "files": 169,
+  "bytes": 1481900
  },
  "files": [
   {
@@ -45,13 +45,13 @@
   },
   {
    "path": "CHANGELOG.md",
-   "bytes": 21518,
-   "sha256": "3cf7fd92bb77b6a8f16b4671678fd30a4c89a7068cb74ea914e53a55a5153291"
+   "bytes": 23591,
+   "sha256": "bb8e26996171d8b23cec2ac00e00984a215e82891bc02e077c7156544229feff"
   },
   {
    "path": "CITATION.cff",
    "bytes": 1066,
-   "sha256": "3da578afbb948768fa6206dd4f76aa4183fc8b91d388bad3b7f13d0523601d18"
+   "sha256": "b84c290fe12aaa15c51bb1c2ffc0ed3a8f82a322bce4c895ef529e192cfc59ad"
   },
   {
    "path": "LICENSE",
@@ -76,12 +76,12 @@
   {
    "path": "README.md",
    "bytes": 20515,
-   "sha256": "662bd39eca5bd4099d25994439d37b83162e291d9ff7065b7ba2b997a02fc007"
+   "sha256": "94bb22d166c16bf40f5521f9b8101aab52636872317983f3d7825e376dc9c778"
   },
   {
    "path": "README.zh-CN.md",
    "bytes": 10808,
-   "sha256": "d6385dfe2475c44035926f9fde10addb721d8934b86f7ec2a874c69e3d31ff9b"
+   "sha256": "d0e2fac66a50f23aae40fb466f3bb3950aa893e5e1585582e2f0f68407556e75"
   },
   {
    "path": "RELEASE_NOTES_v1.2.5.md",
@@ -120,8 +120,8 @@
   },
   {
    "path": "VERSION",
-   "bytes": 8,
-   "sha256": "f5a0380282e2a1b89f837883e2b661649ed6a548a3782a4158174ae68f7c304a"
+   "bytes": 9,
+   "sha256": "ee0e4b769ed3a8bcd8f0f8c612b46653840b65154fd5516656ef7218348b7d75"
   },
   {
    "path": "docs/ARCHITECTURE.md",
@@ -169,6 +169,41 @@
    "sha256": "1eddef80dfa9348c9f584332fd1bb4905f2d962499b9475eb27b2616c5925921"
   },
   {
+   "path": "examples/journal-demo/nature-demo.md",
+   "bytes": 3109,
+   "sha256": "fb1159205b561f146202ac78803f4938b0462041e9a65195f882f3bc97c55384"
+  },
+  {
+   "path": "examples/journal-demo/out/_base.docx",
+   "bytes": 37525,
+   "sha256": "59d055cd51851ed48e8f6789af6546a99a035e915a3197bcec4fcfbea17cc9a0"
+  },
+  {
+   "path": "examples/journal-demo/out/nature-demo.docx",
+   "bytes": 39220,
+   "sha256": "67be978227cd762cf57487c305afc3826c49cfe0f11803ff860ea5113b418561"
+  },
+  {
+   "path": "examples/journal-demo/out/nature-demo.report.json",
+   "bytes": 740,
+   "sha256": "995ee861cecd622c4f46adaabd7453988e32e40c84c6428a21962822a8e287d5"
+  },
+  {
+   "path": "examples/journal-demo/out/science-demo.docx",
+   "bytes": 38742,
+   "sha256": "532c0bbe6a93783918ea049e7123da72db40ebdb2c8deaf95fe7dcdf71f9dae2"
+  },
+  {
+   "path": "examples/journal-demo/out/science-demo.report.json",
+   "bytes": 731,
+   "sha256": "3efaf73fdf846742db6884979af173631d630b032a97e2fad04f7e9927eab2d8"
+  },
+  {
+   "path": "examples/journal-demo/science-demo.md",
+   "bytes": 2037,
+   "sha256": "5d0182e1a54e43a417e01e55cace2ab994724ed7232c3f2008929cef5ce26247"
+  },
+  {
    "path": "examples/prompts-en.md",
    "bytes": 2468,
    "sha256": "6e350e3b4f2aa7ed0f7d76efef7129b777c3e119a03862fa3124012d7be871d6"
@@ -180,18 +215,18 @@
   },
   {
    "path": "skills/natsci-writing-zh/CHANGELOG.md",
-   "bytes": 5191,
-   "sha256": "e7377435e4e75c51a43ba59425fbc253897100b649f066fe2c4a3140ba934aee"
+   "bytes": 5732,
+   "sha256": "82112a9e601eb45fe801d6486264e2be85e78faba7da198a08c6d969a940f306"
   },
   {
    "path": "skills/natsci-writing-zh/SKILL.md",
-   "bytes": 52156,
-   "sha256": "a2574cf4e9fca7d90b3aeec0661238fdc01f7123c2eaa7562d0fcf41e2c79ec9"
+   "bytes": 54355,
+   "sha256": "854bfb04a467a49c7dd20722e34827a7fc44eb957d4077dd4630db6688f6ec6d"
   },
   {
    "path": "skills/natsci-writing-zh/VERSION",
-   "bytes": 8,
-   "sha256": "f5a0380282e2a1b89f837883e2b661649ed6a548a3782a4158174ae68f7c304a"
+   "bytes": 9,
+   "sha256": "ee0e4b769ed3a8bcd8f0f8c612b46653840b65154fd5516656ef7218348b7d75"
   },
   {
    "path": "skills/natsci-writing-zh/assets/code/figure_python.py",
@@ -379,6 +414,11 @@
    "sha256": "9a4c385f8e8acbe9de732432f0ec28fd8a8374f534740e9df0d577e95cd021b0"
   },
   {
+   "path": "skills/natsci-writing-zh/references/journal-templates-and-assembly-zh.md",
+   "bytes": 6473,
+   "sha256": "d85f1823111dde8c5e681ca83a814ce66ae07b6458e5677dbb76f34b7995b001"
+  },
+  {
    "path": "skills/natsci-writing-zh/references/language-and-taste-zh.md",
    "bytes": 6627,
    "sha256": "3f63f67861868ea064a4c7cee685b4c0c24380b0e845b6726f0d99f8d46183ee"
@@ -470,13 +510,13 @@
   },
   {
    "path": "skills/natsci-writing/CHANGELOG.md",
-   "bytes": 4417,
-   "sha256": "a0834e2a9b232d1bed3e28bdbf827130e38a1d1a477f2adb1aa69c7dcd425232"
+   "bytes": 4948,
+   "sha256": "55a7ee855ad45776b23835a68182d077f27639d9c4d457d46a11e3ace9eee734"
   },
   {
    "path": "skills/natsci-writing/SKILL.md",
-   "bytes": 59176,
-   "sha256": "bc3f10ad0a9d6f5d483892b653433faa832aeeb0fe3f07c09ebf5b0bf8b88ccb"
+   "bytes": 61721,
+   "sha256": "b3fdbe9bc1d62796d824dc9186f6515649a7d3fdbd5702b32ee2ee663d9b8fce"
   },
   {
    "path": "skills/natsci-writing/assets/code/figure_python.py",
@@ -487,6 +527,41 @@
    "path": "skills/natsci-writing/assets/code/figure_r.R",
    "bytes": 4655,
    "sha256": "c9b5824b6dffbd3fed995b3c55b9db5b181603f70e5471b725441e27dd4cc2f1"
+  },
+  {
+   "path": "skills/natsci-writing/assets/journal-templates/README.md",
+   "bytes": 1825,
+   "sha256": "db9137d87eac91bb698baaa831641dce9b4acad1a47167cfde7f80fecd2d9f4e"
+  },
+  {
+   "path": "skills/natsci-writing/assets/journal-templates/generated/nature-article.docx",
+   "bytes": 37870,
+   "sha256": "248aed77a9df9b675ab4c2916eb0fe7d517a5a2a737ed69651e4270c6922ea44"
+  },
+  {
+   "path": "skills/natsci-writing/assets/journal-templates/generated/nature-article.tex",
+   "bytes": 1011,
+   "sha256": "ca1843183b3b5392f0232de3c235e29dac369d971414974ed892e40b31c61ee7"
+  },
+  {
+   "path": "skills/natsci-writing/assets/journal-templates/generated/science-research-article.docx",
+   "bytes": 37866,
+   "sha256": "9f0a7c43d4e6ef08cdf321dc235a60ea4aefb28148cfb2f32a63830b1dbfd3fa"
+  },
+  {
+   "path": "skills/natsci-writing/assets/journal-templates/generated/science-research-article.tex",
+   "bytes": 962,
+   "sha256": "beb2cef0f18aeefddc740be5d5c99d54b9e7f7d1d309eb7f9254c9041c9dd156"
+  },
+  {
+   "path": "skills/natsci-writing/assets/journal-templates/specs/nature-article.json",
+   "bytes": 5517,
+   "sha256": "0008e5e2c5baac969b1e80564c2820bc748adbce9fe235d0bff1e8d58f6ba584"
+  },
+  {
+   "path": "skills/natsci-writing/assets/journal-templates/specs/science-research-article.json",
+   "bytes": 5186,
+   "sha256": "f0a874ab02af593256b31365680e9c480a758ec7d11dcef923bbcb0da238ef24"
   },
   {
    "path": "skills/natsci-writing/assets/templates/ai-disclosure.md",
@@ -654,6 +729,11 @@
    "sha256": "e1b0e68eb0e5cbb0b4c31972e2ce98a2a96c4bcc7cae811565d309717dff2dd4"
   },
   {
+   "path": "skills/natsci-writing/references/journal-templates-and-assembly.md",
+   "bytes": 7395,
+   "sha256": "e54487fb65ae34058edf2d27dd534039527f03d59da38005e5898696af003e23"
+  },
+  {
    "path": "skills/natsci-writing/references/language-and-taste.md",
    "bytes": 7978,
    "sha256": "690fabd02e2aeda7e262fff12ac0e61b866bfd2cc9fb7a7ca59a8e9ca1c71135"
@@ -749,14 +829,44 @@
    "sha256": "4f5a9a80a2f06abb7f018c5a9cf7af7326f76e5ad28ef74d64874aef1df30493"
   },
   {
+   "path": "tools/build_manuscript.py",
+   "bytes": 11835,
+   "sha256": "9db3c77f3a7c4edded729762504b7b5475dab1612500c00a39d9975e67716368"
+  },
+  {
+   "path": "tools/check_journal_format.py",
+   "bytes": 7063,
+   "sha256": "f8aed789321469c6bf65c9f0d23ddc689a2ae449a58a413010e9480879bc1354"
+  },
+  {
    "path": "tools/check_prose_style.py",
    "bytes": 17737,
    "sha256": "96bb5b1921b2a8eb339b734106445022824d4ec0fd8ebbb95b629776beb34412"
   },
   {
+   "path": "tools/fetch_journal_templates.py",
+   "bytes": 4094,
+   "sha256": "f45ba2da85dd878a822ac0306ed86bd65b940a3c081d62c1d61249d98c8f4d92"
+  },
+  {
    "path": "tools/install.py",
    "bytes": 2486,
    "sha256": "757b157ee881c0997e181bbcb66f50f296dd55740c35d9616170f0ef17565f8f"
+  },
+  {
+   "path": "tools/journal_spec.py",
+   "bytes": 2027,
+   "sha256": "a07d4195737939b7e66af0e0f2ca468e3454f3bbdf6b15ab3bdccba8dc0ba00d"
+  },
+  {
+   "path": "tools/journal_template_sources.json",
+   "bytes": 1973,
+   "sha256": "14a8c6170c50473ca33c48fbbf4971451150dc0eb02c4c5e7e1d282ffd451f59"
+  },
+  {
+   "path": "tools/make_journal_template.py",
+   "bytes": 7574,
+   "sha256": "734f42cf42a8c0b56bb6ed1b5bd2819a29701c50a2db28fde39147eebad10e12"
   },
   {
    "path": "tools/validate_package.py",
