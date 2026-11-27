@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.2.8.2 — 2026-11-27
+
+- Added references/results-architecture.md: six-move Results narrative (existence, mechanism, diversity, coverage, origin, boundary), a five-function paragraph contract, and a ban on opening Results with software or an analysis inventory.
+- Added section 20; the Results heading limit moved from 40 characters / eight words to 60 characters / twelve words, so completeness outranks brevity.
+- Corrected the changelog header position.
+
+## 1.2.8.1 — 2026-11-27
+
+- Added references/results-heading-language.md: object/process/finding rule, parallelism, no metaphor, no undefined local shorthand, no verb-only slogan, no first-person opener, evidence matching and an audit procedure.
+- Added section 19: heading language is a named audit item separate from prose.
+
 ## 1.2.8.0 — 2026-11-26
 
 - Added references/journal-templates-and-assembly.md and section 18: journal specs, generated and official templates, assembly, format checking and the six-gate submission order (Nature default, Science second).

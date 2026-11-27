@@ -14,7 +14,7 @@ description: >-
   defensive-writing control (press-release principle, argument selection, experiment duties)
   and measurable anti-AI-prose gates for English and Chinese drafts.
 metadata:
-  version: "1.2.8.0"
+  version: "1.2.8.2"
   updated: "2026-11-26"
   author: "Chuanyang Liu"
   system: "NatSci-Writing-skills"
@@ -437,4 +437,33 @@ Default target is **Nature**; Science is the second supported format. A manuscri
 - **Official templates.** python tools/fetch_journal_templates.py --list shows the publisher pages; --from-dir imports a browser download; --check verifies it. Pass --template to the builder, which keeps the official styles and clears the body. Never edit a template's styles to fit the text.
 - **Submission gate order.** Assembly -> format -> prose (section 17) -> claims and statistics -> figures -> package. All six pass before submission; a warning is not a pass until it is recorded as a deliberate decision.
 - **Honest limits.** Spec values are compiled and cross-checked but publishers change them; re-verify at submission and update the spec. The package neither bypasses publisher interstitials nor redistributes publisher templates.
+
+## 19. v1.2.8.1 Results subheading language
+
+A Results subheading is a scientific label, not a compressed finding slogan. It must name the object or system and the measured process or outcome in the paper's own terminology; it must survive removal of the figure. Read references/results-heading-language.md before drafting or revising Results.
+
+- Name a concrete object plus a measured process/outcome; a noun phrase is usually enough.
+- Keep at or below 60 characters and twelve words; keep grammatical form parallel across subsections.
+- Do not use verb-only slogans, metaphors, undefined local shorthand, We/Here/This study, or questions.
+- Do not use a term in a heading before it is defined in the text.
+- A causal heading requires a causal design; otherwise use a descriptive heading.
+- The heading must match the figure legend title and the panel evidence.
+- Audit headings separately from the prose gate; the prose checker does not evaluate headings.
+
+Bad: Rules bias exploration and folding; Route horizon reshapes endpoints.
+Good: Peptide growth in structure space; Route scoring changes terminal structures.
+
+## 20. v1.2.8.2 Results as a discovery narrative
+
+A Results section is a sequence of scientific questions, not a pipeline report. Read references/results-architecture.md before drafting or revising Results.
+
+- Open with existence: one concrete example and what it demonstrates, then how general it is.
+- Move to mechanism: change one causal ingredient and show that path and endpoint change.
+- Add diversity: the process that creates variation, and how products change.
+- Separate known from unassigned coverage; report both.
+- State whether a template or target is required, with controls.
+- End with a boundary: a case series, stability window or failure mode.
+- Each subsection carries question, design, observation, interpretation and boundary.
+- Do not start a Results section with software, parameters or an analysis inventory.
+- Results headings are complete statements or noun phrases, 40-60 characters; completeness over brevity.
 

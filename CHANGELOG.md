@@ -2,6 +2,23 @@
 
 All notable changes to NatSci-Writing-skills are documented here. The system follows semantic versioning.
 
+## 1.2.8.2 — 2026-11-27
+
+Results-as-discovery release, derived from a manuscript revision where the Results read as a pipeline and the headings had been truncated to satisfy a character limit.
+
+- New references results-architecture.md and results-architecture-zh.md: six-move Results narrative (existence, mechanism, diversity, coverage, origin, boundary), a five-function paragraph contract (question, design, observation, interpretation, boundary), and a rule that Results must not open with software or an analysis inventory.
+- SKILL section 20 and 二十 state the operative rule.
+- Section 19 heading limit relaxed from 40 to 60 characters and from eight to twelve words: completeness now takes priority over brevity; a short label is not a scientific Results heading.
+- Why: the previous release could produce technically valid but incomplete headings and a Results section that described what was run instead of what was found. Both are now explicit gates.
+
+## 1.2.8.1 — 2026-11-27
+
+Results-subheading language release, derived from a manuscript review where technically valid Results headings read as slogan fragments.
+
+- New references results-heading-language.md and results-heading-language-zh.md: object/process/finding rule, 40-character and eight-word limits, parallelism, no metaphor, no undefined local shorthand, no verb-only slogan, no first-person opener, evidence-matching and an audit procedure.
+- SKILL section 19 and 十九 state the operative rule and bad/good pairs.
+- Why: the prose gate checks sentences, not headings; a heading can pass every prose metric and still be unclear to a reader. Heading language is now a named audit item, separate from prose.
+
 ## 1.2.8.0 — 2026-11-26
 
 Journal-template and manuscript-assembly release: papers are filled into a journal template and mechanically verified, with **Nature as the default format** and Science as the second target.
@@ -30,7 +47,6 @@ Defensive-writing control and anti-AI-prose release, integrating the open-source
 - Reflow addendum: a log-scaled axis can inflate the measured row pitch and leave a large internal blank band even when every artist is inside the axes. If a plate develops an unexplained blank band, test the log axis; for a narrow dynamic range use a linear axis, or reserve enough explicit vertical space and recheck the content-extent audit.
 
 - Visible-body addendum: audit PolyCollection/LineCollection paths, not only scatter offsets; extend violin KDE grids by about 1.5 bandwidths (flat caps fail); extend density-contour grids by about 6%; give points on 0/1/thresholds a 2-4% marker margin; check rendered rasters at final display width; serve versioned raster URLs or no-store headers.
-
 
 Universal data-extent release, derived from a full panel audit of the PGv3
 six-figure plate set where several axes still truncated real observations,

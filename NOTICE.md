@@ -20,7 +20,7 @@ Adapted material has been rewritten, reorganized, translated and integrated with
 
 ## Third-party attribution: anti-defensive-writing
 
-Version 1.2.7.0 integrates the open-source **anti-defensive-writing** skill:
+Version 1.2.7.0 and later integrate the open-source **anti-defensive-writing** skill:
 
 - Original author: **Adkid-Zephyr**
 - Repository: https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill
