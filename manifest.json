@@ -3,13 +3,13 @@
  "author": "Chuanyang Liu",
  "license": "NatSci-Writing-skills Non-Commercial License 1.0",
  "third_party": "nature-skills by Yuan Yizhe (Apache-2.0)",
- "version": "1.2.8.2",
+ "version": "1.2.8.3",
  "generated": "2026-11-27",
  "skills": [
   {
    "name": "natsci-writing",
    "language": "en",
-   "version": "1.2.8.2",
+   "version": "1.2.8.3",
    "references": 35,
    "templates": 19,
    "code_files": 2
@@ -17,7 +17,7 @@
   {
    "name": "natsci-writing-zh",
    "language": "zh",
-   "version": "1.2.8.2",
+   "version": "1.2.8.3",
    "references": 37,
    "templates": 19,
    "code_files": 2
@@ -25,7 +25,7 @@
  ],
  "totals": {
   "files": 175,
-  "bytes": 1499221
+  "bytes": 1503902
  },
  "files": [
   {
@@ -45,13 +45,13 @@
   },
   {
    "path": "CHANGELOG.md",
-   "bytes": 25032,
-   "sha256": "9c4f6a624214d836d10bfeb3074203494834820a4ac6526688154190f2b0ffd6"
+   "bytes": 25695,
+   "sha256": "dd2d5f08f15e5d1a52ee3951e5eccdd5842fbe0596f7ee3c633825872dce5aa3"
   },
   {
    "path": "CITATION.cff",
    "bytes": 1066,
-   "sha256": "6c2230bdebdaa680c1cda77a26cb1564a0afbc36f0efa5b691c33ad1a8ae68f1"
+   "sha256": "0c895c15764083a93eed1e6cf26be05ecafe1da58f92f7b5e53a4d36a7d5dce9"
   },
   {
    "path": "LICENSE",
@@ -76,12 +76,12 @@
   {
    "path": "README.md",
    "bytes": 20515,
-   "sha256": "123276ceee5dc09c330f96035841f68a2c7f92fe2ab819987a325b68c3b9a1ef"
+   "sha256": "47b1c9d50cb5b53db9f9fd933094d9f92431c7cf0b627797b4ea9b9fbbedd3c1"
   },
   {
    "path": "README.zh-CN.md",
    "bytes": 10808,
-   "sha256": "7ada63d7eef403259f0fe28ca065b26d4d51f5e2440619b68524928ed2f3293e"
+   "sha256": "6ef1933c2926b7f8f24f108c73328e4b01186e1deca6c35367f9f90369e0a32e"
   },
   {
    "path": "RELEASE_NOTES_v1.2.5.md",
@@ -126,27 +126,27 @@
   {
    "path": "VERSION",
    "bytes": 9,
-   "sha256": "ba096f71e945f18ce75d2c32837c546b6fc7259dcf8d8e6affece887ba0d0f91"
+   "sha256": "0c5c2a346733b71a2d6f58628ee7cd5134cea87a0daaa2ade29d83092c4b8f43"
   },
   {
    "path": "docs/ARCHITECTURE.md",
-   "bytes": 8517,
-   "sha256": "382a939587fe66f10e56afb411212ad83d69f11349ba8d7ba80626af1777a96f"
+   "bytes": 9834,
+   "sha256": "46734c5deb02da3f402f84113f25eff115e7f082db89e4928515e9069a37dd9d"
   },
   {
    "path": "docs/ARCHITECTURE.zh-CN.md",
-   "bytes": 7330,
-   "sha256": "223547b7f4c2ad5a15838cdc8eefaa51cb0c26211bc9f53c8dd7eaac63abf12d"
+   "bytes": 8475,
+   "sha256": "b0a65037734fa25ea7167f7471aa6f48084d02ca1e765b109792b88abffdb626"
   },
   {
    "path": "docs/COVERAGE-AUDIT.md",
-   "bytes": 10381,
-   "sha256": "e5e0a010b9226b5635677f4d4ad455671379e5136cf18f282af59ee4572a50bb"
+   "bytes": 11009,
+   "sha256": "eafca820d485d9365a1243ac4ca6ff407604b691b251096ba2470126098953cd"
   },
   {
    "path": "docs/COVERAGE-AUDIT.zh-CN.md",
-   "bytes": 9279,
-   "sha256": "5028f8508eedf8a98f9c0547ad53dc2a8de4cdea0cf2a608e5684ebbe4e72bec"
+   "bytes": 9882,
+   "sha256": "bfaed3caa19d20d92491439780b727bc10cb3b9a0de8be7e9b1dd8158534ed36"
   },
   {
    "path": "docs/MIGRATION.md",
@@ -220,18 +220,18 @@
   },
   {
    "path": "skills/natsci-writing-zh/CHANGELOG.md",
-   "bytes": 6440,
-   "sha256": "2fc04c37ece594bbccb84a0194d09a5cc76395b37994727b4c925474771b4d0a"
+   "bytes": 6594,
+   "sha256": "d072e09306de850b79c8f6fc4b1ed864350c1200a749de6a052ac85c32f3554d"
   },
   {
    "path": "skills/natsci-writing-zh/SKILL.md",
    "bytes": 56139,
-   "sha256": "b28052b60ddf6d5b17068e108fc678b3728b56f1a4c2be0a9c09612ca3389c57"
+   "sha256": "e627a9d7627b282bc269d1ad9a04f3fa000ec503f53c5bf91bc3dcde05511325"
   },
   {
    "path": "skills/natsci-writing-zh/VERSION",
-   "bytes": 9,
-   "sha256": "ee0e4b769ed3a8bcd8f0f8c612b46653840b65154fd5516656ef7218348b7d75"
+   "bytes": 8,
+   "sha256": "512170ec387c0c05e2c88db9d794887a3536abea90a43b8b8d8c9025a70fa93f"
   },
   {
    "path": "skills/natsci-writing-zh/assets/code/figure_python.py",
@@ -525,18 +525,18 @@
   },
   {
    "path": "skills/natsci-writing/CHANGELOG.md",
-   "bytes": 5749,
-   "sha256": "b76d877c034e1c5e03adfa29b30a6780f1d32444bcf069b8e31fb80f78d17dde"
+   "bytes": 5921,
+   "sha256": "2fa1026eb06613fb4b8b7098849eacf6b81d83627501d36b34a8f489af7c0649"
   },
   {
    "path": "skills/natsci-writing/SKILL.md",
    "bytes": 63810,
-   "sha256": "b2ee9f473f6ed88b507f962492523880a6dcf1da6f7cd98bd99333e915b007a6"
+   "sha256": "99536534695b56789886fca248fd3de47dbcda4764f95e1779e1903061c2fe52"
   },
   {
    "path": "skills/natsci-writing/VERSION",
    "bytes": 9,
-   "sha256": "ba096f71e945f18ce75d2c32837c546b6fc7259dcf8d8e6affece887ba0d0f91"
+   "sha256": "0c5c2a346733b71a2d6f58628ee7cd5134cea87a0daaa2ade29d83092c4b8f43"
   },
   {
    "path": "skills/natsci-writing/assets/code/figure_python.py",

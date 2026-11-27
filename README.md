@@ -21,8 +21,8 @@ Everything runs from the folder: references, templates and scripts are local, li
 
 | Skill | Language | Version | Folder | 说明 |
 |---|---|---|---|---|
-| natsci-writing | English | 1.2.8.2 | skills/natsci-writing/ | 英文写作与作图 |
-| natsci-writing-zh | 中文 | 1.2.8.2 | skills/natsci-writing-zh/ | 中文写作与作图 |
+| natsci-writing | English | 1.2.8.3 | skills/natsci-writing/ | 英文写作与作图 |
+| natsci-writing-zh | 中文 | 1.2.8.3 | skills/natsci-writing-zh/ | 中文写作与作图 |
 
 ## What it can do  |  Skill能做什么
 
@@ -147,7 +147,7 @@ Journal limits, figure specifications, reporting rules and AI policies change. T
 
 ## Version, license, provenance and citation  |  版本、许可、来源与引用
 
-Current version: 1.2.8.2 (2026-11-27).  |  当前版本 1.2.8.2（2026-11-27），版本记录见 CHANGELOG.md。
+Current version: 1.2.8.3 (2026-11-27).  |  当前版本 1.2.8.3（2026-11-27），版本记录见 CHANGELOG.md。
 
 **License:** source-available and free for non-commercial academic, research and teaching use; copy, modify and redistribute with attribution. Commercial or profit-generating use requires a separate written license. See LICENSE.  |  源码可用，非商业的学术、科研和教学用途免费；可以复制、修改、再分发，需要署名。商业或盈利性用途需要单独书面许可，详见 LICENSE。
 

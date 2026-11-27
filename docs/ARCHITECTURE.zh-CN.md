@@ -47,6 +47,10 @@ agent 先读 SKILL.md。SKILL.md 是操作手册而非百科：
 | 图件标准 | references/figure-standards-nature-science.md | 期刊规格、图注语法、统计呈现 |
 | 项目图件叠加 | figure-design-and-audit.md + panel-layout + colour audit + Baker standard + SEAL standard + R50 | 作者项目的几何、颜色、结构与发布门槛 |
 | 课题设计 | references/research-and-language.md | 课题设计、假设、文献综合 |
+| 防御性写作 | references/defensive-writing-and-argument-selection-zh.md | 发布会原则、论证取舍、实验职责、修辞减弱与校准的边界、度量门 |
+| 结果章结构 | references/results-architecture-zh.md | 六步结果叙事、段落五功能契约、禁止软件清单开篇 |
+| 结果小标题 | references/results-heading-language-zh.md | 对象/过程/发现三分、60 字符 12 词上限、平行结构、禁隐喻口号 |
+| 期刊模板 | references/journal-templates-and-assembly-zh.md；assets/journal-templates/ | Nature/Science 规格、生成与官方模板、组装与格式检查、六道投稿门 |
 | 数据与 HTML | references/html-and-data-verification.md | 全文修订、数据真实性、计算核验 |
 | 专题 | seal-project.md、translation-validation.md、dimension-annotation.md | SEAL 术语、回译、注释 |
 | 提示词 | references/academic-prompt-zh.md | 可复用中文任务提示词 |
@@ -82,6 +86,11 @@ SEAL 项目规范、R50 回归清单、逐 panel 交付和项目颜色契约是�
 - tools/build_manifest.py：生成带大小和 SHA-256 的 manifest.json。
 - tools/check_prose_style.py：扫描模板对立、防御性/自限性表达和高频 AI 词。
 - tools/install.py：把技能复制到目标 skills 目录并校验。
+- tools/journal_spec.py：加载模板生成器、组装器与检查器共用的期刊规格。
+- tools/make_journal_template.py：按规格生成 .docx 与 .tex 模板。
+- tools/build_manuscript.py：把 markdown/JSON 稿件装进指定期刊模板并输出 build report。
+- tools/check_journal_format.py：按规格验证产物（页面、字体、行号、章节顺序、计数）。
+- tools/fetch_journal_templates.py：列出官方模板页面、导入浏览器下载并校验 SHA-256。
 - CI 工作流 .github/workflows/validate.yml 在每次 push/PR 时校验。
 - 版本遵循语义化版本；系统版本在 VERSION 与 CHANGELOG.md，技能各自也有版本和 changelog。
 

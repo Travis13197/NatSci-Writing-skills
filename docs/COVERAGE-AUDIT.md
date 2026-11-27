@@ -1,6 +1,6 @@
 # Coverage audit: what is integrated and what is not
 
-Version 1.2.5; updated 2026-11-24. This document answers whether the author's earlier writing/figure requirements, the latest nature-skills content, current journal AI policies and independent writing skills are organically integrated into NatSci-Writing-skills.
+Version 1.2.8.3; updated 2026-11-27. This document answers whether the author's earlier writing/figure requirements, the latest nature-skills content, current journal AI policies and independent writing skills are organically integrated into NatSci-Writing-skills.
 
 ## 1. Audit scope
 
@@ -37,6 +37,11 @@ Version 1.2.5; updated 2026-11-24. This document answers whether the author's ea
 | Literature search and citation | literature-search-and-citation; SKILL 6.1; literature-search-plan template | strengthened in 1.2.1 |
 | AI use and disclosure | ai-use-and-writing-integrity; SKILL 3.1; ai-disclosure template | new in 1.2.1 |
 | Style integrity | writing-diagnostics 3A; SKILL 3.0; tools/check_prose_style.py | hardened in 1.2.1 |
+| Structural AI tells and metrics | writing-diagnostics 4A; check_prose_style --metrics/--gate/--genre | new in 1.2.7.0 |
+| Defensive writing and argument selection | defensive-writing-and-argument-selection; SKILL 17; check_prose_style --gate | new in 1.2.7.0 |
+| Journal templates and assembly | journal-templates-and-assembly; SKILL 18; specs, generated/official templates, builder and checker | new in 1.2.8.0 |
+| Results heading language | results-heading-language; SKILL 19; heading audit | new in 1.2.8.1 |
+| Results as a discovery narrative | results-architecture; SKILL 20; paragraph contract | new in 1.2.8.2 |
 | Proofreading and polish | proofreading-and-polish; SKILL 3.2; grammar-checker/polish integration | strengthened in 1.2.1 |
 | Reviewer response and peer review | revision-and-response (extended with taxonomy/severity/forensic consistency); manuscript-production | strengthened in 1.2.1 |
 | Data, code and materials | statistics-and-reporting-integrity (extended deposition/FAIR/RRID); data/code/materials template | strengthened in 1.2.1 |

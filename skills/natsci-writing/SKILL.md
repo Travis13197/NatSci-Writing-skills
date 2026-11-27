@@ -14,7 +14,7 @@ description: >-
   defensive-writing control (press-release principle, argument selection, experiment duties)
   and measurable anti-AI-prose gates for English and Chinese drafts.
 metadata:
-  version: "1.2.8.2"
+  version: "1.2.8.3"
   updated: "2026-11-26"
   author: "Chuanyang Liu"
   system: "NatSci-Writing-skills"

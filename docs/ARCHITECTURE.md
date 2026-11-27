@@ -47,6 +47,10 @@ The agent then loads only the references needed for the current mode. This keeps
 | Figure standards | references/figure-standards-nature-science.md | journal specs, caption grammar, statistical display |
 | Project figure overlay | figure-design-and-audit.md + panel-layout + colour audit + Baker standard + SEAL standard + R50 | author's geometry, colour, structure and release gates |
 | Research design | references/research-and-language.md | topic design, hypotheses, literature synthesis |
+| Defensive writing | references/defensive-writing-and-argument-selection.md | press-release principle, argument selection, experiment duties, rhetorical-hedging versus calibration, measured gates |
+| Results architecture | references/results-architecture.md | six-move Results narrative, five-function paragraph contract, no software-list opening |
+| Results headings | references/results-heading-language.md | object/process/finding rule, 60-character and twelve-word limits, parallelism, no metaphor or slogan |
+| Journal templates | references/journal-templates-and-assembly.md; assets/journal-templates/ | Nature and Science specs, generated and official templates, assembly, format checking, six submission gates |
 | Data and HTML | references/html-and-data-verification.md | full-document revision, data authenticity, calculation checks |
 | Project specifics | seal-project.md, translation-validation.md, dimension-annotation.md | SEAL terminology, validation, annotation |
 | Prompt | references/academic-prompt-zh.md | reusable Chinese task prompt |
@@ -82,6 +86,11 @@ The SEAL project standards, R50 regression checklist, R50/SEAL per-panel deliver
 - tools/build_manifest.py regenerates manifest.json with sizes and SHA-256 checksums.
 - tools/check_prose_style.py scans prose for template contrast, defensive/self-limiting language and AI vocabulary.
 - tools/install.py copies skills into a target skills directory and validates the installed copies.
+- tools/journal_spec.py loads the journal specs shared by the template generator, the assembler and the checker.
+- tools/make_journal_template.py generates the .docx and .tex templates from a spec.
+- tools/build_manuscript.py assembles a markdown or JSON manuscript into the chosen journal template and writes a build report.
+- tools/check_journal_format.py verifies the produced .docx against the spec (page, type, line numbers, section order, counts).
+- tools/fetch_journal_templates.py lists the official publisher template pages, imports a browser download and verifies its SHA-256.
 - CI workflow .github/workflows/validate.yml runs validation on every push and pull request.
 - Releases follow semantic versioning. The system version is in VERSION and CHANGELOG.md; each skill also has its own version and changelog.
 

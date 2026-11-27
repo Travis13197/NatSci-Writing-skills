@@ -9,7 +9,7 @@ description: >-
   统计与报告诚信、信息架构、投稿包与端到端生产流程。内置防御性写作控制（发布会原则、
   论证取舍、实验职责）与可执行的去 AI 腔门禁，覆盖中英文稿。
 metadata:
-  version: "1.2.8.2"
+  version: "1.2.8.3"
   updated: "2026-11-26"
   author: "Chuanyang Liu"
   system: "NatSci-Writing-skills"

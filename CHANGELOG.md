@@ -2,6 +2,14 @@
 
 All notable changes to NatSci-Writing-skills are documented here. The system follows semantic versioning.
 
+## 1.2.8.3 — 2026-11-27
+
+Documentation synchronization release.
+
+- docs/ARCHITECTURE and docs/ARCHITECTURE.zh-CN now list the defensive-writing, results-architecture, results-heading and journal-template layers, and the five journal tools (journal_spec, make_journal_template, build_manuscript, check_journal_format, fetch_journal_templates).
+- docs/COVERAGE-AUDIT and its Chinese edition carry the 1.2.7.0-1.2.8.2 layers (structural AI metrics, defensive writing, journal templates, results headings, results architecture) and the current version stamp.
+- skills/natsci-writing-zh/VERSION was still 1.2.8.0; all version files and frontmatter are now 1.2.8.3.
+
 ## 1.2.8.2 — 2026-11-27
 
 Results-as-discovery release, derived from a manuscript revision where the Results read as a pipeline and the headings had been truncated to satisfy a character limit.

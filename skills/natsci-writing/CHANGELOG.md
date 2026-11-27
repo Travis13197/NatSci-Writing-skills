@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.8.3 — 2026-11-27
+
+- Documentation sync: architecture and coverage docs describe the 1.2.7.0-1.2.8.2 layers and the journal tooling.
+- Version files aligned.
+
 ## 1.2.8.2 — 2026-11-27
 
 - Added references/results-architecture.md: six-move Results narrative (existence, mechanism, diversity, coverage, origin, boundary), a five-function paragraph contract, and a ban on opening Results with software or an analysis inventory.

@@ -1,6 +1,6 @@
 # 覆盖审计：已整合与未整合的内容
 
-版本 1.2.5；更新日期 2026-11-24。本文回答：作者此前的写作/图件要求、nature-skills 最新内容、当前期刊 AI 政策与独立写作 skill，是否已有机整合进 NatSci-Writing-skills。
+版本 1.2.8.3；更新日期 2026-11-27。本文回答：作者此前的写作/图件要求、nature-skills 最新内容、当前期刊 AI 政策与独立写作 skill，是否已有机整合进 NatSci-Writing-skills。
 
 ## 一、审计范围
 
@@ -37,6 +37,11 @@
 | 文献检索与引用 | literature-search-and-citation；SKILL 6.2；文献检索计划模板 | 1.2.1 强化 |
 | AI 使用与披露 | ai-use-and-writing-integrity；SKILL 3.1；AI 披露模板 | 1.2.1 新增 |
 | 文风诚信 | writing-diagnostics 3A；SKILL 3.0；tools/check_prose_style.py | 1.2.1 强化 |
+| 结构层 AI 标记与度量 | writing-diagnostics 4A；check_prose_style --metrics/--gate/--genre | 1.2.7.0 新增 |
+| 防御性写作与论证取舍 | defensive-writing-and-argument-selection-zh；SKILL 十七；--gate | 1.2.7.0 新增 |
+| 期刊模板与组装 | journal-templates-and-assembly-zh；SKILL 十八；规格、生成/官方模板、组装器与检查器 | 1.2.8.0 新增 |
+| 结果小标题语言 | results-heading-language-zh；SKILL 十九；标题审计 | 1.2.8.1 新增 |
+| 结果作为发现叙事 | results-architecture-zh；SKILL 二十；段落契约 | 1.2.8.2 新增 |
 | 校对与润色 | proofreading-and-polish；SKILL 3.2；grammar-checker/polish 整合 | 1.2.1 强化 |
 | 审稿与回复 | revision-and-response（新增分类/严重度/取证一致性）；manuscript-production | 1.2.1 强化 |
 | 数据、代码与材料 | statistics-and-reporting-integrity（新增存缴/FAIR/RRID）；数据/材料模板 | 1.2.1 强化 |
